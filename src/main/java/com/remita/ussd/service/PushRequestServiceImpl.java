@@ -49,7 +49,7 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     public PushResponse pushRequest(PushRequest pushRequest) throws Exception {
 
-        String url = "http://ip:port/push_ussd";
+        String url = "http://52.16.1.180:8080/push_ussd";
 
         return getRequest(url, pushRequest);
     }
