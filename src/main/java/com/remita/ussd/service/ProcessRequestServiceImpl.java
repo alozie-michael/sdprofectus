@@ -3,6 +3,7 @@ package com.remita.ussd.service;
 import java.text.SimpleDateFormat;
 
 import com.remita.ussd.dao.*;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,12 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 		String  timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.ss").format(new java.util.Date());
 
 		if(pullRequest.getMsgType().equals(0)){
-			
+
+            String md5Hex = DigestUtils.md5Hex("hello");
+
+            System.out.println("");
+            System.out.println(md5Hex);
+            System.out.println("");
 
 			newRequest.setTimeStamp(timeStamp);
 			newRequest.setSessionId(pullRequest.getSessionId());
