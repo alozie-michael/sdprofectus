@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("api/v1")
 public class PullRequestController {
 	
 	@Autowired
 	ProcessRequestService processRequestService;
 
-	@RequestMapping(value = "pull_ussd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/pull_ussd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<PullResponse> pullRequest(@RequestBody PullRequest pullRequest) {
 		
 		PullResponse pullResponse = new PullResponse();
