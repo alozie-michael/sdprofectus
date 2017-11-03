@@ -27,7 +27,11 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
             String md5Hex = DigestUtils.md5Hex("hello");
 
             System.out.println("");
-            System.out.println(md5Hex);
+            System.out.println(pullRequest.getSessionId());
+            System.out.println(pullRequest.getCpPassword());
+            System.out.println(pullRequest.getMSISDN());
+            System.out.println(pullRequest.getServiceCode());
+            System.out.println(pullRequest.getSessionId());
             System.out.println("");
 
 			newRequest.setTimeStamp(timeStamp);
@@ -37,7 +41,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setServiceCode(pullRequest.getServiceCode());
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
-			newRequest.setMsgCoding(68);
+			newRequest.setMsgCoding(pullRequest.getMsgCoding());
 			newRequest.setUssdContent("1.Query Balance 2.Query Trans");
 			
 			return pushRequestService.pushRequest(newRequest);
