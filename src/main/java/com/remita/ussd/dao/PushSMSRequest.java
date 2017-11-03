@@ -1,11 +1,14 @@
 package com.remita.ussd.dao;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PushSMSRequest {
 
     private String TimeStamp;
     private String SessionId;
     private String CpId;
     private String CpPassword;
+    @JsonProperty("MSISDN")
     private String MSISDN;
     private String ServiceCode;
     private Integer MsgCoding;
