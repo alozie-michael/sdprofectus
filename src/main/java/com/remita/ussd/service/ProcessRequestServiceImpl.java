@@ -32,6 +32,11 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
             System.out.println(pullRequest.getMSISDN());
             System.out.println(pullRequest.getServiceCode());
             System.out.println(pullRequest.getSessionId());
+            System.out.println(pullRequest.getUssdContent());
+            System.out.println(pullRequest.getMsgType());
+            System.out.println(pullRequest.getNetwork());
+            System.out.println(pullRequest.getOpType());
+            System.out.println(pullRequest.getTimeStamp());
             System.out.println("");
 
 			newRequest.setTimeStamp(timeStamp);
