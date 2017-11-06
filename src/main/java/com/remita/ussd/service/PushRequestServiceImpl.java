@@ -21,11 +21,11 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     protected ObjectMapper mapper = new ObjectMapper();
 
-    public PushResponse getRequest(String url, PushRequest pushRequest) throws Exception {
+    public Object getRequest(String url, PushRequest pushRequest) throws Exception {
 
         HttpEntity<PushRequest> requestObject = new HttpEntity(pushRequest, createRequestHeader());
-        ResponseEntity<PushResponse> response = getResetTemplate().postForEntity(url, requestObject, PushResponse.class);
-
+        ResponseEntity<Object> response = getResetTemplate().postForEntity(url, requestObject, Object.class);
+        System.out.println("response = [" + response.getBody() + "]");
         return response.getBody();
     }
 
@@ -57,7 +57,7 @@ public class PushRequestServiceImpl implements PushRequestService {
 
         String url = "http://52.213.221.23:8080/push_ussd";
 
-        PushResponse response = getRequest(url, pushRequest);
+        PushResponse response = (PushResponse) getRequest(url, pushRequest);
 
         System.out.println("");
         System.out.println(response.getSessionId());
