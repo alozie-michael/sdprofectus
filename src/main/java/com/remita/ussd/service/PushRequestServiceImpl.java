@@ -32,7 +32,7 @@ public class PushRequestServiceImpl implements PushRequestService {
     protected HttpHeaders createRequestHeader() {
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Accept", "application/json");
+        //headers.add("Accept", "application/json");
         headers.add("Content-Type", "application/json");
         return headers;
     }
