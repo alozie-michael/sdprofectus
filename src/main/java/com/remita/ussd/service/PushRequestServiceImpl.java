@@ -4,6 +4,7 @@ import com.remita.ussd.dao.PushSMSRequest;
 import com.remita.ussd.dao.PushSMSResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -20,21 +21,19 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     protected ObjectMapper mapper = new ObjectMapper();
 
-    public PushResponse getRequest(String url, Object... urlVariables) throws Exception {
+    public PushResponse getRequest(String url, PushRequest pushRequest) throws Exception {
 
-        HttpEntity<String> requestObject = new HttpEntity<>(createRequestHeader());
-        ResponseEntity<PushResponse> response = getResetTemplate().exchange(url, HttpMethod.POST, requestObject, PushResponse.class,
-                urlVariables);
+        HttpEntity<PushRequest> requestObject = new HttpEntity(pushRequest, createRequestHeader());
+        ResponseEntity<PushResponse> response = getResetTemplate().postForEntity(url, requestObject, PushResponse.class);
 
         return response.getBody();
     }
 
-    protected MultiValueMap<String, String> createRequestHeader() {
+    protected HttpHeaders createRequestHeader() {
 
-        MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
+        HttpHeaders headers = new HttpHeaders();
         headers.add("Accept", "application/json");
         headers.add("Content-Type", "application/json");
-
         return headers;
     }
 
