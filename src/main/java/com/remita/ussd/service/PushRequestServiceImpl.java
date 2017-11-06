@@ -49,6 +49,13 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     public PushResponse pushRequest(PushRequest pushRequest) throws Exception {
 
+        System.out.println("");
+        System.out.println(pushRequest.getSessionId());
+        System.out.println(pushRequest.getMSISDN());
+        System.out.println(pushRequest.getUssdContent());
+        System.out.println(pushRequest.getTimeStamp());
+        System.out.println("");
+
         String url = "http://52.213.221.23:8080/push_ussd";
 
         PushResponse response = getRequest(url, pushRequest);
