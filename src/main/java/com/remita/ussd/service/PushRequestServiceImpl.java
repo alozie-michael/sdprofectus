@@ -3,10 +3,10 @@ package com.remita.ussd.service;
 import com.remita.ussd.dao.PushSMSRequest;
 import com.remita.ussd.dao.PushSMSResponse;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
+import org.springframework.http.*;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -15,6 +15,8 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.remita.ussd.dao.PushRequest;
 import com.remita.ussd.dao.PushResponse;
+
+import java.util.Arrays;
 
 @Service("pushRequestService")
 public class PushRequestServiceImpl implements PushRequestService {
@@ -39,11 +41,16 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     private RestTemplate getResetTemplate() {
 
-        System.setProperty("http.proxyHost", "192.9.200.10");
+       /* System.setProperty("http.proxyHost", "192.9.200.10");
         System.setProperty("http.proxyPort", "3128");
-        System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);
 
-        return new RestTemplate();
+        System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);*/
+
+        MappingJackson2HttpMessageConverter messageConverter = new MappingJackson2HttpMessageConverter();
+        messageConverter.getSupportedMediaTypes().addAll(Arrays.asList(new MediaType[]{MediaType.APPLICATION_OCTET_STREAM, MediaType.APPLICATION_JSON}));
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(messageConverter);
+        return restTemplate;
     }
 
     public PushResponse pushRequest(PushRequest pushRequest) throws Exception {
