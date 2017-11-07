@@ -1,34 +1,46 @@
 package com.remita.ussd.dao;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PushResponse {
-	
-	private String SessionId;
-	private String MSISDN;
-	private String ErrorCode;
-	private String ErrorMsg;
-	
+
+	private String sessionId;
+	@JsonProperty("MSISDN")
+	private String msisdn;
+	private String errorMsg;
+	private String errorCode;
+
 	public String getSessionId() {
-		return SessionId;
+		return sessionId;
 	}
+
 	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
+		this.sessionId = sessionId;
 	}
-	public String getMSISDN() {
-		return MSISDN;
+
+	public String getMsisdn() {
+		return msisdn;
 	}
-	public void setMSISDN(String mSISDN) {
-		MSISDN = mSISDN;
+
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
 	}
-	public String getErrorCode() {
-		return ErrorCode;
-	}
-	public void setErrorCode(String errorCode) {
-		ErrorCode = errorCode;
-	}
+
 	public String getErrorMsg() {
-		return ErrorMsg;
+		return errorMsg;
 	}
+
 	public void setErrorMsg(String errorMsg) {
-		ErrorMsg = errorMsg;
+		this.errorMsg = errorMsg;
 	}
+
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+	
+
 }
