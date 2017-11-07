@@ -51,12 +51,16 @@ public class PushRequestServiceImpl implements PushRequestService {
     public PushResponse pushRequest(PushRequest pushRequest) throws Exception {
 
         System.out.println("");
+        System.out.println(pushRequest.getTimeStamp());
         System.out.println(pushRequest.getSessionId());
         System.out.println(pushRequest.getCpId());
         System.out.println(pushRequest.getCpPassword());
         System.out.println(pushRequest.getMSISDN());
+        System.out.println(pushRequest.getMsgCoding());
+        System.out.println(pushRequest.getMsgType());
+        System.out.println(pushRequest.getOpType());
         System.out.println(pushRequest.getUssdContent());
-        System.out.println(pushRequest.getTimeStamp());
+        System.out.println(pushRequest.getServiceCode());
         System.out.println("");
 
         String url = "http://52.213.221.23:8080/push_ussd";

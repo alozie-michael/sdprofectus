@@ -25,21 +25,6 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
 		if(pullRequest.getMsgType().equals(0)){
 
-
-            System.out.println("");
-            System.out.println(pullRequest.getSessionId());
-            System.out.println(pullRequest.getCpId());
-            System.out.println(pullRequest.getCpPassword());
-            System.out.println(pullRequest.getMSISDN());
-            System.out.println(pullRequest.getServiceCode());
-            System.out.println(pullRequest.getSessionId());
-            System.out.println(pullRequest.getUssdContent());
-            System.out.println(pullRequest.getMsgType());
-            System.out.println(pullRequest.getNetwork());
-            System.out.println(pullRequest.getOpType());
-            System.out.println(pullRequest.getTimeStamp());
-            System.out.println("");
-
 			newRequest.setTimeStamp(timeStamp);
 			newRequest.setSessionId(pullRequest.getSessionId());
 			newRequest.setCpId(pullRequest.getCpId());
@@ -49,7 +34,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
 			newRequest.setMsgCoding(pullRequest.getMsgCoding());
-			newRequest.setUssdContent("1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
+			newRequest.setUssdContent(" 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
 			
 			return pushRequestService.pushRequest(newRequest);
 			
