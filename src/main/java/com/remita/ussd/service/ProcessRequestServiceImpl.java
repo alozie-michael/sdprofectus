@@ -34,7 +34,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
 			newRequest.setMsgCoding(pullRequest.getMsgCoding());
-			newRequest.setUssdContent(" 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
+			newRequest.setUssdContent(" Remita \n\n 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
 			
 			return pushRequestService.pushRequest(newRequest);
 			
@@ -51,7 +51,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -66,7 +66,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -81,7 +81,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -96,7 +96,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -111,7 +111,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -126,7 +126,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -141,7 +141,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
+                newRequest.setUssdContent(" Remita \n\n 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
 
                 return pushRequestService.pushRequest(newRequest);
 
