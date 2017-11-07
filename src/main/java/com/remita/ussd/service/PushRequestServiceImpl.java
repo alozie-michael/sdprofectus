@@ -41,11 +41,6 @@ public class PushRequestServiceImpl implements PushRequestService {
 
     private RestTemplate getResetTemplate() {
 
-       /* System.setProperty("http.proxyHost", "192.9.200.10");
-        System.setProperty("http.proxyPort", "3128");
-
-        System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);*/
-
         MappingJackson2HttpMessageConverter messageConverter = new MappingJackson2HttpMessageConverter();
         messageConverter.setSupportedMediaTypes(Arrays.asList(new MediaType[]{MediaType.APPLICATION_OCTET_STREAM, MediaType.APPLICATION_JSON}));
         RestTemplate restTemplate = new RestTemplate();
@@ -57,6 +52,8 @@ public class PushRequestServiceImpl implements PushRequestService {
 
         System.out.println("");
         System.out.println(pushRequest.getSessionId());
+        System.out.println(pushRequest.getCpId());
+        System.out.println(pushRequest.getCpPassword());
         System.out.println(pushRequest.getMSISDN());
         System.out.println(pushRequest.getUssdContent());
         System.out.println(pushRequest.getTimeStamp());

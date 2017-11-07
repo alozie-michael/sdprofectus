@@ -24,10 +24,11 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
 		if(pullRequest.getMsgType().equals(0)){
 
-            String md5Hex = DigestUtils.md5Hex("hello");
+            String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
             System.out.println("");
             System.out.println(pullRequest.getSessionId());
+            System.out.println(pullRequest.getCpId());
             System.out.println(pullRequest.getCpPassword());
             System.out.println(pullRequest.getMSISDN());
             System.out.println(pullRequest.getServiceCode());
@@ -41,7 +42,8 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
 			newRequest.setTimeStamp(timeStamp);
 			newRequest.setSessionId(pullRequest.getSessionId());
-			newRequest.setCpPassword(pullRequest.getCpPassword());
+			newRequest.setCpId(pullRequest.getCpId());
+			newRequest.setCpPassword(cpPassword);
 			newRequest.setMSISDN(pullRequest.getMSISDN());
 			newRequest.setServiceCode(pullRequest.getServiceCode());
 			newRequest.setMsgType(1);
