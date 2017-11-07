@@ -65,9 +65,9 @@ public class PushRequestServiceImpl implements PushRequestService {
 
         System.out.println("");
         System.out.println("session ID = [" + response.getSessionId() + "]");
-        System.out.println("MSISDN = [" +response.getMsisdn() + "}");
+        System.out.println("MSISDN = [" +response.getMsisdn() + "]");
         System.out.println("Error Message = [" +response.getErrorMsg() + "]");
-        System.out.println("Error code = [" +response.getErrorCode() + "}");
+        System.out.println("Error code = [" +response.getErrorCode() + "]");
         System.out.println("");
         return response;
     }

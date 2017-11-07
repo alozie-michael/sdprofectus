@@ -21,10 +21,10 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
         PushRequest newRequest = new PushRequest();
 
 		String  timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.ss").format(new java.util.Date());
+        String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
 		if(pullRequest.getMsgType().equals(0)){
 
-            String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
             System.out.println("");
             System.out.println(pullRequest.getSessionId());
@@ -49,7 +49,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
 			newRequest.setMsgCoding(pullRequest.getMsgCoding());
-			newRequest.setUssdContent("1.Query Balance 2.Query Trans");
+			newRequest.setUssdContent("1.Query Balance \n 2.Query Trans");
 			
 			return pushRequestService.pushRequest(newRequest);
 			
@@ -59,13 +59,14 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
                 newRequest.setTimeStamp(timeStamp);
                 newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpPassword(pullRequest.getCpPassword());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
                 newRequest.setMSISDN(pullRequest.getMSISDN());
                 newRequest.setServiceCode(pullRequest.getServiceCode());
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Trans is xxx. 0. Back");
+                newRequest.setUssdContent("Trans is xxx. \n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -73,13 +74,14 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
                 newRequest.setTimeStamp(timeStamp);
                 newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpPassword(pullRequest.getCpPassword());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
                 newRequest.setMSISDN(pullRequest.getMSISDN());
                 newRequest.setServiceCode(pullRequest.getServiceCode());
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Your balance is #30,000.00. 0. Back");
+                newRequest.setUssdContent("Your balance is #30,000.00. \n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -87,13 +89,14 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 
                 newRequest.setTimeStamp(timeStamp);
                 newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpPassword(pullRequest.getCpPassword());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
                 newRequest.setMSISDN(pullRequest.getMSISDN());
                 newRequest.setServiceCode(pullRequest.getServiceCode());
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("1.Query Balance 2.Query Trans");
+                newRequest.setUssdContent("1.Query Balance \n 2.Query Trans");
 
                 return pushRequestService.pushRequest(newRequest);
 
