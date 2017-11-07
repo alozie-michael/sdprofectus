@@ -47,7 +47,7 @@ public class PushRequestServiceImpl implements PushRequestService {
         System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);*/
 
         MappingJackson2HttpMessageConverter messageConverter = new MappingJackson2HttpMessageConverter();
-        messageConverter.getSupportedMediaTypes().addAll(Arrays.asList(new MediaType[]{MediaType.APPLICATION_OCTET_STREAM, MediaType.APPLICATION_JSON}));
+        messageConverter.setSupportedMediaTypes(Arrays.asList(new MediaType[]{MediaType.APPLICATION_OCTET_STREAM, MediaType.APPLICATION_JSON}));
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(messageConverter);
         return restTemplate;
