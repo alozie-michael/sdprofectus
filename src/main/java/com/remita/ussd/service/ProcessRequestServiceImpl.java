@@ -49,13 +49,13 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
 			newRequest.setMsgCoding(pullRequest.getMsgCoding());
-			newRequest.setUssdContent("1.Query Balance \n 2.Query Trans");
+			newRequest.setUssdContent("1.Register \n 2.Buy Airtime \n 3.Transfer \n 4.Pay TSA \n 5.Pay Biller \n 6.Receipt");
 			
 			return pushRequestService.pushRequest(newRequest);
 			
 		}else if(pullRequest.getMsgType().equals(1)){
 
-		    if(pullRequest.getUssdContent().equals("2")){
+		    if(pullRequest.getUssdContent().equals("1")){
 
                 newRequest.setTimeStamp(timeStamp);
                 newRequest.setSessionId(pullRequest.getSessionId());
@@ -66,11 +66,11 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Trans is xxx. \n 0. Back");
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
-            }else if (pullRequest.getUssdContent().equals("1")){
+            }else if (pullRequest.getUssdContent().equals("2")){
 
                 newRequest.setTimeStamp(timeStamp);
                 newRequest.setSessionId(pullRequest.getSessionId());
@@ -81,7 +81,67 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("Your balance is #30,000.00. \n 0. Back");
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("3")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("4")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("5")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("6")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent("Not yet available. \n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -96,7 +156,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent("1.Query Balance \n 2.Query Trans");
+                newRequest.setUssdContent("1.Register \n 2.Buy Airtime \n 3.Transfer \n 4.Pay TSA \n 5.Pay Biller \n 6.Receipt");
 
                 return pushRequestService.pushRequest(newRequest);
 
