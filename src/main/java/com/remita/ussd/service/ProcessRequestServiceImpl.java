@@ -38,7 +38,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         newRequest.setCpPassword(cpPassword);
         newRequest.setMSISDN(pullRequest.getMSISDN());
         newRequest.setServiceCode(pullRequest.getServiceCode());
-        newRequest.setMsgType(pullRequest.getMsgType());
+        newRequest.setMsgType(1);
         newRequest.setOpType(pullRequest.getOpType());
         newRequest.setMsgCoding(pullRequest.getMsgCoding());
 
