@@ -2,9 +2,14 @@ package com.remita.ussd.object;
 
 import com.remita.ussd.dao.PushRequest;
 
-public class Transfer {
+import java.util.HashMap;
+import java.util.Map;
+
+public class menus {
+
 
     public PushRequest processTransfer(PushRequest request, int step){
+
 
         switch (step){
 
@@ -20,6 +25,28 @@ public class Transfer {
                 break;
             }case 4:{
                 request.setUssdContent(" Remita - Transfer \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Back ");
+                break;
+            }
+            default:
+        }
+
+        return request;
+    }
+
+    public PushRequest processAirtime(PushRequest request, int step){
+
+
+        switch (step){
+
+            case 1:{
+                request.setUssdContent(" Remita - Airtime \n\n Please Enter Amount: \n\n 0> Back ");
+                break;
+            }
+            case 2:
+                request.setUssdContent(" Remita - Airtime \n\n Please Enter Telephone no: \n\n 0> Back  ");
+                break;
+            case 3:{
+                request.setUssdContent(" Remita - Airtime \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Back ");
                 break;
             }
             default:
