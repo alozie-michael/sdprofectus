@@ -44,6 +44,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         if (pullRequest.getMsgType().equals(0) || pullRequest.getUssdContent().equals("0")) {
             newRequest.setMsgType(1);
 
+            map.remove(pullRequest.getSessionId());
 
             newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
 
