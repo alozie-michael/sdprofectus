@@ -1,5 +1,7 @@
 package com.remita.ussd.dao;
 
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
+
 public class PullResponse {
 	
 	private String SessionId;
@@ -31,7 +33,9 @@ public class PullResponse {
 	public void setErrorMsg(String errorMsg) {
 		ErrorMsg = errorMsg;
 	}
-	
-	
+
+	public String toString(){
+		return ReflectionToStringBuilder.toString(this);
+	}
 
 }

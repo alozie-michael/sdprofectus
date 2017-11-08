@@ -27,6 +27,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
     @Async
     public PushResponse processRequest(PullRequest pullRequest) throws Exception {
 
+        System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
         PushRequest newRequest = new PushRequest();
 
 

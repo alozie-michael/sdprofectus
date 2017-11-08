@@ -22,17 +22,20 @@ public class PullRequestController {
     public ResponseEntity<PullResponse> pullRequest(@RequestBody PullRequest pullRequest) {
 
         PullResponse pullResponse = new PullResponse();
-
+        System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
         try {
             processRequestService.processRequest(pullRequest);
         }catch (Exception e){
 
         }
 
+
         pullResponse.setSessionId(pullRequest.getSessionId());
         pullResponse.setMSISDN(pullRequest.getMSISDN());
         pullResponse.setErrorCode("200");
         pullResponse.setErrorMsg("success");
+
+        System.out.println("pull Response = [" + pullResponse.toString() + "]");
 
         return new ResponseEntity<>(pullResponse, HttpStatus.OK);
     }
