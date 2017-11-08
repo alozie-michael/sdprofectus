@@ -32,17 +32,18 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
 
+        newRequest.setTimeStamp(timeStamp);
+        newRequest.setSessionId(pullRequest.getSessionId());
+        newRequest.setCpId(pullRequest.getCpId());
+        newRequest.setCpPassword(cpPassword);
+        newRequest.setMSISDN(pullRequest.getMSISDN());
+        newRequest.setServiceCode(pullRequest.getServiceCode());
+        newRequest.setMsgType(pullRequest.getMsgType());
+        newRequest.setOpType(pullRequest.getOpType());
+        newRequest.setMsgCoding(pullRequest.getMsgCoding());
+
         if (pullRequest.getMsgType().equals(0)) {
 
-            newRequest.setTimeStamp(timeStamp);
-            newRequest.setSessionId(pullRequest.getSessionId());
-            newRequest.setCpId(pullRequest.getCpId());
-            newRequest.setCpPassword(cpPassword);
-            newRequest.setMSISDN(pullRequest.getMSISDN());
-            newRequest.setServiceCode(pullRequest.getServiceCode());
-            newRequest.setMsgType(1);
-            newRequest.setOpType(1);
-            newRequest.setMsgCoding(pullRequest.getMsgCoding());
             newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
 
             return pushRequestService.pushRequest(newRequest);
@@ -63,7 +64,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
                 map.put(pullRequest.getSessionId(), getOperation);
             }
 
-            
+
             switch (getOperation.getAction()) {
                 case 1:
                     this.processTransfer(newRequest, getOperation.getStep());
