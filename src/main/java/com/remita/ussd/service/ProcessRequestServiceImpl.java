@@ -28,20 +28,20 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
     public PushResponse processRequest(PullRequest pullRequest) throws Exception {
 
         System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
-        PushRequest newRequest = new PushRequest();
 
+        PushRequest newRequest = new PushRequest();
 
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.ss").format(new java.util.Date());
         String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
         BeanUtils.copyProperties(pullRequest, newRequest);
 
-
         newRequest.setTimeStamp(timeStamp);
         newRequest.setCpPassword(cpPassword);
         newRequest.setOpType(1);
 
         if (pullRequest.getMsgType().equals(0) || pullRequest.getUssdContent().equals("0")) {
+
             newRequest.setMsgType(1);
 
             map.remove(pullRequest.getSessionId());
@@ -71,7 +71,15 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
                 case 1:
                     this.processTransfer(newRequest, getOperation.getStep());
                     break;
-
+                case 2:
+                    this.processAirtime(newRequest, getOperation.getStep());
+                    break;
+                case 3:
+                    this.processBalance(newRequest, getOperation.getStep());
+                    break;
+                case 4:
+                    this.processPayTSAAndBillers(newRequest, getOperation.getStep());
+                    break;
             }
             return pushRequestService.pushRequest(newRequest);
         }

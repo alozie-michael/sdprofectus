@@ -22,6 +22,7 @@ public class PullRequestController {
     public ResponseEntity<PullResponse> pullRequest(@RequestBody PullRequest pullRequest) {
 
         PullResponse pullResponse = new PullResponse();
+
         System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
         try {
             processRequestService.processRequest(pullRequest);
