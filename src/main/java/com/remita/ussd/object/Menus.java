@@ -2,10 +2,7 @@ package com.remita.ussd.object;
 
 import com.remita.ussd.dao.PushRequest;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class menus {
+public class Menus {
 
 
     public PushRequest processTransfer(PushRequest request, int step){
