@@ -14,66 +14,59 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/v1")
 public class PullRequestController {
-	
-	@Autowired
-	ProcessRequestService processRequestService;
 
-	@RequestMapping(value = "/pull_ussd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<PullResponse> pullRequest(@RequestBody PullRequest pullRequest) {
-		
-		PullResponse pullResponse = new PullResponse();
+    @Autowired
+    ProcessRequestService processRequestService;
 
-		Thread process = new Thread(() -> {
-            try {
+    @RequestMapping(value = "/pull_ussd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<PullResponse> pullRequest(@RequestBody PullRequest pullRequest) {
 
-                processRequestService.processRequest(pullRequest);
+        PullResponse pullResponse = new PullResponse();
 
-            } catch (Exception e) {
+        try {
+            processRequestService.processRequest(pullRequest);
+        }catch (Exception e){
 
-                e.printStackTrace();
-            }
-        });
+        }
 
-		process.start();
-		
-		pullResponse.setSessionId(pullRequest.getSessionId());
-		pullResponse.setMSISDN(pullRequest.getMSISDN());
-		pullResponse.setErrorCode("200");
-		pullResponse.setErrorMsg("success");
+        pullResponse.setSessionId(pullRequest.getSessionId());
+        pullResponse.setMSISDN(pullRequest.getMSISDN());
+        pullResponse.setErrorCode("200");
+        pullResponse.setErrorMsg("success");
 
-		return new ResponseEntity<>(pullResponse, HttpStatus.OK);
-	}
+        return new ResponseEntity<>(pullResponse, HttpStatus.OK);
+    }
 
-	@RequestMapping(value = "U_Abort", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<PullResponse> abortRequest(@RequestBody AbortRequest abortRequest) {
+    @RequestMapping(value = "U_Abort", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<PullResponse> abortRequest(@RequestBody AbortRequest abortRequest) {
 
-		PullResponse pullResponse = new PullResponse();
+        PullResponse pullResponse = new PullResponse();
 
-		Thread process = new Thread(new Runnable() {
+        Thread process = new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				try {
+            @Override
+            public void run() {
+                try {
 
                     processRequestService.abortSession(abortRequest);
 
-				} catch (Exception e) {
+                } catch (Exception e) {
 
-					e.printStackTrace();
-				}
+                    e.printStackTrace();
+                }
 
-			}
-		});
+            }
+        });
 
-		process.start();
+        process.start();
 
-		pullResponse.setSessionId(abortRequest.getSessionID());
-		pullResponse.setMSISDN(abortRequest.getMSISDN());
-		pullResponse.setErrorCode("200");
-		pullResponse.setErrorMsg("success");
+        pullResponse.setSessionId(abortRequest.getSessionID());
+        pullResponse.setMSISDN(abortRequest.getMSISDN());
+        pullResponse.setErrorCode("200");
+        pullResponse.setErrorMsg("success");
 
-		return new ResponseEntity<>(pullResponse, HttpStatus.OK);
-	}
+        return new ResponseEntity<>(pullResponse, HttpStatus.OK);
+    }
 
     @RequestMapping(value = "push_sms", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<PushSMSResponse> pushSMSRequest(@RequestBody PushSMSRequest pushSMSRequest) {

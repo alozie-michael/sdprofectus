@@ -10,6 +10,7 @@ import com.remita.ussd.object.Operation;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service("processRequestService")
@@ -23,6 +24,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
 
     Map<String, Operation> map = new ConcurrentHashMap<>();
 
+    @Async
     public PushResponse processRequest(PullRequest pullRequest) throws Exception {
 
         PushRequest newRequest = new PushRequest();
