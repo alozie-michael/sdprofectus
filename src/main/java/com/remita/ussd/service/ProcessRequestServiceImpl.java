@@ -8,6 +8,7 @@ import com.remita.ussd.dao.*;
 import com.remita.ussd.object.Menus;
 import com.remita.ussd.object.Operation;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,24 +26,18 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
     public PushResponse processRequest(PullRequest pullRequest) throws Exception {
 
         PushRequest newRequest = new PushRequest();
-        Operation operation = new Operation();
 
 
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.ss").format(new java.util.Date());
         String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
-
+        BeanUtils.copyProperties(pullRequest, newRequest);
         newRequest.setTimeStamp(timeStamp);
-        newRequest.setSessionId(pullRequest.getSessionId());
-        newRequest.setCpId(pullRequest.getCpId());
         newRequest.setCpPassword(cpPassword);
-        newRequest.setMSISDN(pullRequest.getMSISDN());
-        newRequest.setServiceCode(pullRequest.getServiceCode());
-        newRequest.setMsgType(1);
-        newRequest.setOpType(pullRequest.getOpType());
-        newRequest.setMsgCoding(pullRequest.getMsgCoding());
 
         if (pullRequest.getMsgType().equals(0)) {
+            newRequest.setMsgType(1);
+            newRequest.setOpType(1);
 
             newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
 
