@@ -23,20 +23,16 @@ public class PullRequestController {
 		
 		PullResponse pullResponse = new PullResponse();
 
-		Thread process = new Thread(new Runnable() {
+		Thread process = new Thread(() -> {
+            try {
 
-			@Override
-			public void run() {
-				try {
+                processRequestService.processRequest(pullRequest);
 
-					processRequestService.processRequest(pullRequest);
+            } catch (Exception e) {
 
-				} catch (Exception e) {
-
-					e.printStackTrace();
-				}
-			}
-		});
+                e.printStackTrace();
+            }
+        });
 
 		process.start();
 		

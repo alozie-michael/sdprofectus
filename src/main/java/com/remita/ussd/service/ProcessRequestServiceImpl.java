@@ -1,14 +1,17 @@
 package com.remita.ussd.service;
 
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.remita.ussd.dao.*;
+import com.remita.ussd.object.Transfer;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("processRequestService")
-public class ProcessRequestServiceImpl implements ProcessRequestService{
+public class ProcessRequestServiceImpl extends Transfer implements ProcessRequestService{
 
 	@Autowired
 	PushRequestService pushRequestService;
@@ -23,7 +26,9 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 		String  timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.ss").format(new java.util.Date());
         String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
-		if(pullRequest.getMsgType().equals(0)){
+        Map<String,Integer> map =new HashMap<String,Integer>();
+
+        if(pullRequest.getMsgType().equals(0)){
 
 			newRequest.setTimeStamp(timeStamp);
 			newRequest.setSessionId(pullRequest.getSessionId());
@@ -34,7 +39,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
 			newRequest.setMsgType(1);
 			newRequest.setOpType(1);
 			newRequest.setMsgCoding(pullRequest.getMsgCoding());
-			newRequest.setUssdContent(" Remita \n\n 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
+			newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
 			
 			return pushRequestService.pushRequest(newRequest);
 			
@@ -51,9 +56,10 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
 
-                return pushRequestService.pushRequest(newRequest);
+                PushRequest request = processTransfer(newRequest, 1);
+
+                return pushRequestService.pushRequest(request);
 
             }else if (pullRequest.getUssdContent().equals("2")){
 
@@ -66,7 +72,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita - Airtime \n\n Not yet available. \n\n 0> Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -81,7 +87,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita - Balance \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -96,7 +102,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita - Pay TSA and Billers \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -111,7 +117,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita - Get Loan \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -126,7 +132,37 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n Not yet available. \n\n 0. Back");
+                newRequest.setUssdContent(" Remita - RRR \n\n Not yet available. \n\n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("7")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent(" Remita - Receipt \n\n Not yet available. \n\n 0. Back");
+
+                return pushRequestService.pushRequest(newRequest);
+
+            }else if (pullRequest.getUssdContent().equals("8")){
+
+                newRequest.setTimeStamp(timeStamp);
+                newRequest.setSessionId(pullRequest.getSessionId());
+                newRequest.setCpId(pullRequest.getCpId());
+                newRequest.setCpPassword(cpPassword);
+                newRequest.setMSISDN(pullRequest.getMSISDN());
+                newRequest.setServiceCode(pullRequest.getServiceCode());
+                newRequest.setMsgType(1);
+                newRequest.setOpType(1);
+                newRequest.setMsgCoding(68);
+                newRequest.setUssdContent(" Remita - Register \n\n Not yet available. \n\n 0. Back");
 
                 return pushRequestService.pushRequest(newRequest);
 
@@ -141,7 +177,7 @@ public class ProcessRequestServiceImpl implements ProcessRequestService{
                 newRequest.setMsgType(1);
                 newRequest.setOpType(1);
                 newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita \n\n 1. Register \n 2. Buy Airtime \n 3. Transfer \n 4. Pay TSA \n 5. Pay Biller \n 6. Receipt");
+                newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
 
                 return pushRequestService.pushRequest(newRequest);
 
