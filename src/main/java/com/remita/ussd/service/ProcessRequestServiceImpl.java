@@ -80,56 +80,24 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
                 case 4:
                     this.processPayTSAAndBillers(newRequest, getOperation.getStep());
                     break;
+                case 5:
+                    this.processGetLoan(newRequest, getOperation.getStep());
+                    break;
+                case 6:
+                    this.processRRR(newRequest, getOperation.getStep());
+                    break;
+                case 7:
+                    this.processReceipt(newRequest, getOperation.getStep());
+                    break;
+                case 8:
+                    this.processRegistration(newRequest, getOperation.getStep());
+                    break;
             }
             return pushRequestService.pushRequest(newRequest);
         }
             /*if (getOperation.getAction() == 1) {
 
 
-            } else if (pullRequest.getUssdContent().equals("2")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Airtime \n\n Not yet available. \n\n 0> Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else if (pullRequest.getUssdContent().equals("3")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Balance \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else if (pullRequest.getUssdContent().equals("4")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Pay TSA and Billers \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
 
             } else if (pullRequest.getUssdContent().equals("5")) {
 
