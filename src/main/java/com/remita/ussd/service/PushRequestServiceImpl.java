@@ -51,16 +51,7 @@ public class PushRequestServiceImpl implements PushRequestService {
     public PushResponse pushRequest(PushRequest pushRequest) throws Exception {
 
         System.out.println("");
-        System.out.println(pushRequest.getTimeStamp());
-        System.out.println(pushRequest.getSessionId());
-        System.out.println(pushRequest.getCpId());
-        System.out.println(pushRequest.getCpPassword());
-        System.out.println(pushRequest.getMSISDN());
-        System.out.println(pushRequest.getMsgCoding());
-        System.out.println(pushRequest.getMsgType());
-        System.out.println(pushRequest.getOpType());
-        System.out.println(pushRequest.getUssdContent());
-        System.out.println(pushRequest.getServiceCode());
+        System.out.println("pushRequest = [" + pushRequest.toString() + "]");
         System.out.println("");
 
         String url = "http://52.213.221.23:8080/push_ussd";
@@ -68,10 +59,7 @@ public class PushRequestServiceImpl implements PushRequestService {
         PushResponse response = getRequest(url, pushRequest);
 
         System.out.println("");
-        System.out.println("session ID = [" + response.getSessionId() + "]");
-        System.out.println("MSISDN = [" +response.getMsisdn() + "]");
-        System.out.println("Error Message = [" +response.getErrorMsg() + "]");
-        System.out.println("Error code = [" +response.getErrorCode() + "]");
+        System.out.println("pushResponse = [" + response.toString() + "]");
         System.out.println("");
         return response;
     }

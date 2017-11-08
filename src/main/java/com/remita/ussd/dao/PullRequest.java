@@ -1,6 +1,8 @@
 package com.remita.ussd.dao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
+import org.apache.el.util.ReflectionUtil;
 
 public class PullRequest {
 
@@ -104,4 +106,8 @@ public class PullRequest {
 	public void setNetwork(Integer network) {
 		Network = network;
 	}
+
+	public String toString(){
+        return ReflectionToStringBuilder.toString(this);
+    }
 }

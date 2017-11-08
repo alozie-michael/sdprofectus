@@ -32,6 +32,8 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         String cpPassword = DigestUtils.md5Hex(pullRequest.getCpId() + 123123 + timeStamp);
 
         BeanUtils.copyProperties(pullRequest, newRequest);
+
+
         newRequest.setTimeStamp(timeStamp);
         newRequest.setCpPassword(cpPassword);
 

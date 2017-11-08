@@ -1,6 +1,7 @@
 package com.remita.ussd.dao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 public class PushResponse {
 
@@ -41,6 +42,9 @@ public class PushResponse {
 	public void setErrorCode(String errorCode) {
 		this.errorCode = errorCode;
 	}
-	
+
+    public String toString(){
+        return ReflectionToStringBuilder.toString(this);
+    }
 
 }

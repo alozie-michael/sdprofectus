@@ -1,6 +1,7 @@
 package com.remita.ussd.dao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 public class PushRequest {
 	
@@ -75,6 +76,10 @@ public class PushRequest {
 	}
 	public void setUssdContent(String ussdContent) {
 		UssdContent = ussdContent;
+	}
+
+	public String toString(){
+		return ReflectionToStringBuilder.toString(this);
 	}
 
 }
