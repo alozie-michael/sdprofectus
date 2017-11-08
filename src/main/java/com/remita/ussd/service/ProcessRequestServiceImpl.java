@@ -41,7 +41,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         newRequest.setCpPassword(cpPassword);
         newRequest.setOpType(1);
 
-        if (pullRequest.getMsgType().equals(0)) {
+        if (pullRequest.getMsgType().equals(0) || pullRequest.getUssdContent().equals("0")) {
             newRequest.setMsgType(1);
 
 
