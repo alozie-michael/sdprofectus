@@ -5,77 +5,96 @@ import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 public class PushRequest {
 	
-	private String TimeStamp;
-	private String SessionId;
-	private String CpId;
-	private String CpPassword;
+	private String timeStamp;
+	private String sessionId;
+	private String cpId;
+	private String cpPassword;
 	@JsonProperty("MSISDN")
-	private String MSISDN;
-	private String ServiceCode;
-	private Integer MsgType;
-	private Integer OpType;
-	private Integer MsgCoding;
-	private String UssdContent;
-	
+	private String msisdn;
+	private String serviceCode;
+	private Integer msgType;
+	private Integer opType;
+	private Integer msgCoding;
+	private String ussdContent;
+
 	public String getTimeStamp() {
-		return TimeStamp;
+		return timeStamp;
 	}
+
 	public void setTimeStamp(String timeStamp) {
-		TimeStamp = timeStamp;
+		this.timeStamp = timeStamp;
 	}
+
 	public String getSessionId() {
-		return SessionId;
+		return sessionId;
 	}
+
 	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
+		this.sessionId = sessionId;
 	}
+
 	public String getCpId() {
-		return CpId;
+		return cpId;
 	}
+
 	public void setCpId(String cpId) {
-		CpId = cpId;
+		this.cpId = cpId;
 	}
+
 	public String getCpPassword() {
-		return CpPassword;
+		return cpPassword;
 	}
+
 	public void setCpPassword(String cpPassword) {
-		CpPassword = cpPassword;
+		this.cpPassword = cpPassword;
 	}
-	public String getMSISDN() {
-		return MSISDN;
+
+	public String getMsisdn() {
+		return msisdn;
 	}
-	public void setMSISDN(String mSISDN) {
-		MSISDN = mSISDN;
+
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
 	}
+
 	public String getServiceCode() {
-		return ServiceCode;
+		return serviceCode;
 	}
+
 	public void setServiceCode(String serviceCode) {
-		ServiceCode = serviceCode;
+		this.serviceCode = serviceCode;
 	}
+
 	public Integer getMsgType() {
-		return MsgType;
+		return msgType;
 	}
+
 	public void setMsgType(Integer msgType) {
-		MsgType = msgType;
+		this.msgType = msgType;
 	}
+
 	public Integer getOpType() {
-		return OpType;
+		return opType;
 	}
+
 	public void setOpType(Integer opType) {
-		OpType = opType;
+		this.opType = opType;
 	}
+
 	public Integer getMsgCoding() {
-		return MsgCoding;
+		return msgCoding;
 	}
+
 	public void setMsgCoding(Integer msgCoding) {
-		MsgCoding = msgCoding;
+		this.msgCoding = msgCoding;
 	}
+
 	public String getUssdContent() {
-		return UssdContent;
+		return ussdContent;
 	}
+
 	public void setUssdContent(String ussdContent) {
-		UssdContent = ussdContent;
+		this.ussdContent = ussdContent;
 	}
 
 	public String toString(){

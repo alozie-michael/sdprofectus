@@ -3,6 +3,7 @@ package com.remita.ussd.service;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executor;
 
 import com.remita.ussd.dao.*;
 import com.remita.ussd.object.Menus;
@@ -52,6 +53,14 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
 
         } else if (pullRequest.getMsgType().equals(1)) {
 
+            Integer action = 1;
+
+            try {
+                action = Integer.valueOf(pullRequest.getUssdContent());
+            }catch (Exception e){
+                System.out.println(e);
+            }
+
             Operation getOperation;
 
             if (map.containsKey(pullRequest.getSessionId())) {
@@ -62,7 +71,7 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
             } else {
                 getOperation = new Operation();
                 getOperation.setStep(1);
-                getOperation.setAction(Integer.valueOf(pullRequest.getUssdContent()));
+                getOperation.setAction(action);
                 map.put(pullRequest.getSessionId(), getOperation);
             }
 
@@ -92,95 +101,13 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
                 case 8:
                     this.processRegistration(newRequest, getOperation.getStep());
                     break;
+                default:
+                    newRequest.setUssdContent(" Welcome to Remita \n\n Invalid response. \n\n 0> Back ");
+                    break;
             }
             return pushRequestService.pushRequest(newRequest);
         }
-            /*if (getOperation.getAction() == 1) {
 
-
-
-            } else if (pullRequest.getUssdContent().equals("5")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Get Loan \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else if (pullRequest.getUssdContent().equals("6")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - RRR \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else if (pullRequest.getUssdContent().equals("7")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Receipt \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else if (pullRequest.getUssdContent().equals("8")) {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Remita - Register \n\n Not yet available. \n\n 0. Back");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            } else {
-
-                newRequest.setTimeStamp(timeStamp);
-                newRequest.setSessionId(pullRequest.getSessionId());
-                newRequest.setCpId(pullRequest.getCpId());
-                newRequest.setCpPassword(cpPassword);
-                newRequest.setMSISDN(pullRequest.getMSISDN());
-                newRequest.setServiceCode(pullRequest.getServiceCode());
-                newRequest.setMsgType(1);
-                newRequest.setOpType(1);
-                newRequest.setMsgCoding(68);
-                newRequest.setUssdContent(" Welcome to Remita \n\n 1> Transfer \n 2> Airtime \n 3> Balance \n 4> Pay TSA and Billers \n 5> Get loan \n 6> RRR \n 7> Receipt \n 8> Register \n\n 9> Next ");
-
-                return pushRequestService.pushRequest(newRequest);
-
-            }
-
-
-        } else {
-
-            return null;
-        }*/
         return null;
     }
 

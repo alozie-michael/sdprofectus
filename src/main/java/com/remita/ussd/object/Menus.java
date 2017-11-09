@@ -9,24 +9,27 @@ public class Menus {
 
         switch (step){
 
-            case 1:{
-                request.setUssdContent(" Remita - Transfer \n\n Please Enter Amount: \n\n 0> Back ");
+            case 1:
+                request.setUssdContent(" Remita - Transfer \n\n Enter amount: \n\n 0> Home ");
                 break;
-            }
             case 2:
-                request.setUssdContent(" Remita - Transfer \n\n Select Recipient Bank: \n 1> United Bank of Africa \n 2> Access Bank \n 3> Akunna Matata Bank \n\n 0> Back ");
+                request.setUssdContent(" Remita - Transfer \n\n Enter recipient account: \n\n 0> Home ");
                 break;
-            case 3:{
-                request.setUssdContent(" Remita - Transfer \n\n Select Your Account To Debit Bank: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Back ");
+            case 3:
+                request.setUssdContent(" Remita - Transfer \n\n Select recipient bank: \n 1> United Bank of Africa \n 2> Access Bank \n 3> Akunna Matata Bank \n\n 0> Home ");
                 break;
-            }case 4:{
-                request.setUssdContent(" Remita - Transfer \n\n Enter DAN: \n\n 0> Back ");
+            case 4:
+                request.setUssdContent(" Remita - Transfer \n\n Select your account to debit: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Home ");
                 break;
-            }case 5:{
-                request.setUssdContent(" Remita - Transfer \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Back ");
+            case 5:
+                request.setUssdContent(" Remita - Transfer \n\n Enter PIN: \n\n 0> Home ");
                 break;
-            }
+            case 6:
+                request.setUssdContent(" Remita - Transfer \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Home ");
+                break;
             default:
+                request.setUssdContent(" Remita - Transfer \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -36,21 +39,21 @@ public class Menus {
 
         switch (step){
 
-            case 1:{
-                request.setUssdContent(" Remita - Airtime \n\n Please Enter Amount: \n\n 0> Back ");
+            case 1:
+                request.setUssdContent(" Remita - Airtime \n\n Enter amount: \n\n 0> Home ");
                 break;
-            }
             case 2:
-                request.setUssdContent(" Remita - Airtime \n\n Please Enter Telephone no: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Airtime \n\n Enter telephone no: \n\n 0> Home  ");
                 break;
             case 3:
-                request.setUssdContent(" Remita - Airtime \n\n Enter DAN: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Airtime \n\n Enter PIN: \n\n 0> Home  ");
                 break;
-            case 4:{
-                request.setUssdContent(" Remita - Airtime \n\n Successful. \n Your new account balance is #59,200. \n\n 0> Back ");
+            case 4:
+                request.setUssdContent(" Remita - Airtime \n\n Successful. \n Your new account balance is #59,200. \n\n 0> Home ");
                 break;
-            }
             default:
+                request.setUssdContent(" Remita - Airtime \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -60,18 +63,19 @@ public class Menus {
 
         switch (step){
 
-            case 1:{
-                request.setUssdContent(" Remita - Balance \n\n Select Your Account: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Back ");
+            case 1:
+                request.setUssdContent(" Remita - Balance \n\n Select your account to view: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Home ");
                 break;
-            }
             case 2:
-                request.setUssdContent(" Remita - Balance \n\n Enter DAN: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Balance \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 3:{
-                request.setUssdContent(" Remita - Balance \n\n Your balance is #59,200. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Balance \n\n Your balance on your 123***123/UBA is #59,200. \n\n 0> Home ");
                 break;
             }
             default:
+                request.setUssdContent(" Remita - Balance \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -82,21 +86,23 @@ public class Menus {
         switch (step){
 
             case 1:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter RRR: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter RRR: \n\n 0> Home  ");
                 break;
             case 2:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Please Enter Amount: \n\n 0> Back ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n RRR: 123421343 \n Type: Invoice \n Amount: #10,000 \n Biller: NCC \n Payer: Alozie Michael \n Telephone: 08146963838 \n Status: pending \n\n 1> Pay \n\n 0> Home ");
                 break;
             case 3:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Select Your Account To Debit Bank: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Back ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Select your account to debit: \n 1> 123***123/UBA \n 2> 345***999/FBN \n\n 0> Home ");
                 break;
             case 4:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter DAN: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 5:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Successful. \n Your just paid the sum of #59,200 to FAAN. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Successful. \n You just paid the sum of #59,200 to NCC. \n\n 0> Home ");
                 break;
             default:
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -106,18 +112,24 @@ public class Menus {
 
         switch (step){
 
-            case 1:{
-                request.setUssdContent(" Remita - Get Loan \n\n Your eligible loan is Nxxx. T&Cs apply: 3% Flat Interest; 2% Fee & 0.15% Credit Life Insurance. \n Please Enter Amount:  \n\n 0> Back ");
+            case 1:
+                request.setUssdContent(" Remita - Get Loan \n\n I accept that my salary and transaction history can be accessed to evaluate my loan eligibility. Additional T&C at bit.ly/rmttc. \n Enter loan amount:  \n\n 0> Home ");
                 break;
-            }
             case 2:
-                request.setUssdContent(" Remita - Get Loan \n\n Select Your Account To Be Credited: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Back ");
+                request.setUssdContent(" Remita - Get Loan \n\n 1> Access Payday. N5,000 pay 6500 in 10 days \n 2> PayLater. N4,000 pay N5,600 in 5 days \n 3> Mo-De. N5,000 pay N5,600 in 5 days. \n\n 0> Home ");
                 break;
-            case 3:{
-                request.setUssdContent(" Remita - Get Loan \n\n Successful. \n The sum of #30,000 has been credited to your account. It will be debited from your account on your next pay day. \n\n 0> Back ");
+            case 3:
+                request.setUssdContent(" Remita - Get Loan \n\n Where do you want your loan to be credited? \n 1> 123***123/UBA \n 2> 345***999/FBN \n\n 0> Home ");
                 break;
-            }
+            case 4:
+                request.setUssdContent(" Remita - Get Loan \n\n Successful. \n Enter PIN. \n\n 0> Home ");
+                break;
+            case 5:
+                request.setUssdContent(" Remita - Get Loan \n\n Successful. \n Congratulations! Your loan has been approved and would be transferred to your 123***123/FBN account within the next 1 hour. \n\n 0> Home ");
+                break;
             default:
+                request.setUssdContent(" Remita - Get Loan \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -128,24 +140,23 @@ public class Menus {
         switch (step){
 
             case 1:
-                request.setUssdContent(" Remita - RRR \n\n Please Select A Function: \n 1> Pay RRR \n 2> Check Status \n\n 0> Back  ");
+                request.setUssdContent(" Remita - RRR \n\n Enter RRR: \n\n 0> Home  ");
                 break;
             case 2:
-                request.setUssdContent(" Remita - RRR \n\n Enter RRR: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - RRR \n\n RRR: 123421343 \n Type: Invoice \n Amount: #15,000 \n Biller: CAC \n Payer: Alozie Michael \n Telephone: 08146963838 \n Status: pending \n\n 1> Pay \n\n 0> Home ");
                 break;
             case 3:
-                request.setUssdContent(" Remita - RRR \n\n Please Enter Amount: \n\n 0> Back ");
+                request.setUssdContent(" Remita - RRR \n\n Select your account to debit: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Home ");
                 break;
             case 4:
-                request.setUssdContent(" Remita - RRR \n\n Select Your Account To Debit Bank: \n 1>123***123/UBA \n 2>345***999/FBN \n\n 0> Back ");
+                request.setUssdContent(" Remita - RRR \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 5:
-                request.setUssdContent(" Remita - RRR \n\n Enter DAN: \n\n 0> Back  ");
-                break;
-            case 6:
-                request.setUssdContent(" Remita - RRR \n\n Successful. \n Your just paid the sum of #59,200 to FAAN. \n\n 0> Back ");
+                request.setUssdContent(" Remita - RRR \n\n Successful. \n You just paid the sum of #109,200 to Alozie and sons enterprise. \n\n 0> Home ");
                 break;
             default:
+                request.setUssdContent(" Remita - RRR \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -155,18 +166,21 @@ public class Menus {
 
         switch (step){
 
-            case 1:{
-                request.setUssdContent(" Remita - Receipt \n\n Please Enter RRR: \n\n 0> Back ");
+            case 1:
+                request.setUssdContent(" Remita - Receipt \n\n Enter RRR: \n\n 0> Home ");
                 break;
-            }
             case 2:
-                request.setUssdContent(" Remita - Receipt \n\n Enter Receiving Email: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Receipt \n\n 1> Resend Receipt \n 2> Send Receipt to Another Email \n\n 0> Home ");
                 break;
-            case 3:{
-                request.setUssdContent(" Remita - Receipt \n\n Receipt sent. \n\n 0> Back ");
+            case 3:
+                request.setUssdContent(" Remita - Receipt \n\n Enter receiving email: \n\n 0> Home  ");
                 break;
-            }
+            case 4:
+                request.setUssdContent(" Remita - Receipt \n\n Receipt sent. \n\n 0> Home ");
+                break;
             default:
+                request.setUssdContent(" Remita - Receipt \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;
@@ -177,30 +191,29 @@ public class Menus {
         switch (step){
 
             case 1:
-                request.setUssdContent(" Remita - Registration \n\n Please Enter Your BVN: \n\n 0> Back ");
+                request.setUssdContent(" Remita - Registration \n\n Enter your BVN: \n\n 0> Home ");
                 break;
             case 2:
-                request.setUssdContent(" Remita - Registration \n\n Please Enter Your Telephone no: \n\n 0> Back ");
+                request.setUssdContent(" Remita - Registration \n\n Enter your telephone no: \n\n 0> Home ");
                 break;
             case 3:
-                request.setUssdContent(" Remita - Registration \n\n Please Confirm Your Details; \n ALOZIE MICHAEL \n 4/OCT/2001 \n 0814***3838: \n\n 1> YES 2> NO \n\n 0> Back ");
+                request.setUssdContent(" Remita - Registration \n\n Please confirm your details; \n ALOZIE MICHAEL \n 4/OCT/2001 \n 0814***3838: \n\n 1> YES \n 2> NO \n\n 0> Home ");
                 break;
             case 4:
-                request.setUssdContent(" Remita - Registration \n\n Add an account for your Remita profile. \n Enter Your Account Number: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Registration \n\n Add an account to your Remita profile. \n Enter your account number: \n\n 0> Home  ");
                 break;
             case 5:
-                request.setUssdContent(" Remita - Registration \n\n Select Your Bank. \n 1> United Bank of Africa \n 2> Access Bank \n 3> Akunna Matata Bank \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Registration \n\n Select your bank. \n 1> United Bank of Africa \n 2> Access Bank \n 3> Akunna Matata Bank \n\n 0> Home  ");
                 break;
             case 6:
-                request.setUssdContent(" Remita - Registration \n\n Please Enter OTP Sent To Your Telephone no: \n\n 0> Back  ");
+                request.setUssdContent(" Remita - Registration \n\n Your OTP has been sent to your phone. Dial *7000*8*6# and enter your OTP: \n\n 0> Home  ");
                 break;
             case 7:
-                request.setUssdContent(" Remita - Registration \n\n Please choose your Dynamic Authentication Number (DAN). This should be a 2 to 4 digit number: \n\n 0> Back  ");
-                break;
-            case 8:
                 request.setUssdContent(" Remita - Registration \n\n Successful. \n\n 0> Back ");
                 break;
             default:
+                request.setUssdContent(" Remita - Registration \n\n Invalid response. \n\n 0> Back ");
+                break;
         }
 
         return request;

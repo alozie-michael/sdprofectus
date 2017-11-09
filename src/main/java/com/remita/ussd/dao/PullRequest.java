@@ -6,108 +6,108 @@ import org.apache.el.util.ReflectionUtil;
 
 public class PullRequest {
 
-    private String TimeStamp;
-	private String SessionId;
-	private String CpId;
-	private String CpPassword;
+    private String timeStamp;
+	private String sessionId;
+	private String cpId;
+	private String cpPassword;
 	@JsonProperty("MSISDN")
-	private String MSISDN;
-	private String ServiceCode;
-	private Integer MsgType;
-	private Integer OpType;
-	private Integer MsgCoding;
-	private String UssdContent;
-	private Integer Network;
+	private String msisdn;
+	private String serviceCode;
+	private Integer msgType;
+	private Integer opType;
+	private Integer msgCoding;
+	private String ussdContent;
+	private Integer network;
 
-	public String getTimeStamp() {
-		return TimeStamp;
-	}
+    public String getTimeStamp() {
+        return timeStamp;
+    }
 
-	public void setTimeStamp(String timeStamp) {
-		TimeStamp = timeStamp;
-	}
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
 
-	public String getSessionId() {
-		return SessionId;
-	}
+    public String getSessionId() {
+        return sessionId;
+    }
 
-	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
-	}
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
 
-	public String getCpId() {
-		return CpId;
-	}
+    public String getCpId() {
+        return cpId;
+    }
 
-	public void setCpId(String cpId) {
-		CpId = cpId;
-	}
+    public void setCpId(String cpId) {
+        this.cpId = cpId;
+    }
 
-	public String getCpPassword() {
-		return CpPassword;
-	}
+    public String getCpPassword() {
+        return cpPassword;
+    }
 
-	public void setCpPassword(String cpPassword) {
-		CpPassword = cpPassword;
-	}
+    public void setCpPassword(String cpPassword) {
+        this.cpPassword = cpPassword;
+    }
 
-	public String getMSISDN() {
-		return MSISDN;
-	}
+    public String getMsisdn() {
+        return msisdn;
+    }
 
-	public void setMSISDN(String MSISDN) {
-		this.MSISDN = MSISDN;
-	}
+    public void setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
+    }
 
-	public String getServiceCode() {
-		return ServiceCode;
-	}
+    public String getServiceCode() {
+        return serviceCode;
+    }
 
-	public void setServiceCode(String serviceCode) {
-		ServiceCode = serviceCode;
-	}
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
 
-	public Integer getMsgType() {
-		return MsgType;
-	}
+    public Integer getMsgType() {
+        return msgType;
+    }
 
-	public void setMsgType(Integer msgType) {
-		MsgType = msgType;
-	}
+    public void setMsgType(Integer msgType) {
+        this.msgType = msgType;
+    }
 
-	public Integer getOpType() {
-		return OpType;
-	}
+    public Integer getOpType() {
+        return opType;
+    }
 
-	public void setOpType(Integer opType) {
-		OpType = opType;
-	}
+    public void setOpType(Integer opType) {
+        this.opType = opType;
+    }
 
-	public Integer getMsgCoding() {
-		return MsgCoding;
-	}
+    public Integer getMsgCoding() {
+        return msgCoding;
+    }
 
-	public void setMsgCoding(Integer msgCoding) {
-		MsgCoding = msgCoding;
-	}
+    public void setMsgCoding(Integer msgCoding) {
+        this.msgCoding = msgCoding;
+    }
 
-	public String getUssdContent() {
-		return UssdContent;
-	}
+    public String getUssdContent() {
+        return ussdContent;
+    }
 
-	public void setUssdContent(String ussdContent) {
-		UssdContent = ussdContent;
-	}
+    public void setUssdContent(String ussdContent) {
+        this.ussdContent = ussdContent;
+    }
 
-	public Integer getNetwork() {
-		return Network;
-	}
+    public Integer getNetwork() {
+        return network;
+    }
 
-	public void setNetwork(Integer network) {
-		Network = network;
-	}
+    public void setNetwork(Integer network) {
+        this.network = network;
+    }
 
-	public String toString(){
+    public String toString(){
         return ReflectionToStringBuilder.toString(this);
     }
 }
