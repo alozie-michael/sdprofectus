@@ -5,59 +5,60 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MtbReportRequest {
 
-    private String TimeStamp;
-	private String SessionId;
-	private String CpId;
-	private String CpPassword;
+    private String timeStamp;
+	private String sessionId;
+	private String cpId;
+	private String cpPassword;
 	@JsonProperty("MSISDN")
-	private String MSISDN;
-	private String MTB_Report;
+	private String msisdn;
+	@JsonProperty("MTB_Report")
+	private String mtbReport;
 
 	public String getTimeStamp() {
-		return TimeStamp;
+		return timeStamp;
 	}
 
 	public void setTimeStamp(String timeStamp) {
-		TimeStamp = timeStamp;
+		this.timeStamp = timeStamp;
 	}
 
 	public String getSessionId() {
-		return SessionId;
+		return sessionId;
 	}
 
 	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
+		this.sessionId = sessionId;
 	}
 
 	public String getCpId() {
-		return CpId;
+		return cpId;
 	}
 
 	public void setCpId(String cpId) {
-		CpId = cpId;
+		this.cpId = cpId;
 	}
 
 	public String getCpPassword() {
-		return CpPassword;
+		return cpPassword;
 	}
 
 	public void setCpPassword(String cpPassword) {
-		CpPassword = cpPassword;
+		this.cpPassword = cpPassword;
 	}
 
-	public String getMSISDN() {
-		return MSISDN;
+	public String getMsisdn() {
+		return msisdn;
 	}
 
-	public void setMSISDN(String MSISDN) {
-		this.MSISDN = MSISDN;
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
 	}
 
-	public String getMTB_Report() {
-		return MTB_Report;
+	public String getMtbReport() {
+		return mtbReport;
 	}
 
-	public void setMTB_Report(String MTB_Report) {
-		this.MTB_Report = MTB_Report;
+	public void setMtbReport(String mtbReport) {
+		this.mtbReport = mtbReport;
 	}
 }

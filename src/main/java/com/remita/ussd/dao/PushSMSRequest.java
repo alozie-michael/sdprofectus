@@ -4,77 +4,78 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PushSMSRequest {
 
-    private String TimeStamp;
-    private String SessionId;
-    private String CpId;
-    private String CpPassword;
+    private String timeStamp;
+    private String sessionId;
+    private String cpId;
+    private String cpPassword;
     @JsonProperty("MSISDN")
-    private String MSISDN;
-    private String ServiceCode;
-    private Integer MsgCoding;
-    private String SMSContent;
+    private String msisdn;
+    private String serviceCode;
+    private Integer msgCoding;
+    @JsonProperty("SMSContent")
+    private String smsContent;
 
     public String getTimeStamp() {
-        return TimeStamp;
+        return timeStamp;
     }
 
     public void setTimeStamp(String timeStamp) {
-        TimeStamp = timeStamp;
+        this.timeStamp = timeStamp;
     }
 
     public String getSessionId() {
-        return SessionId;
+        return sessionId;
     }
 
     public void setSessionId(String sessionId) {
-        SessionId = sessionId;
+        this.sessionId = sessionId;
     }
 
     public String getCpId() {
-        return CpId;
+        return cpId;
     }
 
     public void setCpId(String cpId) {
-        CpId = cpId;
+        this.cpId = cpId;
     }
 
     public String getCpPassword() {
-        return CpPassword;
+        return cpPassword;
     }
 
     public void setCpPassword(String cpPassword) {
-        CpPassword = cpPassword;
+        this.cpPassword = cpPassword;
     }
 
-    public String getMSISDN() {
-        return MSISDN;
+    public String getMsisdn() {
+        return msisdn;
     }
 
-    public void setMSISDN(String MSISDN) {
-        this.MSISDN = MSISDN;
+    public void setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
     }
 
     public String getServiceCode() {
-        return ServiceCode;
+        return serviceCode;
     }
 
     public void setServiceCode(String serviceCode) {
-        ServiceCode = serviceCode;
+        this.serviceCode = serviceCode;
     }
 
     public Integer getMsgCoding() {
-        return MsgCoding;
+        return msgCoding;
     }
 
     public void setMsgCoding(Integer msgCoding) {
-        MsgCoding = msgCoding;
+        this.msgCoding = msgCoding;
     }
 
-    public String getSMSContent() {
-        return SMSContent;
+    public String getSmsContent() {
+        return smsContent;
     }
 
-    public void setSMSContent(String SMSContent) {
-        this.SMSContent = SMSContent;
+    public void setSmsContent(String smsContent) {
+        this.smsContent = smsContent;
     }
 }

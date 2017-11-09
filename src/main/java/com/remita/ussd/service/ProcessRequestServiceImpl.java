@@ -3,7 +3,6 @@ package com.remita.ussd.service;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Executor;
 
 import com.remita.ussd.dao.*;
 import com.remita.ussd.object.Menus;
@@ -111,9 +110,10 @@ public class ProcessRequestServiceImpl extends Menus implements ProcessRequestSe
         return null;
     }
 
-    @Override
+    @Async
     public void abortSession(AbortRequest abortRequest) {
-        //abort session logic
+
+        map.remove(abortRequest.getSessionID());
     }
 
     @Override

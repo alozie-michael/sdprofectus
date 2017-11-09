@@ -26,13 +26,13 @@ public class PullRequestController {
         System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
         try {
             processRequestService.processRequest(pullRequest);
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
 
         pullResponse.setSessionId(pullRequest.getSessionId());
-        pullResponse.setMSISDN(pullRequest.getMSISDN());
+        pullResponse.setMsisdn(pullRequest.getMsisdn());
         pullResponse.setErrorCode("200");
         pullResponse.setErrorMsg("success");
 
@@ -46,26 +46,15 @@ public class PullRequestController {
 
         PullResponse pullResponse = new PullResponse();
 
-        Thread process = new Thread(new Runnable() {
+        try {
+            processRequestService.abortSession(abortRequest);
+        } catch (Exception e) {
 
-            @Override
-            public void run() {
-                try {
-
-                    processRequestService.abortSession(abortRequest);
-
-                } catch (Exception e) {
-
-                    e.printStackTrace();
-                }
-
-            }
-        });
-
-        process.start();
+            e.printStackTrace();
+        }
 
         pullResponse.setSessionId(abortRequest.getSessionID());
-        pullResponse.setMSISDN(abortRequest.getMSISDN());
+        pullResponse.setMsisdn(abortRequest.getMsisdn());
         pullResponse.setErrorCode("200");
         pullResponse.setErrorMsg("success");
 
@@ -77,26 +66,22 @@ public class PullRequestController {
 
         PushSMSResponse pushSMSResponse = new PushSMSResponse();
 
-        Thread process = new Thread(new Runnable() {
+        Thread process = new Thread(() -> {
+            try {
 
-            @Override
-            public void run() {
-                try {
+                processRequestService.processSMSRequest(pushSMSRequest);
 
-                    processRequestService.processSMSRequest(pushSMSRequest);
+            } catch (Exception e) {
 
-                } catch (Exception e) {
-
-                    e.printStackTrace();
-                }
-
+                e.printStackTrace();
             }
+
         });
 
         process.start();
 
         pushSMSResponse.setSessionId(pushSMSRequest.getSessionId());
-        pushSMSResponse.setMSISDN(pushSMSRequest.getMSISDN());
+        pushSMSResponse.setMsisdn(pushSMSRequest.getMsisdn());
         pushSMSResponse.setErrorCode("200");
         pushSMSResponse.setErrorMsg("success");
 
@@ -108,26 +93,22 @@ public class PullRequestController {
 
         MtbReportResponse mtbReportResponse = new MtbReportResponse();
 
-        Thread process = new Thread(new Runnable() {
+        Thread process = new Thread(() -> {
+            try {
 
-            @Override
-            public void run() {
-                try {
+                processRequestService.processMtbReport(mtbReportRequest);
 
-                    processRequestService.processMtbReport(mtbReportRequest);
+            } catch (Exception e) {
 
-                } catch (Exception e) {
-
-                    e.printStackTrace();
-                }
-
+                e.printStackTrace();
             }
+
         });
 
         process.start();
 
         mtbReportResponse.setSessionId(mtbReportRequest.getSessionId());
-        mtbReportResponse.setMSISDN(mtbReportRequest.getMSISDN());
+        mtbReportResponse.setMsisdn(mtbReportRequest.getMsisdn());
         mtbReportResponse.setErrorCode("200");
         mtbReportResponse.setErrorMsg("success");
 

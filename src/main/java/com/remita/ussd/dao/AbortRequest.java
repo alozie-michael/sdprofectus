@@ -1,59 +1,62 @@
 package com.remita.ussd.dao;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class AbortRequest {
 
-    private String TimeStamp;
-    private String SessionID;
-    private String CpId;
-    private String CpPassword;
-    private String MSISDN;
-    private String AbortReason;
+    private String timeStamp;
+    private String sessionID;
+    private String cpId;
+    private String cpPassword;
+    @JsonProperty("MSISDN")
+    private String msisdn;
+    private String abortReason;
 
     public String getTimeStamp() {
-        return TimeStamp;
+        return timeStamp;
     }
 
     public void setTimeStamp(String timeStamp) {
-        TimeStamp = timeStamp;
+        this.timeStamp = timeStamp;
     }
 
     public String getSessionID() {
-        return SessionID;
+        return sessionID;
     }
 
     public void setSessionID(String sessionID) {
-        SessionID = sessionID;
+        this.sessionID = sessionID;
     }
 
     public String getCpId() {
-        return CpId;
+        return cpId;
     }
 
     public void setCpId(String cpId) {
-        CpId = cpId;
+        this.cpId = cpId;
     }
 
     public String getCpPassword() {
-        return CpPassword;
+        return cpPassword;
     }
 
     public void setCpPassword(String cpPassword) {
-        CpPassword = cpPassword;
+        this.cpPassword = cpPassword;
     }
 
-    public String getMSISDN() {
-        return MSISDN;
+    public String getMsisdn() {
+        return msisdn;
     }
 
-    public void setMSISDN(String MSISDN) {
-        this.MSISDN = MSISDN;
+    public void setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
     }
 
     public String getAbortReason() {
-        return AbortReason;
+        return abortReason;
     }
 
     public void setAbortReason(String abortReason) {
-        AbortReason = abortReason;
+        this.abortReason = abortReason;
     }
 }

@@ -2,36 +2,40 @@ package com.remita.ussd.dao;
 
 public class PushSMSResponse {
 	
-	private String SessionId;
-	private String MSISDN;
-	private String ErrorCode;
-	private String ErrorMsg;
-	
-	public String getSessionId() {
-		return SessionId;
-	}
-	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
-	}
-	public String getMSISDN() {
-		return MSISDN;
-	}
-	public void setMSISDN(String mSISDN) {
-		MSISDN = mSISDN;
-	}
-	public String getErrorCode() {
-		return ErrorCode;
-	}
-	public void setErrorCode(String errorCode) {
-		ErrorCode = errorCode;
-	}
-	public String getErrorMsg() {
-		return ErrorMsg;
-	}
-	public void setErrorMsg(String errorMsg) {
-		ErrorMsg = errorMsg;
-	}
-	
-	
+	private String sessionId;
+	private String msisdn;
+	private String errorCode;
+	private String errorMsg;
 
+	public String getSessionId() {
+		return sessionId;
+	}
+
+	public void setSessionId(String sessionId) {
+		this.sessionId = sessionId;
+	}
+
+	public String getMsisdn() {
+		return msisdn;
+	}
+
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
+	}
+
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public String getErrorMsg() {
+		return errorMsg;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		this.errorMsg = errorMsg;
+	}
 }

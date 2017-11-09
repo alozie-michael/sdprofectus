@@ -4,34 +4,41 @@ import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 public class PullResponse {
 	
-	private String SessionId;
-	private String MSISDN;
-	private String ErrorCode;
-	private String ErrorMsg;
-	
+	private String sessionId;
+	private String msisdn;
+	private String errorCode;
+	private String errorMsg;
+
 	public String getSessionId() {
-		return SessionId;
+		return sessionId;
 	}
+
 	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
+		this.sessionId = sessionId;
 	}
-	public String getMSISDN() {
-		return MSISDN;
+
+	public String getMsisdn() {
+		return msisdn;
 	}
-	public void setMSISDN(String mSISDN) {
-		MSISDN = mSISDN;
+
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
 	}
+
 	public String getErrorCode() {
-		return ErrorCode;
+		return errorCode;
 	}
+
 	public void setErrorCode(String errorCode) {
-		ErrorCode = errorCode;
+		this.errorCode = errorCode;
 	}
+
 	public String getErrorMsg() {
-		return ErrorMsg;
+		return errorMsg;
 	}
+
 	public void setErrorMsg(String errorMsg) {
-		ErrorMsg = errorMsg;
+		this.errorMsg = errorMsg;
 	}
 
 	public String toString(){
