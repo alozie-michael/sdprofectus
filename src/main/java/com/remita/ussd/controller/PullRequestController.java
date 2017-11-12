@@ -23,7 +23,7 @@ public class PullRequestController {
 
         PullResponse pullResponse = new PullResponse();
 
-        System.out.println("current Thread = [" + Thread.currentThread().getName() + "]");
+
         try {
             processRequestService.processRequest(pullRequest);
         } catch (Exception e) {

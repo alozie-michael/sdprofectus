@@ -1,20 +1,46 @@
 package com.remita.ussd.object;
 
 import com.remita.ussd.dao.PushRequest;
+import com.remita.ussd.model.Activities;
+import com.remita.ussd.model.AirtimeTransactions;
+import com.remita.ussd.model.BillerTransactions;
+import com.remita.ussd.model.TransferTransactions;
+import com.remita.ussd.repository.ActivitiesRepository;
+import com.remita.ussd.repository.AirtimeTransactionsRepository;
+import com.remita.ussd.repository.BillerTransactionsRepository;
+import com.remita.ussd.repository.TransferTransactionsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Menus {
 
+    @Autowired
+    ActivitiesRepository activitiesRepository;
 
-    public PushRequest processTransfer(PushRequest request, int step){
+    @Autowired
+    TransferTransactionsRepository transferTransactionsRepository;
 
-        switch (step){
+    @Autowired
+    AirtimeTransactionsRepository airtimeTransactionsRepository;
+
+    @Autowired
+    BillerTransactionsRepository billerTransactionsRepository;
+
+
+    public PushRequest processTransfer(PushRequest request, Operation operation, String ussdContent){
+
+        switch (operation.getStep()){
 
             case 1:
                 request.setUssdContent(" Remita - Transfer \n\n Enter amount: \n\n 0> Home ");
                 break;
-            case 2:
+            case 2: {
+                operation.getMetaData().putIfAbsent("amount", ussdContent);
                 request.setUssdContent(" Remita - Transfer \n\n Enter recipient account: \n\n 0> Home ");
                 break;
+            }
             case 3:
                 request.setUssdContent(" Remita - Transfer \n\n Select recipient bank: \n 1> United Bank of Africa \n 2> Access Bank \n 3> Akunna Matata Bank \n\n 0> Home ");
                 break;
@@ -24,18 +50,20 @@ public class Menus {
             case 5:
                 request.setUssdContent(" Remita - Transfer \n\n Enter PIN: \n\n 0> Home ");
                 break;
-            case 6:
+            case 6: {
+                persistTransferTransactions(request, operation);
                 request.setUssdContent(" Remita - Transfer \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Home ");
                 break;
+            }
             default:
-                request.setUssdContent(" Remita - Transfer \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Transfer \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
 
         return request;
     }
 
-    public PushRequest processAirtime(PushRequest request, int step){
+    public PushRequest processAirtime(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -48,18 +76,19 @@ public class Menus {
             case 3:
                 request.setUssdContent(" Remita - Airtime \n\n Enter PIN: \n\n 0> Home  ");
                 break;
-            case 4:
+            case 4: {
+                persistAirtimeTransactions(request);
                 request.setUssdContent(" Remita - Airtime \n\n Successful. \n Your new account balance is #59,200. \n\n 0> Home ");
                 break;
+            }
             default:
-                request.setUssdContent(" Remita - Airtime \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Airtime \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processBalance(PushRequest request, int step){
+    public PushRequest processBalance(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -74,14 +103,13 @@ public class Menus {
                 break;
             }
             default:
-                request.setUssdContent(" Remita - Balance \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Balance \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processPayTSAAndBillers(PushRequest request, int step){
+    public PushRequest processPayTSAAndBillers(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -97,18 +125,19 @@ public class Menus {
             case 4:
                 request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter PIN: \n\n 0> Home  ");
                 break;
-            case 5:
+            case 5: {
+                persistBillerTransactions(request);
                 request.setUssdContent(" Remita - Pay TSA and Billers \n\n Successful. \n You just paid the sum of #59,200 to NCC. \n\n 0> Home ");
                 break;
+            }
             default:
-                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Pay TSA and Billers \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processGetLoan(PushRequest request, int step){
+    public PushRequest processGetLoan(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -128,14 +157,13 @@ public class Menus {
                 request.setUssdContent(" Remita - Get Loan \n\n Successful. \n Congratulations! Your loan has been approved and would be transferred to your 123***123/FBN account within the next 1 hour. \n\n 0> Home ");
                 break;
             default:
-                request.setUssdContent(" Remita - Get Loan \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Get Loan \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processRRR(PushRequest request, int step){
+    public PushRequest processRRR(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -151,18 +179,19 @@ public class Menus {
             case 4:
                 request.setUssdContent(" Remita - RRR \n\n Enter PIN: \n\n 0> Home  ");
                 break;
-            case 5:
+            case 5: {
+                persistBillerTransactions(request);
                 request.setUssdContent(" Remita - RRR \n\n Successful. \n You just paid the sum of #109,200 to Alozie and sons enterprise. \n\n 0> Home ");
                 break;
+            }
             default:
-                request.setUssdContent(" Remita - RRR \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - RRR \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processReceipt(PushRequest request, int step){
+    public PushRequest processReceipt(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -179,14 +208,13 @@ public class Menus {
                 request.setUssdContent(" Remita - Receipt \n\n Receipt sent. \n\n 0> Home ");
                 break;
             default:
-                request.setUssdContent(" Remita - Receipt \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Receipt \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
-
         return request;
     }
 
-    public PushRequest processRegistration(PushRequest request, int step){
+    public PushRequest processRegistration(PushRequest request, int step, String ussdContent){
 
         switch (step){
 
@@ -212,10 +240,57 @@ public class Menus {
                 request.setUssdContent(" Remita - Registration \n\n Successful. \n\n 0> Back ");
                 break;
             default:
-                request.setUssdContent(" Remita - Registration \n\n Invalid response. \n\n 0> Back ");
+                request.setUssdContent(" Remita - Registration \n\n Invalid response. \n\n 0> Home ");
                 break;
         }
 
         return request;
     }
+
+    public void persistTransferTransactions(PushRequest pushRequest, Operation operation){
+
+        String amount = operation.getMetaData().get("amount");
+
+        String createdDate = new SimpleDateFormat("yyyy/MM/dd HH.ss").format(new Date());
+        TransferTransactions transferTransactions = new TransferTransactions();
+        Activities activities = activitiesRepository.findBySessionIDContaining(pushRequest.getSessionId());
+
+        transferTransactions.setCreatedDate(createdDate);
+        transferTransactions.setMsisdn(pushRequest.getMsisdn());
+        transferTransactions.setDestinationTransactionStatus("successful");
+        transferTransactions.setTransactionAmount(amount);
+        transferTransactions.setActivities(activities);
+
+        transferTransactionsRepository.save(transferTransactions);
+    }
+
+    public void persistAirtimeTransactions(PushRequest pushRequest){
+
+        String createdDate = new SimpleDateFormat("yyyy/MM/dd HH.ss").format(new Date());
+        AirtimeTransactions airtimeTransactions = new AirtimeTransactions();
+        Activities activities = activitiesRepository.findBySessionIDContaining(pushRequest.getSessionId());
+
+        airtimeTransactions.setCreatedDate(createdDate);
+        airtimeTransactions.setMsisdn(pushRequest.getMsisdn());
+        airtimeTransactions.setDestinationTransactionStatus("successful");
+        airtimeTransactions.setActivities(activities);
+
+        airtimeTransactionsRepository.save(airtimeTransactions);
+    }
+
+    public void persistBillerTransactions(PushRequest pushRequest){
+
+        String createdDate = new SimpleDateFormat("yyyy/MM/dd HH.ss").format(new Date());
+        BillerTransactions billerTransactions = new BillerTransactions();
+        Activities activities = activitiesRepository.findBySessionIDContaining(pushRequest.getSessionId());
+
+        billerTransactions.setCreatedDate(createdDate);
+        billerTransactions.setTransactionAmount("20,000");
+        billerTransactions.setBillerName("Federal university of technology, owerri");
+        billerTransactions.setBillerServiceName("School fees");
+        billerTransactions.setActivities(activities);
+
+        billerTransactionsRepository.save(billerTransactions);
+    }
+
 }

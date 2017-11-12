@@ -6,8 +6,7 @@ public class Operation {
 
     private Integer action;
     private Integer step;
-
-    private Map<String, Object> metaData;
+    private Map<String, String> metaData;
 
     public Integer getAction() {
         return action;
@@ -25,11 +24,11 @@ public class Operation {
         this.step = step;
     }
 
-    public Map<String, Object> getMetaData() {
+    public Map<String, String> getMetaData() {
         return metaData;
     }
 
-    public void setMetaData(Map<String, Object> metaData) {
+    public void setMetaData(Map<String, String> metaData) {
         this.metaData = metaData;
     }
 }
