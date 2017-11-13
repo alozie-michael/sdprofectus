@@ -51,7 +51,6 @@ public class Menus {
                 request.setUssdContent(" Remita - Transfer \n\n Enter PIN: \n\n 0> Home ");
                 break;
             case 6: {
-                persistTransferTransactions(request, operation);
                 request.setUssdContent(" Remita - Transfer \n\n Successful. \n Your new account balance is #300,000. \n\n 0> Home ");
                 break;
             }
@@ -77,7 +76,6 @@ public class Menus {
                 request.setUssdContent(" Remita - Airtime \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 4: {
-                persistAirtimeTransactions(request);
                 request.setUssdContent(" Remita - Airtime \n\n Successful. \n Your new account balance is #59,200. \n\n 0> Home ");
                 break;
             }
@@ -126,7 +124,6 @@ public class Menus {
                 request.setUssdContent(" Remita - Pay TSA and Billers \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 5: {
-                persistBillerTransactions(request);
                 request.setUssdContent(" Remita - Pay TSA and Billers \n\n Successful. \n You just paid the sum of #59,200 to NCC. \n\n 0> Home ");
                 break;
             }
@@ -180,7 +177,6 @@ public class Menus {
                 request.setUssdContent(" Remita - RRR \n\n Enter PIN: \n\n 0> Home  ");
                 break;
             case 5: {
-                persistBillerTransactions(request);
                 request.setUssdContent(" Remita - RRR \n\n Successful. \n You just paid the sum of #109,200 to Alozie and sons enterprise. \n\n 0> Home ");
                 break;
             }
