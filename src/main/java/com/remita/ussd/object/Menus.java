@@ -37,7 +37,7 @@ public class Menus {
                 request.setUssdContent(" Remita - Transfer \n\n Enter amount: \n\n 0> Home ");
                 break;
             case 2: {
-                operation.getMetaData().putIfAbsent("amount", ussdContent);
+                //operation.getMetaData().putIfAbsent("amount", ussdContent);
                 request.setUssdContent(" Remita - Transfer \n\n Enter recipient account: \n\n 0> Home ");
                 break;
             }
