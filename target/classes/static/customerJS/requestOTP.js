@@ -3,7 +3,8 @@ $('#requestOTP').on('click', function (e) {
     e.preventDefault();
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/api/v1/remita/sd/requestOtp",
+        //url: "http://localhost:8080/api/v1/remita/sd/requestOtp",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/requestOtp",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
