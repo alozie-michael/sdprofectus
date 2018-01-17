@@ -15,7 +15,7 @@ $(function ($) {
             $.ajax({
                 type: "POST",
                 //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-                url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
+                url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/stopMandate",
                 dataType: 'json',
                 contentType: 'application/json',
                 crossDomain: true,
@@ -74,7 +74,7 @@ $(function ($) {
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/sd/getBanks",
+            url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/getBanks",
             //url: "http://localhost:8080/api/v1/remita/sd/getBanks",
             contentType: 'application/json',
             crossDomain: true,
@@ -114,7 +114,8 @@ $('#setup').on('click', function (e) {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/api/v1/remita/sd/mandateSetup",
+        //url: "http://localhost:8080/api/v1/remita/sd/mandateSetup",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/mandateSetup",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
@@ -141,7 +142,7 @@ $('#setup').on('click', function (e) {
                 //success
                 $.ajax({
                     type: "GET",
-                    url: "http://localhost:8080/api/v1/remita/sd/getMandates",
+                    url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/getMandates",
                     //url: "http://localhost:8080/api/v1/remita/sd/getMandates",
                     contentType: 'application/json',
                     crossDomain: true,

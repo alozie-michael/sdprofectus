@@ -9,7 +9,8 @@ $('#validateOTP').on('click', function (e) {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/api/v1/remita/sd/validateOTP",
+        //url: "http://localhost:8080/api/v1/remita/sd/validateOTP",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/validateOTP",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,

@@ -32,7 +32,7 @@ $(function () {
 function getMandates() {
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/remita/sd/getMandates",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/getMandates",
         //url: "http://localhost:8080/api/v1/remita/sd/getMandates",
         contentType: 'application/json',
         crossDomain: true,
@@ -126,7 +126,7 @@ function getDebits() {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/remita/sd/getDebits",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/getDebits",
         //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
         contentType: 'application/json',
         crossDomain: true,

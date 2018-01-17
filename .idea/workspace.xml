@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d76d4c-a504-4c8b-995f-d6479aa5b6f9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/SDDirectDebitApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/controller/DirectDebitController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/controller/DirectDebitNotificationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/AuthParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Credentials.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/DebitInstruction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Hash512Class.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/LineItems.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateActivation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateSetup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Notification.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/RequestOtpForMandateActivation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/StopDebit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/StopMandate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/AuthParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/Bank.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/DebitInstructionResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/DebitInstructions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateActivationResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateDebits.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateSetupResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateStatusResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/Mandates.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/RequestOtpForMandateActivationResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/StopDebitResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/StopMandateResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/Bank.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/DebitInstruction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/Mandate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/BankRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/DebitInstructionRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/MandateRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/ProcessRequestService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/ProcessRequestServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/SendRequestService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/SendRequestServiceImpl.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-heroku.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-heroku.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" afterPath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,8 +83,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Mandate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/DebitInstructionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopDebitResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/bank.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/BankRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Bank.java" />
@@ -124,19 +91,21 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/css/custom.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/css/paper-dashboard.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/debitinstructions.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mandates.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/SDDirectDebitApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Credentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-heroku.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-heroku.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" />
       </list>
     </option>
   </component>
@@ -182,17 +151,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane">
@@ -212,6 +170,17 @@
               <item name="SDDirectDebit" type="616d4139:PackageViewModuleNode" />
               <item name="com" type="1f31426a:PackageElementNode" />
               <item name="remita.directdebit" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -400,12 +369,13 @@
       <workItem from="1516025360047" duration="2719000" />
       <workItem from="1516104290019" duration="6084000" />
       <workItem from="1516171664734" duration="3816000" />
-      <workItem from="1516182601587" duration="967000" />
+      <workItem from="1516182601587" duration="1553000" />
+      <workItem from="1516197125576" duration="668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256524000" />
+    <option name="totallyTimeSpent" value="257778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -423,7 +393,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12277868" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21482602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21482602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -592,20 +562,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/requestOTP.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/validateOTP.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/DebitInstruction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -718,27 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="2" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/mandates.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -757,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,14 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="156" column="44" lean-forward="false" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-heroku.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,6 +748,58 @@
         <state relative-caret-position="-4288">
           <caret line="92" column="60" lean-forward="false" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-heroku.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="149" column="34" lean-forward="true" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1313">
+          <caret line="104" column="78" lean-forward="false" selection-start-line="104" selection-start-column="78" selection-end-line="104" selection-end-column="78" />
+          <folding>
+            <marker date="1516197667097" expanded="true" signature="4078:4103" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="222" column="32" lean-forward="true" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
+          <folding>
+            <marker date="1516197762122" expanded="true" signature="5612:5637" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
