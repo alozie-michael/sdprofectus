@@ -2,7 +2,6 @@
   <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.8/jackson-databind-2.8.8.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/lombok.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.8/jackson-databind-2.8.8-javadoc.jar!/" />
