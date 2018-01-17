@@ -1,0 +1,116 @@
+<div class="header">
+    <h4 class="title">Mandates</h4>
+    <label id="mandate-info" class="pull-right"></label>
+    <hr>
+    <div id="infoDiv" class="alert" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <span id="info-message"></span>
+    </div>
+
+</div>
+
+<div id="bank-page"></div>
+<div class="content table-responsive">
+    <div id="mandateListDiv">
+        <div class="hideTable scrollit">
+            <table class="table mandates">
+                <thead>
+                <tr>
+                    <th>Mandate ID</th>
+                    <th>Payer Name</th>
+                    <th>Telephone</th>
+                    <th>Email</th>
+                    <th>Bank</th>
+                    <th>Account Number</th>
+                    <th>Request ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Amount</th>
+                    <th>No Of Debits</th>
+                    <th>Date Created</th>
+                    <th>Date Activated</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <center>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#mandateSetupModal">
+                New Mandate
+            </button>
+        </center>
+    </div>
+
+    <div id="requestOTPDiv" class="requestOTPDiv">
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Mandate ID:</label>
+                        <input id="mandateId" type="text" class="form-control border-input" readonly/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Request ID:</label>
+                        <input id="requestId" type="text" class="form-control border-input" readonly/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group label-floating">
+                        <button id="requestOTP"
+                                class="btn btn-block form-control border-input">Request OTP</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="validateOTPDiv" class="validateOTPDiv">
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group label-floating">
+                        <span id="description1" class="control-label"></span>
+                        <input id="OTP" type="number" class="form-control border-input"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group label-floating">
+                        <span id="description2" class="control-label"></span>
+                        <input id="cardDetails" type="number" class="form-control border-input"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group label-floating">
+                        <span id="requestOTP-message" class="control-label"></span>
+                        <button id="validateOTP" class="btn btn-block form-control border-input">
+                            Activate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="customerJS/mandate.js"></script>
+<script src="customerJS/requestOTP.js"></script>
+<script src="customerJS/validateOTP.js"></script>

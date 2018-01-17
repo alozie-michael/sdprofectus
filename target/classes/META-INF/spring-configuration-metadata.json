@@ -1,0 +1,132 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd",
+      "type": "com.remita.directdebit.dao.Credentials"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.debit-instruction-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.debit-instruction-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.mandate-setup-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.mandate-setup-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.mandate-status-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.mandate-status-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.merchant-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.merchant-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.request-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.request-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.service-type-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.service-type-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.stop-debit-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.stop-debit-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.stop-mandate-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.stop-mandate-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.view-mandate-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.remita.directdebit.dao.Credentials",
+      "name": "sd.view-mandate-link",
+      "type": "java.lang.String"
+    }
+  ]
+}

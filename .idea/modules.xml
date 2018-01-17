@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/remita_USSD.iml" filepath="$PROJECT_DIR$/remita_USSD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SDDirectDebit.iml" filepath="$PROJECT_DIR$/SDDirectDebit.iml" />
     </modules>
   </component>
 </project>
