@@ -2,9 +2,297 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d76d4c-a504-4c8b-995f-d6479aa5b6f9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mindrot_jbcrypt_0_3m.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/controller/OTPController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dao/AuthParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dao/OtpCredentials.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dao/RequestOtp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dao/ValidateOTP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dto/AuthParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dto/Data.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dto/RequestOtpResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dto/ValidateOtpResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpProcessRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpProcessRequestServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpSendRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpSendRequestServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/controller/RpgController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/BulkPayment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/BulkPaymentInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/Encryptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/PaymentDetails.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/PaymentStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/RpgCredentials.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/SinglePayment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/AccountEnquiryResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/Banks.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/BulkPaymentResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/Data.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/GetBanksResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/PaymentStatusResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/SinglePaymentResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/model/Account.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/repository/AccountRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgProcessRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgProcessRequestServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgSendRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgSendRequestServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/controller/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/ChangePassword.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/LoginDetails.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dto/Data.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dto/UserResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/RemovedUser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/UserLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/UserProfile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/repository/RemovedUserRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/repository/UserRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/service/UserProcessRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/service/UserProcessRequestServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/MandateRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/myJS.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/user.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/MandateRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/debitinstructions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/bootstrap-datepicker3.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/paper-dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/css/themify-icons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/fonts/themify.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/fonts/themify.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/fonts/themify.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/fonts/themify.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/Preloader_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/apple-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/faces/face-0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/faces/face-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/faces/face-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/faces/face-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/logos.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/new_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/img/tim_80x80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-checkbox-radio.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-datepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-notify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/js/paper-dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper-dashboard.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_checkbox-radio.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_footers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_inputs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_misc.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_navbars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_responsive.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_sidebar-and-main-panel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_inputs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_navbars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_sidebar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_transparency.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/generalassets/sass/paper/mixins/_vendor-prefixes.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/mandates.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/SDDirectDebitApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/controller/DirectDebitController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/controller/DirectDebitNotificationController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/AuthParams.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Credentials.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/DebitInstruction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Hash512Class.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/LineItems.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateActivation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateSetup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/MandateStatus.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/Notification.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/RequestOtpForMandateActivation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/StopDebit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dao/StopMandate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/AuthParams.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/Bank.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/DebitInstructionResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/DebitInstructions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateActivationResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateDebits.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateSetupResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/MandateStatusResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/Mandates.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/RequestOtpForMandateActivationResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/StopDebitResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/dto/StopMandateResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/Bank.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/DebitInstruction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/model/Mandate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/BankRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/DebitInstructionRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/repository/MandateRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/ProcessRequestService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/ProcessRequestServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/SendRequestService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/remita/directdebit/service/SendRequestServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/debitinstructions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/bootstrap-datepicker3.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/paper-dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/css/themify-icons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/fonts/themify.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/fonts/themify.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/fonts/themify.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/fonts/themify.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/Preloader_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/apple-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/faces/face-0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/faces/face-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/faces/face-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/faces/face-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/logos.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/new_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/img/tim_80x80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/bootstrap-checkbox-radio.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/bootstrap-datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/bootstrap-datepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/bootstrap-notify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/js/paper-dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper-dashboard.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_checkbox-radio.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_footers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_inputs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_misc.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_navbars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_responsive.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_sidebar-and-main-panel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_inputs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_labels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_navbars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_sidebar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_transparency.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/generalassets/sass/paper/mixins/_vendor-prefixes.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/mandates.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_1_5_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SDDirectDebit.iml" afterPath="$PROJECT_DIR$/SolutionsDelivery.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/SDDirectDebitApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/SolutionsDeliveryApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/controller/DirectDebitController.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/controller/DirectDebitController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/controller/DirectDebitNotificationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/controller/DirectDebitNotificationController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/AuthParams.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/AuthParams.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Credentials.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/DirectDebitCredentials.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/DebitInstruction.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/DebitInstruction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Hash512Class.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/Hash512Class.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/LineItems.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/LineItems.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateActivation.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/MandateActivation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateSetup.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/MandateSetup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/MandateStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Notification.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/Notification.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/RequestOtpForMandateActivation.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/RequestOtpForMandateActivation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/StopDebit.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/StopDebit.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/StopMandate.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/StopMandate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/AuthParams.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/AuthParams.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/Bank.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructionResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/DebitInstructionResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructions.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/DebitInstructions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateActivationResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateActivationResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateDebits.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateDebits.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateSetupResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateSetupResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateStatusResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateStatusResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Mandates.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/Mandates.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/RequestOtpForMandateActivationResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/RequestOtpForMandateActivationResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopDebitResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/StopDebitResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopMandateResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/StopMandateResponse.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/model/Bank.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/DebitInstruction.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/model/DebitInstruction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Mandate.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/model/Mandate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/BankRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/BankRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/DebitInstructionRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/DebitInstructionRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestService.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestService.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitSendRequestService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitSendRequestServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-heroku.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-heroku.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" afterPath="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-heroku.properties" afterPath="$PROJECT_DIR$/target/classes/application-heroku.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-local.properties" afterPath="$PROJECT_DIR$/target/classes/application-local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/customerJS/debit.js" afterPath="$PROJECT_DIR$/target/classes/static/customerJS/debit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/customerJS/mandate.js" afterPath="$PROJECT_DIR$/target/classes/static/customerJS/mandate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/customerJS/requestOTP.js" afterPath="$PROJECT_DIR$/target/classes/static/customerJS/requestOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/customerJS/validateOTP.js" afterPath="$PROJECT_DIR$/target/classes/static/customerJS/validateOTP.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/index.html" afterPath="$PROJECT_DIR$/target/classes/static/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +302,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf />
   </component>
@@ -22,6 +321,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -34,10 +334,17 @@
       <find>input</find>
       <find>table</find>
       <find>datepicker</find>
+      <find>AESold</find>
+      <find>select</find>
+      <find>selected</find>
+      <find>selectpicker</find>
+      <find>bank</find>
+      <find>sele</find>
     </findStrings>
     <dirStrings>
       <dir>C:\workspace\SDDirectDebit</dir>
       <dir>C:\workspace\SDDirectDebit\src\main\resources\static</dir>
+      <dir>C:\workspace\SDDirectDebit\src\main\resources\static\js</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -51,57 +358,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/StopMandate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Notification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/LineItems.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/controller/DirectDebitNotificationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Hash512Class.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/MandateRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateStatusResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customer/debitinstructions.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customer/customerJS/mandate.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customer/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customer/mandates.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Mandates.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructionResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/DebitInstruction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateDebits.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/ValidateOTP.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/activateMandate.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/RequestOtpForMandateActivation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateActivation.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/requestOTP.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/validateOTP.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopMandateResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Mandate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/DebitInstructionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopDebitResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/BankRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/controller/DirectDebitController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/css/custom.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/css/paper-dashboard.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/debitinstructions.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/mandates.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/SDDirectDebitApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Credentials.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/dto/Data.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpProcessRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgProcessRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/UserProfile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpSendRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgSendRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgSendRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/controller/RpgController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/SinglePayment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dto/UserResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/directdebit/custom.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/controller/DirectDebitController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/otp/custom.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dao/RpgCredentials.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/service/RpgProcessRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/rpg/custom.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/dto/Data.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/custom.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/RemovedUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/repository/RemovedUserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/service/UserProcessRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/ChangePassword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/LoginDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/model/UserLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/service/UserProcessRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/AuthParams.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/config/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/DebitInstructionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/MandateRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/BankRepository.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitSendRequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/users.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/custom.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/custom.min.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/home.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/rpg.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/otp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-heroku.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/directdebit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/user/user.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/rpg/rpg.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/otp/otp.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/login/login.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/directdebit/directdebit.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/myJS.js" />
       </list>
     </option>
   </component>
@@ -146,30 +453,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
-              <item name="SDDirectDebit" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
-              <item name="SDDirectDebit" type="616d4139:PackageViewModuleNode" />
-              <item name="com" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
-              <item name="SDDirectDebit" type="616d4139:PackageViewModuleNode" />
-              <item name="com" type="1f31426a:PackageElementNode" />
-              <item name="remita.directdebit" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,35 +460,50 @@
               <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDDirectDebit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDDirectDebit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
+              <item name="SolutionsDelivery" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
+              <item name="SolutionsDelivery" type="616d4139:PackageViewModuleNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="SDDirectDebit" type="58d84e3e:PackageViewProjectNode" />
+              <item name="SolutionsDelivery" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="SDDirectDebit" type="cbb8eebc:String" user="SDDirectDebit" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="web.server" />
@@ -218,24 +516,28 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
+    <property name="SearchEverywhereHistoryKey" value="custom&#9;FILE&#9;file://C:/workspace/SDDirectDebit/src/main/resources/static/js/custom.min.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\SDDirectDebit\src\main\resources" />
-      <recent name="C:\workspace\SDDirectDebit\src\main\resources\static\customerJS" />
-      <recent name="C:\workspace\SDDirectDebit\src\main\resources\static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.remita.directdebit.repository" />
-      <recent name="com.remita.directdebit.controller" />
-      <recent name="com.remita.directdebit.dao" />
-      <recent name="com.remita.directdebit.dto" />
-      <recent name="com.remita.directdebit.service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\SDDirectDebit\src\main\resources\static\generalassets\js" />
       <recent name="C:\workspace\SDDirectDebit\src\main\resources\static\customerJS" />
       <recent name="C:\workspace\SDDirectDebit\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.solutionsdelivery.directdebit.repository" />
+      <recent name="com.solutionsdelivery.User.repository" />
+      <recent name="com.solutionsdelivery.User.model" />
+      <recent name="com.solutionsdelivery.User.dto" />
+      <recent name="com.solutionsdelivery.User.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\SDDirectDebit\src\main\resources\static" />
+      <recent name="C:\workspace\SDDirectDebit\src\main\resources\static\js" />
+      <recent name="C:\workspace\SDDirectDebit\src\main\java\com\solutionsdelivery\RPG\dao" />
+      <recent name="C:\workspace\SDDirectDebit\src\main\java\com\solutionsdelivery\User" />
+      <recent name="C:\workspace\SDDirectDebit\src\main\java\com\solutionsdelivery\User\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,18 +552,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SDDirectDebitApplication">
-    <configuration name="SDDirectDebitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.SolutionsDeliveryApplication">
+    <configuration name="AESold" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.remita.directdebit.*" />
+          <option name="PATTERN" value="com.solutionsdelivery.RPG.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.remita.directdebit.SDDirectDebitApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.solutionsdelivery.RPG.dao.AESold" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SolutionsDelivery" />
+      <envs />
+    </configuration>
+    <configuration name="All in SolutionsDelivery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="SolutionsDelivery" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Encryptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.solutionsdelivery.RPG.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.solutionsdelivery.RPG.dao.Encryptor" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SolutionsDelivery" />
+      <envs />
+    </configuration>
+    <configuration name="SDDirectDebit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SolutionsDeliveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.solutionsdelivery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solutionsdelivery.SolutionsDeliveryApplication" />
       <option name="ACTIVE_PROFILES" value="local" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="SDDirectDebit" />
+      <module name="SolutionsDelivery" />
+      <envs />
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SolutionsDelivery" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -357,14 +734,28 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.SDDirectDebit" />
+      <item index="2" class="java.lang.String" itemvalue="Application.AESold" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Encryptor" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in SolutionsDelivery" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.SolutionsDeliveryApplication" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.SDDirectDebitApplication" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.SolutionsDeliveryApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Encryptor" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in SolutionsDelivery" />
+        <item index="3" class="java.lang.String" itemvalue="Application.AESold" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -389,74 +780,87 @@
       <workItem from="1516197125576" duration="668000" />
       <workItem from="1516197970609" duration="1835000" />
       <workItem from="1516209772003" duration="1338000" />
+      <workItem from="1516261944923" duration="64233000" />
+      <workItem from="1516383655938" duration="6414000" />
+      <workItem from="1516425379133" duration="6119000" />
+      <workItem from="1516652556695" duration="4144000" />
+      <workItem from="1516691191363" duration="450000" />
+      <workItem from="1516723676828" duration="2104000" />
+      <workItem from="1516726677926" duration="60346000" />
+      <workItem from="1517146788087" duration="36411000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_SolutionsDelivery - 2018.01.19 at 13h 02m 41s.xml">
+      <configuration name="All in SolutionsDelivery" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260951000" />
+    <option name="totallyTimeSpent" value="441172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49434572" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6365105" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36672053" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46042004" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12277868" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32526475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6365105" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49434572" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41195476" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41518578" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12277868" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19288956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -467,346 +871,448 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/StopDebit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/MandateRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dashboard.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/employment.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Mandates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructionResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/DebitInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/DebitInstructions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/MandateDebits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/LineItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/MandateActivation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/AuthParams.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/dao/ChangePassword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/RequestOtpForMandateActivation.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.3.RELEASE/spring-boot-autoconfigure-1.5.3.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="-3271">
+          <caret line="92" column="13" lean-forward="false" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopMandateResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateSetupResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/AuthParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/DebitInstructionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/StopDebitResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/requestOTP.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/validateOTP.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/DebitInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Bank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/model/Mandate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/repository/BankRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dto/Bank.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/AuthParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/MandateActivation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="153">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/controller/DirectDebitController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dao/RequestOtpForMandateActivation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/jquery-1.10.2.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/controller/DirectDebitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="889" column="25" lean-forward="false" selection-start-line="889" selection-start-column="25" selection-end-line="889" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/RequestOtpForMandateActivationResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="1" lean-forward="false" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state relative-caret-position="238">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-datepicker.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/OTP/service/OtpSendRequestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="65" column="59" lean-forward="false" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/css/datepicker.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/MandateActivationResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="114" column="15" lean-forward="true" selection-start-line="114" selection-start-column="15" selection-end-line="114" selection-end-column="15" />
+        <state relative-caret-position="136">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/RPG/repository/AccountRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/bootstrap-datepicker.min.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="87" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="87" />
+        <state relative-caret-position="153">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/debitinstructions.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/dto/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/demo.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/css/paper-dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5697">
-          <caret line="1694" column="17" lean-forward="false" selection-start-line="1694" selection-start-column="17" selection-end-line="1694" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mandates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.3.RELEASE/spring-boot-1.5.3.RELEASE-sources.jar!/org/springframework/boot/context/properties/EnableConfigurationProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/SDDirectDebitApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/SendRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4193">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/service/ProcessRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="156" column="44" lean-forward="false" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/remita/directdebit/dao/Credentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html" />
+    <entry file="uml://SpringLocalModels/module=SolutionsDelivery">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>module=SolutionsDelivery</OriginalElement>
+          <nodes>
+            <node x="" y="">module=SolutionsDelivery</node>
+            <node x="" y="">fileset=SolutionsDelivery/SolutionsDeliveryApplication</node>
+            <node x="" y="">com.solutionsdelivery.SolutionsDeliveryApplication</node>
+            <node x="" y="">com.solutionsdelivery.config.SecurityConfiguration</node>
+            <node x="" y="">org.springframework.data.jpa.repository.config.EnableJpaRepositories</node>
+            <node x="" y="">org.springframework.scheduling.annotation.EnableAsync</node>
+            <node x="" y="">org.springframework.boot.context.properties.EnableConfigurationProperties</node>
+            <node x="" y="">org.springframework.boot.autoconfigure.SpringBootApplication</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8896734333627537" x="557.0" y="130.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/config/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/SolutionsDeliveryApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4288">
-          <caret line="92" column="60" lean-forward="false" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
+        <state relative-caret-position="165">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/mandate.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/DebitInstructionRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
-          <caret line="149" column="34" lean-forward="true" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/debit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1313">
-          <caret line="104" column="78" lean-forward="false" selection-start-line="104" selection-start-column="78" selection-end-line="104" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/requestOTP.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/MandateRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/customerJS/validateOTP.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/repository/BankRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+        <state relative-caret-position="187">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/generalassets/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitProcessRequestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="132" column="34" lean-forward="true" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+        <state relative-caret-position="85">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-local.properties">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        <state relative-caret-position="272">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/directdebit/service/DirectDebitSendRequestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3404">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solutionsdelivery/User/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-heroku.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/spinners.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2873">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7568">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="2099" column="3" lean-forward="false" selection-start-line="2099" selection-start-column="2" selection-end-line="2099" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/plugins/jqueryui/external/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="8973" column="0" lean-forward="false" selection-start-line="8973" selection-start-column="0" selection-end-line="8973" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/plugins/bootstrap-select/bootstrap-select.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="75" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+          <folding>
+            <element signature="e#219#801#0" expanded="false" />
+            <element signature="e#899#1355#0" expanded="false" />
+            <element signature="e#1714#1758#0" expanded="false" />
+            <element signature="e#1803#1898#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="540" column="7" lean-forward="true" selection-start-line="540" selection-start-column="7" selection-end-line="540" selection-end-column="7" />
+          <folding>
+            <element signature="e#22821#22828#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/rpg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="37" column="74" lean-forward="false" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/otp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="103" column="30" lean-forward="true" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/directdebit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="176" column="17" lean-forward="false" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/user/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-452">
+          <caret line="120" column="26" lean-forward="true" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/rpg/rpg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/otp/otp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="27" lean-forward="true" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/directdebit/directdebit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1268">
+          <caret line="421" column="10" lean-forward="false" selection-start-line="421" selection-start-column="10" selection-end-line="421" selection-end-column="10" />
+          <folding>
+            <marker date="1517259281886" expanded="true" signature="15058:15083" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/myJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding>
+            <element signature="e#127#329#0" expanded="false" />
+            <element signature="e#441#569#0" expanded="false" />
+            <element signature="e#1232#5587#0" expanded="false" />
+            <element signature="e#5614#9592#0" expanded="false" />
+            <element signature="e#9618#11436#0" expanded="false" />
+            <element signature="e#9636#11427#0" expanded="false" />
+            <element signature="e#11491#11578#0" expanded="false" />
+            <element signature="e#11653#14171#0" expanded="false" />
+            <element signature="e#14220#14343#0" expanded="false" />
+            <marker date="1517259443478" expanded="true" signature="6429:6454" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -862,7 +1368,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|SDDirectDebit</last-edited>
+          <last-edited>SolutionsDelivery</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

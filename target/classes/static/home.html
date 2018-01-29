@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logos.png">
+    <title>SD - SandBox</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/green.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+</head>
+
+<body class="fix-header card-no-border">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon -->
+                    <img src="assets/images/logos.png" class="light-logo" alt="homepage"/> </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto mt-md-0">
+                    <!-- This is  -->
+                    <!--<li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>-->
+                    <!--<li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>-->
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+
+                    <!-- ============================================================== -->
+                    <!-- Messages -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- End Messages -->
+                    <!-- ============================================================== -->
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <!-- ============================================================== -->
+                    <!-- Comment -->
+                    <!-- ============================================================== -->
+                    <!-- Messages -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="2"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                                class="mdi mdi-email"></i>
+                            <div class="notify"><span class="heartbit"></span> <span class="point"></span></div>
+                        </a>
+                        <div class="dropdown-menu mailbox dropdown-menu-right scale-up" aria-labelledby="2">
+                            <ul>
+                                <li>
+                                    <div class="drop-title">You have 4 new messages</div>
+                                </li>
+                                <li>
+                                    <div class="message-center">
+                                        <!-- Message -->
+                                        <a href="#">
+                                            <div class="user-img"><img src="assets/images/users/1.jpg" alt="user"
+                                                                       class="img-circle"> <span
+                                                    class="profile-status online pull-right"></span></div>
+                                            <div class="mail-contnet">
+                                                <h5>Pavan kumar</h5> <span
+                                                    class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all
+                                        e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <!-- End Messages -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Profile -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                src="assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
+                        <div class="dropdown-menu dropdown-menu-right scale-up">
+                            <ul class="dropdown-user">
+                                <li>
+                                    <div class="dw-user-box">
+                                        <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-text">
+                                            <h4><span id="userName"></span></h4>
+                                            <p class="text-muted" id="userEmail"></p><a href="#"
+                                                                                        class="btn btn-rounded btn-danger btn-sm">View
+                                            Profile</a></div>
+                                    </div>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a id="changePasswordBtn"><i class="ti-settings"></i> Change Password</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a class="logoutBtn"><i class="fa fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <!-- Language -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- User profile -->
+            <div class="user-profile">
+
+            </div>
+            <!-- End User profile text-->
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap hide">PERSONAL</li>
+                    <li><a class="waves-effect waves-dark active" href="directdebit.html" aria-expanded="true"><i
+                            class="mdi mdi-laptop-windows"></i><span class="hide-menu">Direct Debit</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="rpg.html" aria-expanded="true"><i
+                            class="mdi mdi-launch"></i><span class="hide-menu">RPG</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="otp.html" aria-expanded="true"><i
+                            class="mdi mdi-bullseye"></i><span class="hide-menu">OTP</span></a>
+                    </li>
+                    <li><a class="waves-effect waves-dark" href="users.html" aria-expanded="true"><i
+                            class="fa fa-user-circle-o"></i><span class="hide-menu">Users</span></a></li>
+
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+        <!-- Bottom points-->
+        <div class="sidebar-footer">
+            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+            <!-- item--><a class="logoutBtn" data-toggle="tooltip" title="Logout"><i
+                class="mdi mdi-power"></i></a></div>
+        <!-- End Bottom points-->
+    </aside>       <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+            <div id="myContent">
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--Mandate Setuo Modal -->
+    <div id="mandateSetupModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Setup Mandate</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels m-t-40">
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="payerName" class="control-label">Payer Name:</label>
+                                    <input id="payerName" type="text" class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="payerEmail" class="control-label">Email:</label>
+                                    <input id="payerEmail" type="email"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="payerPhone" class="control-label">Telephone:</label>
+                                    <input id="payerPhone" type="text" class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="payerBankCode" class="control-label">Bank:</label>
+                                    <select id="payerBankCode"
+                                            class="ages border-input form-control" required>
+                                        <option value=""></option>
+                                        <option value="044">ACCESS BANK PLC</option>
+                                        <option value="000">CBN</option>
+                                        <option value="023">CITI BANK</option>
+                                        <option value="063">DIAMOND BANK PLC</option>
+                                        <option value="050">ECOBANK NIGERIA PLC</option>
+                                        <option value="070">FIDELITY BANK PLC</option>
+                                        <option value="011">FIRST BANK OF NIGERIA PLC</option>
+                                        <option value="214">FIRST CITY MONUMENT BANK PLC</option>
+                                        <option value="058">GUARANTY TRUST BANK PLC</option>
+                                        <option value="030">HERITAGE BANK</option>
+                                        <option value="301">JAIZ BANK</option>
+                                        <option value="580">JUBILEE LIFE</option>
+                                        <option value="082">KEYSTONE BANK</option>
+                                        <option value="101">PROVIDOUS BANK</option>
+                                        <option value="076">SKYE BANK PLC</option>
+                                        <option value="039">STANBIC-IBTC BANK PLC</option>
+                                        <option value="068">STANDARD CHARTERED</option>
+                                        <option value="232">STERLING BANK PLC</option>
+                                        <option value="032">UNION BANK OF NIGERIA PLC</option>
+                                        <option value="033">UNITED BANK FOR AFRICA PLC</option>
+                                        <option value="215">UNITY BANK PLC</option>
+                                        <option value="035">WEMA BANK PLC</option>
+                                        <option value="057">ZENITH BANK PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="payerAccount" class="control-label">Account No:</label>
+                                    <input id="payerAccount" type="text"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="amount" class="control-label">Amount:</label>
+                                    <input id="amount" type="number" class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="startDate" class="control-label">Start Date:</label>
+                                    <input id="startDate" class="form-control border-input selectDate"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="endDate" class="control-label">End Date:</label>
+                                    <input id="endDate" class="form-control border-input selectDate"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="maxNoOfDebits" class="control-label">Max Number of Debits:</label>
+                                    <input id="maxNoOfDebits" type="number"
+                                           class="form-control border-input" required/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="setup" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Pass Debit Modal -->
+    <div id="passDebitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Pass Debit</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels m-t-40">
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <span class="control-label">Mandate ID:</span>
+                                    <input id="debitMandateId" type="text" class="form-control border-input"
+                                           readonly/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="totalAmount" class="control-label">Amount:</label>
+                                    <input id="totalAmount" type="email"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="passDebit" class="btn btn-primary">Debit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Pass Debit Modal -->
+    <div id="changePasswordModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Change Password</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels m-t-40">
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="oldPassword" class="control-label">Old Password:</label>
+                                    <input id="oldPassword" type="password" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="newPassword" class="control-label">New Password:</label>
+                                    <input id="newPassword" type="password"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="retypeNewPassword" class="control-label">Retype New Password:</label>
+                                    <input id="retypeNewPassword" type="password"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="passinfoDiv" class="alert" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <span id="passinfo-message"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="changePassword" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<!--<div class="right-sidebar">
+    <div class="slimscrollright">
+        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span>
+        </div>
+        <div class="r-panel-body">
+            <ul id="themecolors" class="m-t-20">
+                <li><b>With Light sidebar</b></li>
+                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+            </ul>
+            <ul class="m-t-20 chatonline">
+                <li><b>Chat option</b></li>
+                <li>
+                    <a href="javascript:void(0)"><img src="assets/images/users/1.jpg" alt="user-img"
+                                                      class="img-circle"> <span>Varun Dhavan <small
+                            class="text-success">online</small></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+<footer class="footer"> SD - Sandbox</footer>
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!--<script src="assets/plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>-->
+
+
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<!--Custom JavaScript -->
+<script src="js/myJS.js"></script>
+<script src="js/custom.min.js"></script>
+
+<!-- This is data table -->
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+<!-- Date Picker Plugin JavaScript -->
+<script src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<!-- Date range Plugin JavaScript -->
+<script src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<!--<script type="text/javascript" src="assets/plugins/multiselect/js/jquery.multi-select.js"></script>-->
+<!-- end - This is for export functionality only -->
+<script>
+    $(document).ready(function () {
+//        $('.selectpicker').selectpicker();
+    });
+
+    $('.myTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: []
+    });
+
+    jQuery('.selectDate').datepicker({
+        format: 'dd/mm/yyyy',
+        todayHighlight: true,
+        toggleActive: true
+    });
+</script>
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>

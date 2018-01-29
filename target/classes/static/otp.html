@@ -1,0 +1,131 @@
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">OTP</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">OTP</li>
+        </ol>
+    </div>
+
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <!-- column -->
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="infoDiv" class="alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <span id="info-message"></span>
+                </div>
+                <div id="requestOTPDiv">
+                    <h4>Request OTP</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Account No:</label>
+                                    <input id="accountNo" type="number" class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Bank:</label>
+                                    <select id="bank" class="form-control border-input"
+                                            required>
+                                        <option value=""></option>
+                                        <option value="044">ACCESS BANK PLC</option>
+                                        <option value="000">CBN</option>
+                                        <option value="023">CITI BANK</option>
+                                        <option value="063">DIAMOND BANK PLC</option>
+                                        <option value="050">ECOBANK NIGERIA PLC</option>
+                                        <option value="070">FIDELITY BANK PLC</option>
+                                        <option value="011">FIRST BANK OF NIGERIA PLC</option>
+                                        <option value="214">FIRST CITY MONUMENT BANK PLC</option>
+                                        <option value="058">GUARANTY TRUST BANK PLC</option>
+                                        <option value="030">HERITAGE BANK</option>
+                                        <option value="301">JAIZ BANK</option>
+                                        <option value="580">JUBILEE LIFE</option>
+                                        <option value="082">KEYSTONE BANK</option>
+                                        <option value="101">PROVIDOUS BANK</option>
+                                        <option value="076">SKYE BANK PLC</option>
+                                        <option value="039">STANBIC-IBTC BANK PLC</option>
+                                        <option value="068">STANDARD CHARTERED</option>
+                                        <option value="232">STERLING BANK PLC</option>
+                                        <option value="032">UNION BANK OF NIGERIA PLC</option>
+                                        <option value="033">UNITED BANK FOR AFRICA PLC</option>
+                                        <option value="215">UNITY BANK PLC</option>
+                                        <option value="035">WEMA BANK PLC</option>
+                                        <option value="057">ZENITH BANK PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <button id="requestOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Request OTP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="validateOTPDiv" class="hideDiv">
+                    <h4>Validate OTP</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label id="description1" class="control-label"></label>
+                                    <input id="OTP" type="number" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label id="description2" class="control-label"></label>
+                                    <input id="cardDetails" type="number" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <span id="requestOTP-message" class="control-label"></span>
+                                    <button id="validateOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Validate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<script src="js/otp/otp.js"></script>

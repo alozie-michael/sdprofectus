@@ -1,0 +1,266 @@
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">RPG</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">RPG</li>
+        </ol>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body" style="padding-bottom: 30px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button id="showAddAccount"
+                                class="btn btn-block btn-inverse waves-effect waves-light"
+                                style="margin-top: 20px; font-size: 18px;">Add Account
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="showSinglePayment" class="btn btn-block waves-effect waves-light"
+                                style="margin-top: 20px; font-size: 18px;">Single payment
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="showBulkPayment" class="btn btn-block waves-effect waves-light"
+                                style="margin-top: 20px; font-size: 18px;">Bulk Payment
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button id="showPaymentStatus" class="btn btn-block waves-effect waves-light"
+                                style="margin-top: 20px; font-size: 18px;">Payment Status
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="infoDiv" class="alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <span id="info-message"></span>
+                </div>
+                <div id="requestOTPDiv">
+                    <h4>Add Account</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="accountNo" class="control-label">Account Number:</label>
+                                    <input id="accountNo" type="text" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="bank" class="control-label">Bank:</label>
+                                    <select id="bank" class="form-control border-input"
+                                            required>
+                                        <option value=""></option>
+                                        <option value="044">ACCESS BANK PLC</option>
+                                        <option value="000">CBN</option>
+                                        <option value="023">CITI BANK</option>
+                                        <option value="063">DIAMOND BANK PLC</option>
+                                        <option value="050">ECOBANK NIGERIA PLC</option>
+                                        <option value="070">FIDELITY BANK PLC</option>
+                                        <option value="011">FIRST BANK OF NIGERIA PLC</option>
+                                        <option value="214">FIRST CITY MONUMENT BANK PLC</option>
+                                        <option value="058">GUARANTY TRUST BANK PLC</option>
+                                        <option value="030">HERITAGE BANK</option>
+                                        <option value="301">JAIZ BANK</option>
+                                        <option value="580">JUBILEE LIFE</option>
+                                        <option value="082">KEYSTONE BANK</option>
+                                        <option value="101">PROVIDOUS BANK</option>
+                                        <option value="076">SKYE BANK PLC</option>
+                                        <option value="039">STANBIC-IBTC BANK PLC</option>
+                                        <option value="068">STANDARD CHARTERED</option>
+                                        <option value="232">STERLING BANK PLC</option>
+                                        <option value="032">UNION BANK OF NIGERIA PLC</option>
+                                        <option value="033">UNITED BANK FOR AFRICA PLC</option>
+                                        <option value="215">UNITY BANK PLC</option>
+                                        <option value="035">WEMA BANK PLC</option>
+                                        <option value="057">ZENITH BANK PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <button id="requestOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Request OTP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="validateOTPDiv" class="hideDiv">
+                    <h4>Validate OTP</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="OTP" id="description1" class="control-label"></label>
+                                    <input id="OTP" type="number" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="cardDetails" id="description2" class="control-label"></label>
+                                    <input id="cardDetails" type="number"
+                                           class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <span id="requestOTP-message" class="control-label"></span>
+                                    <button id="validateOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Activate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="singlePayment" class="hideDiv">
+                    <h4>Single Payment</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="beneficiaryName" class="control-label">Beneficiary Name:</label>
+                                    <input id="beneficiaryName" type="text"
+                                           class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="email" class="control-label">Email:</label>
+                                    <input id="email" type="email" class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="phone" class="control-label">Telephone:</label>
+                                    <input id="phone" type="text" class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="beneficiaryAccount" class="control-label">Beneficiary Account:</label>
+                                    <input id="beneficiaryAccount" type="number"
+                                           class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="toBank" class="control-label">Bank:</label>
+                                    <select id="toBank" class="selectpicker form-control border-input"
+                                            required>
+                                        <option value=""></option>
+                                        <option value="044">ACCESS BANK PLC</option>
+                                        <option value="000">CBN</option>
+                                        <option value="023">CITI BANK</option>
+                                        <option value="063">DIAMOND BANK PLC</option>
+                                        <option value="050">ECOBANK NIGERIA PLC</option>
+                                        <option value="070">FIDELITY BANK PLC</option>
+                                        <option value="011">FIRST BANK OF NIGERIA PLC</option>
+                                        <option value="214">FIRST CITY MONUMENT BANK PLC</option>
+                                        <option value="058">GUARANTY TRUST BANK PLC</option>
+                                        <option value="030">HERITAGE BANK</option>
+                                        <option value="301">JAIZ BANK</option>
+                                        <option value="580">JUBILEE LIFE</option>
+                                        <option value="082">KEYSTONE BANK</option>
+                                        <option value="101">PROVIDOUS BANK</option>
+                                        <option value="076">SKYE BANK PLC</option>
+                                        <option value="039">STANBIC-IBTC BANK PLC</option>
+                                        <option value="068">STANDARD CHARTERED</option>
+                                        <option value="232">STERLING BANK PLC</option>
+                                        <option value="032">UNION BANK OF NIGERIA PLC</option>
+                                        <option value="033">UNITED BANK FOR AFRICA PLC</option>
+                                        <option value="215">UNITY BANK PLC</option>
+                                        <option value="035">WEMA BANK PLC</option>
+                                        <option value="057">ZENITH BANK PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="amount" class="control-label">Amount:</label>
+                                    <input id="amount" type="number" class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="narration" class="control-label">Narration:</label>
+                                    <input id="narration" type="text" class="form-control border-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <span id="singlePayment-message" class="control-label"></span>
+                                    <button id="paySingle" class="btn btn-inverse form-control border-input">
+                                        Make Payment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/rpg/rpg.js"></script>
+<script src="js/otp/otp.js"></script>
+
+<script>
+    $(function(){
+            $(".floating-labels .form-control").on("focus blur", function (i) {
+                console.log('eee', i);
+                $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
+            }).trigger("blur");
+
+        $('.selectpicker').selectpicker();
+        });
+</script>

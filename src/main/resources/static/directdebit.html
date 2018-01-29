@@ -1,0 +1,184 @@
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Direct Debit</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Direct Debit</li>
+        </ol>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body" style="padding-bottom: 30px;">
+                <div class="rowx text-center">
+                    <button id="showMandates" class="btn btn-inverse waves-effect waves-light"
+                            style="margin-top: 20px; margin-right: 10px; font-size: 18px;">Mandates
+                    </button>
+                    <button id="showDebits" class="btn waves-effect waves-light"
+                            style="margin-top: 20px; font-size: 18px;">Debits
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="infoDiv" class="alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <span id="info-message"></span>
+                </div>
+                <div id="mandateDiv">
+                    <h4>Mandates</h4>
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal"
+                            data-target="#mandateSetupModal" data-whatever="@mdo">Setup Mandate
+                    </button>
+                    <br><br>
+                    <table id="mandateTable"
+                           class="display nowrap table table-hover table-bordered myTable table-responsive m-t-40"
+                           cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Mandate ID</th>
+                            <th>Payer Name</th>
+                            <th>Telephone</th>
+                            <th>Email</th>
+                            <th>Bank</th>
+                            <th>Account Number</th>
+                            <th>Request ID</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Amount</th>
+                            <th>No Of Debits</th>
+                            <th>Date Created</th>
+                            <th>Date Activated</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="requestOTPDiv" class="hideDiv">
+                    <h4>Request OTP</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span class="control-label">Mandate ID:</span>
+                                    <input id="mandateId" type="text" class="form-control border-input"
+                                           readonly/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span class="control-label">Request ID:</span>
+                                    <input id="requestId" type="text" class="form-control border-input"
+                                           readonly/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <button id="requestOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">Request OTP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="validateOTPDiv" class="hideDiv">
+                    <h4>Validate OTP</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span id="description1" class="control-label"></span>
+                                    <input id="OTP" type="number" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span id="description2" class="control-label"></span>
+                                    <input id="cardDetails" type="number"
+                                           class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <span id="requestOTP-message" class="control-label"></span>
+                                    <button id="validateOTP"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Activate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="debitDiv">
+                    <h4>Debits</h4>
+                    <table id="debitTable"
+                           class="display nowrap table table-hover table-striped table-bordered myTable table-responsive m-t-40 hideDiv"
+                           cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Transaction Ref</th>
+                            <th>Total Amount</th>
+                            <th>Funding Account</th>
+                            <th>Funding Bank</th>
+                            <th>Date Created</th>
+                            <th>Last Debit Amount</th>
+                            <th>Last Debit Date</th>
+                            <th>Balance</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/directdebit/directdebit.js"></script>
+<script>
+    $(function(){
+        $(".floating-labels .form-control").on("focus blur", function (i) {
+            $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
+        }).trigger("blur");
+
+        $('.selectpicker').selectpicker();
+    });
+</script>

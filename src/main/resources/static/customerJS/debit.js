@@ -22,7 +22,7 @@ $(function ($) {
             $.ajax({
                 type: "POST",
                 //url: "http://localhost:8080/api/v1/remita/sd/stopDebit",
-                url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/stopDebit",
+                url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/solutionsdelivery/sd/stopDebit",
                 dataType: 'json',
                 contentType: 'application/json',
                 crossDomain: true,
@@ -82,7 +82,7 @@ $('#debit').on('click', function (e) {
     $.ajax({
         type: "POST",
         //url: "http://localhost:8080/api/v1/remita/sd/debitInstruction",
-        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/debitInstruction",
+        url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/solutionsdelivery/sd/debitInstruction",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
@@ -102,7 +102,7 @@ $('#debit').on('click', function (e) {
                 //success
                 $.ajax({
                     type: "GET",
-                    url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/remita/sd/getDebits",
+                    url: "https://solutionsdelivery-directdebit.herokuapp.com/api/v1/solutionsdelivery/sd/getDebits",
                     //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
                     contentType: 'application/json',
                     crossDomain: true,
