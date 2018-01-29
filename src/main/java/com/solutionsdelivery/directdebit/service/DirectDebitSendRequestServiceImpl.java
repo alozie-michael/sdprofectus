@@ -160,9 +160,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(messageConverter);
 
-        System.setProperty("http.proxyHost", "192.9.200.10");
+        /*System.setProperty("http.proxyHost", "192.9.200.10");
         System.setProperty("http.proxyPort", "3128");
-        System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);
+        System.setProperty("http.nonProxyHosts", StringUtils.EMPTY);*/
 
         return restTemplate;
     }
