@@ -129,3 +129,12 @@
 <!-- ============================================================== -->
 <!-- .right-sidebar -->
 <script src="js/otp/otp.js"></script>
+<script>
+    $(function(){
+        $(".floating-labels .form-control").on("focus blur", function (i) {
+            $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
+        }).trigger("blur");
+
+        $('.selectpicker').selectpicker();
+    });
+</script>
