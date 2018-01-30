@@ -20,8 +20,8 @@ $(function ($) {
 
             $.ajax({
                 type: "POST",
-                //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-                url: "http://localhost:8080/api/v1/remita/user/createUser/" + email,
+                //url: "http://localhost:8080/api/v1/remita/user/createUser/" + email,
+                url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/createUser/" + email,
                 dataType: 'json',
                 contentType: 'application/json',
                 crossDomain: true,
@@ -77,8 +77,8 @@ $(function ($) {
 
                 $.ajax({
                     type: "POST",
-                    //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-                    url: "http://localhost:8080/api/v1/remita/user/removeUser/" + email,
+                    //url: "http://localhost:8080/api/v1/remita/user/removeUser/" + email,
+                    url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/removeUser/" + email,
                     dataType: 'json',
                     contentType: 'application/json',
                     crossDomain: true,
@@ -115,8 +115,8 @@ function getUsers() {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/remita/user/getUsers",
-        //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
+        //url: "http://localhost:8080/api/v1/remita/user/getUsers",
+        url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/getUsers",
         contentType: 'application/json',
         crossDomain: true,
         success: function (data) {

@@ -22,22 +22,6 @@ $(function ($) {
 
     });
 
-    /*$('#showBulkPayment').on('click', function (e) {
-
-        e.preventDefault();
-        $('#requestOTPDiv').addClass('hideDiv');
-        $('#validateOTPDiv').removeClass('hideDiv');
-
-    });
-
-    $('#showPaymentStatus').on('click', function (e) {
-
-        e.preventDefault();
-        $('#requestOTPDiv').addClass('hideDiv');
-        $('#validateOTPDiv').removeClass('hideDiv');
-
-    });*/
-
     $('#paySingle').on('click', function (e) {
 
         e.preventDefault();
@@ -51,8 +35,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-            url: "http://localhost:8080/api/v1/remita/RPG/singlePayment",
+            //url: "http://localhost:8080/api/v1/remita/RPG/singlePayment",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/RPG/singlePayment",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,

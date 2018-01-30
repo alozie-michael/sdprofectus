@@ -142,10 +142,10 @@
                     </form>
                 </div>
 
-                <div id="debitDiv">
+                <div id="debitDiv" class="hideDiv">
                     <h4>Debits</h4>
                     <table id="debitTable"
-                           class="display nowrap table table-hover table-striped table-bordered myTable table-responsive m-t-40 hideDiv"
+                           class="display nowrap table table-hover table-striped table-bordered myTable table-responsive m-t-40"
                            cellspacing="0" width="100%">
                         <thead>
                         <tr>
@@ -175,7 +175,6 @@
 <script src="js/directdebit/directdebit.js"></script>
 <script>
     $(function(){
-        console.log('sss',$(".floating-labels .form-control"))
         $(".floating-labels .form-control").on("focus blur", function (i) {
             $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
         }).trigger("blur");

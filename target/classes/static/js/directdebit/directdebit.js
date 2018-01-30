@@ -40,8 +40,54 @@ $(function ($) {
 
             $.ajax({
                 type: "POST",
-                //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-                url: "http://localhost:8080/api/v1/remita/directdebit/stopMandate",
+                //url: "http://localhost:8080/api/v1/remita/directdebit/stopMandate",
+                url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/stopMandate",
+                dataType: 'json',
+                contentType: 'application/json',
+                crossDomain: true,
+                data: JSON.stringify({
+
+                    "mandateId": mandateID,
+                    "requestId": requestId
+
+                }),
+                success: function (data) {
+                    if (data.statuscode && data.statuscode !== "00") {
+                        $("#info-message").text(data.status);
+                        $("#infoDiv").addClass("alert-danger").show();
+                    } else {
+                        $("#info-message").text(data.status);
+                        $("#infoDiv").addClass("alert-success").show();
+                    }
+                },
+                error: function (e) {
+                    $("#info-message").text("error processing");
+                    $("#infoDiv").addClass("alert-danger").show();
+                    console.log(e);
+                    return false;
+                }
+            });
+        }
+
+    });
+
+    //STOP DEBIT
+    $('#debitTable').on('click', '[data-action="stopDebit"]', function () {
+
+        var response = confirm("Are you sure you want to stop this debit?");
+
+        if (response) {
+
+            var $row = jQuery(this).closest('tr');
+            var $columns = $row.find('td');
+
+            var mandateID = $columns[0].innerHTML.trim();
+            var requestId = $columns[6].innerHTML.trim();
+
+            $.ajax({
+                type: "POST",
+                //url: "http://localhost:8080/api/v1/remita/directdebit/stopMandate",
+                url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/stopDebit",
                 dataType: 'json',
                 contentType: 'application/json',
                 crossDomain: true,
@@ -112,8 +158,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-            url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -167,8 +213,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-            url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/validateOTP",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -233,7 +279,7 @@ $('#setup').on('click', function (e) {
     $.ajax({
         type: "POST",
         //url: "http://localhost:8080/api/v1/remita/directdebit/mandateSetup",
-        url: "http://localhost:8080/api/v1/remita/directdebit/mandateSetup",
+        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/mandateSetup",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
@@ -286,7 +332,7 @@ $('#passDebit').on('click', function (e) {
     $.ajax({
         type: "POST",
         //url: "http://localhost:8080/api/v1/remita/directdebit/debitInstruction",
-        url: "http://localhost:8080/api/v1/remita/directdebit/debitInstruction",
+        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/debitInstruction",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
@@ -326,8 +372,8 @@ function getMandates() {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/remita/directdebit/getMandates",
-        //url: "http://localhost:8080/api/v1/remita/sd/getMandates",
+        //url: "http://localhost:8080/api/v1/remita/directdebit/getMandates",
+        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getMandates",
         contentType: 'application/json',
         crossDomain: true,
         success: function (data) {
@@ -419,8 +465,8 @@ function getDebits() {
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
-        //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
+        //url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
+        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
         contentType: 'application/json',
         crossDomain: true,
         success: function (data) {

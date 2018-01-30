@@ -28,14 +28,14 @@ $(function () {
     $("#sidebarnav").find("li a").click(function (e) {
         $(".preloader").fadeOut();
         e.preventDefault();
-        $("#sidebarnav li").each(function () {
+        $("#sidebarnav").find("li").each(function () {
             $(this).removeClass('active');
         });
         $(this).parent().addClass("active");
 
         var page = $(this).attr("href");
 
-        $("#myContent").load(page, null, function (e) {
+        $("#myContent").load(page, null, function () {
 
             if (page === "directdebit.html") {
                 getMandates();
@@ -51,8 +51,8 @@ $(function () {
     function getMandates() {
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/directdebit/getMandates",
-            //url: "http://localhost:8080/api/v1/remita/sd/getMandates",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/getMandates",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getMandates",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
@@ -144,8 +144,8 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
-            //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
@@ -238,8 +238,8 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/user/getUsers",
-            //url: "http://localhost:8080/api/v1/remita/sd/getDebits",
+            //url: "http://localhost:8080/api/v1/remita/user/getUsers",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/getUsers",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
@@ -321,8 +321,8 @@ $(function () {
                 $.ajax({
 
                     type: "POST",
-                    url: "http://localhost:8080/api/v1/remita/user/changePassword",
-                    //url: "http://localhost:8080/api/v1/changePassword/customer",
+                    //url: "http://localhost:8080/api/v1/remita/user/changePassword",
+                    url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/changePassword",
                     dataType: 'json',
                     contentType: 'application/json',
                     crossDomain: true,

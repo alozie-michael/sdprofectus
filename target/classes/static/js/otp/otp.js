@@ -10,8 +10,8 @@ $(function ($) {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-            url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
+            //url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -64,8 +64,8 @@ $(function ($) {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/sd/stopMandate",
-            url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/validateOTP",
+            //url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,

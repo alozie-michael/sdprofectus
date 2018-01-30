@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Account No:</label>
+                                    <label for="accountNo" class="control-label">Account No:</label>
                                     <input id="accountNo" type="number" class="form-control border-input"
                                            required/>
                                 </div>
@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Bank:</label>
+                                    <label for="bank" class="control-label">Bank:</label>
                                     <select id="bank" class="form-control border-input"
                                             required>
                                         <option value=""></option>
@@ -89,7 +89,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group label-floating">
-                                    <label id="description1" class="control-label"></label>
+                                    <label for="OTP" id="description1" class="control-label"></label>
                                     <input id="OTP" type="number" class="form-control border-input"/>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group label-floating">
-                                    <label id="description2" class="control-label"></label>
+                                    <label for="cardDetails" id="description2" class="control-label"></label>
                                     <input id="cardDetails" type="number" class="form-control border-input"/>
                                 </div>
                             </div>
@@ -129,3 +129,12 @@
 <!-- ============================================================== -->
 <!-- .right-sidebar -->
 <script src="js/otp/otp.js"></script>
+<script>
+    $(function(){
+        $(".floating-labels .form-control").on("focus blur", function (i) {
+            $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
+        }).trigger("blur");
+
+        $('.selectpicker').selectpicker();
+    });
+</script>
