@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="138b67a1-b5c5-4a73-8938-063e51dd25a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/users.html" afterPath="$PROJECT_DIR$/src/main/resources/static/users.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/rpg.html" afterPath="$PROJECT_DIR$/src/main/resources/static/rpg.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,21 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/home.html">
+      <file leaf-file-name="rpg.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/rpg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="439" column="30" lean-forward="true" selection-start-line="439" selection-start-column="30" selection-end-line="439" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/users.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+            <state relative-caret-position="1230">
+              <caret line="193" column="84" lean-forward="true" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -54,6 +43,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/directdebit/directdebit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/users.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/home.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/rpg.html" />
       </list>
     </option>
   </component>
@@ -64,7 +54,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-14" />
     <option name="y" value="-10" />
     <option name="width" value="1346" />
@@ -254,15 +244,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517264238565</updated>
-      <workItem from="1517264245962" duration="3585000" />
+      <workItem from="1517264245962" duration="4330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3585000" />
+    <option name="totallyTimeSpent" value="4330000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -391,10 +381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/rpg.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="265" selection-end-column="9" />
+        <state relative-caret-position="136">
+          <caret line="430" column="38" lean-forward="false" selection-start-line="430" selection-start-column="38" selection-end-line="430" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -407,10 +397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/home.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/rpg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="439" column="30" lean-forward="true" selection-start-line="439" selection-start-column="30" selection-end-line="439" selection-end-column="30" />
+        <state relative-caret-position="1230">
+          <caret line="193" column="84" lean-forward="true" selection-start-line="193" selection-start-column="84" selection-end-line="193" selection-end-column="84" />
           <folding />
         </state>
       </provider>
