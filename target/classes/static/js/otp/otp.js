@@ -111,6 +111,9 @@ $(function ($) {
                     $("#info-message").text(response.responseDescription);
                     $("#infoDiv").addClass("alert-success").show();
 
+                    if(bankCode === "057")
+                        $('#description').removeClass('hideDiv');
+
                     $('#requestOTPDiv').removeClass('hideDiv');
                     $('#validateOTPDiv').addClass('hideDiv');
                 }

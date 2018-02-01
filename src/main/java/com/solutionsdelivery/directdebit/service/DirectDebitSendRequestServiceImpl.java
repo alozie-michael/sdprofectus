@@ -202,7 +202,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         if(response.getStatuscode().equals("00")){
 
             Mandate mandate = mandateRepository.findByMandateIdContaining(response.getMandateId());
-            String activationDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date());
+            String activationDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
             mandate.setStatus("ACTIVE");
             mandate.setActivationDate(activationDate);
 
@@ -250,7 +250,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
             BeanUtils.copyProperties(debitInstruction, saveDebitInstruction);
 
-            String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH.mm.ss").format(new Date());
+            String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH.mm.ss").format(new Date());
             saveDebitInstruction.setDateCreated(timeStamp);
             saveDebitInstruction.setFundingBank(bank.getBankName());
             saveDebitInstruction.setTransactionRef(response.getTransactionRef());
@@ -305,7 +305,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
             Mandate mandate = mandateRepository.findByMandateIdContaining(stopMandateResponse.getMandateId());
 
-            String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH.mm.ss").format(new Date());
+            String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH.mm.ss").format(new Date());
 
             mandate.setStoppedDate(timeStamp);
             mandate.setStatus("STOPPED");
@@ -357,7 +357,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
             String hash = getHash.getResponseHash(credentials.getMerchantId() + credentials.getApiKey() + response.getRequestId());
             String mandateLink = credentials.getViewMandateLink() + credentials.getMerchantId() + "/" + hash + "/" + response.getMandateId() + "/" + response.getRequestId() + "/rest.reg";
 
-            String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH.mm.ss").format(new Date());
+            String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH.mm.ss").format(new Date());
             BeanUtils.copyProperties(mandateSetup, mandate);
             mandate.setPayerBankCode(bank.getBankName());
             mandate.setMandateId(response.getMandateId());
