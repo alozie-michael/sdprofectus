@@ -24,9 +24,6 @@ public class UserProfile {
     @Column(name = "TELEPHONE")
     private String telephone;
 
-    @Column(name = "ROLES")
-    private String roles;
-
     @Column(name = "CREATEDBY")
     private String createdBy;
 
