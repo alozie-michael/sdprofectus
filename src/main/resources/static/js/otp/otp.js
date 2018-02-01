@@ -42,10 +42,14 @@ $(function ($) {
 
                 } else {
 
+                    remitaTransRef = response.remitaTransRef;
+
                     $("#info-message").text(response.responseDescription);
                     $("#infoDiv").addClass("alert-success").show();
 
-                    remitaTransRef = response.remitaTransRef;
+                    if(bankCode === "057")
+                        $('#description').removeClass('hideDiv');
+
                     $.each(response.authParams, function (i, item) {
 
                         $('#description1').text(item.description1);
@@ -111,8 +115,6 @@ $(function ($) {
                     $("#info-message").text(response.responseDescription);
                     $("#infoDiv").addClass("alert-success").show();
 
-                    if(bankCode === "057")
-                        $('#description').removeClass('hideDiv');
 
                     $('#requestOTPDiv').removeClass('hideDiv');
                     $('#validateOTPDiv').addClass('hideDiv');
