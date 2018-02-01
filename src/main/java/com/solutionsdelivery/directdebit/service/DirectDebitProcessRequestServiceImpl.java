@@ -19,14 +19,9 @@ import java.util.List;
 @Service
 public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessRequestService {
 
-    private final
-    DirectDebitSendRequestService directDebitSendRequestService;
-
+    private final DirectDebitSendRequestService directDebitSendRequestService;
     private final MandateRepository mandateRepository;
-
-    private final
-    DebitInstructionRepository debitInstructionRepository;
-
+    private final DebitInstructionRepository debitInstructionRepository;
     private final BankRepository bankRepository;
 
     private Hash512Class getHash = new Hash512Class();
@@ -51,7 +46,7 @@ public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessR
     @Override
     public MandateSetupResponse mandateSetup(MandateSetup mandateSetup) throws Exception {
 
-        String timeStamp = new SimpleDateFormat("yyyyMMddHHss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 
         mandateSetup.setMerchantId(merchantId);
         mandateSetup.setServiceTypeId(serviceTypeId);
@@ -100,10 +95,7 @@ public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessR
         Mandate mandate = mandateRepository.findByMandateIdContaining(debitInstruction.getMandateId());
         Bank bank = bankRepository.findByBankCodeContaining(mandate.getPayerBankCode());
 
-        if(mandate == null && bank == null)
-            return new DebitInstructionResponse();
-
-        String requestId = new SimpleDateFormat("yyyyMMddHHss").format(new Date());
+        String requestId = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 
         debitInstruction.setMerchantId(merchantId);
         debitInstruction.setServiceTypeId(serviceTypeId);
@@ -282,9 +274,7 @@ public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessR
             newBanks.add(bank);
 
         }
-
         return newBanks;
     }
-
 
 }

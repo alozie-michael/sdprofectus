@@ -1,5 +1,9 @@
 $(function ($) {
 
+    $('#passDebitModal').on('shown.bs.modal', function (e) {
+        $('#totalAmount').val('');
+    });
+
     //SHOW MANDATE DIV
     $('#showMandates').on('click', function (e) {
 
