@@ -117,11 +117,10 @@
                 </div>
 
                 <br><hr>
-                <div id="otpReportDiv">
+                <div id="otpReportDiv" class="hideDiv">
                     <h4>OTP Report</h4>
                     <table id="otpReportTable"
-                           class="display nowrap table table-bordered myTable table-responsive m-t-40"
-                           cellspacing="0" width="100%">
+                           class="table table-bordered" style="table-layout:fixed">
                         <thead>
                         <tr>
                             <th>Bank Code</th>
@@ -132,10 +131,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="bankCode"></td>
-                                <td id="accNo"></td>
-                                <td id="rOtpResponse" width="10%"></td>
-                                <td id="vOtpResponse" width="10%"></td>
+                                <td id="bankCode" width="10%"></td>
+                                <td id="accNo" width="20%"></td>
+                                <td id="rOtpResponse" width="35%"></td>
+                                <td id="vOtpResponse" width="35%"></td>
                             </tr>
                         </tbody>
                     </table>

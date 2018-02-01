@@ -300,7 +300,6 @@ $(function () {
             var userData = JSON.parse(user);
 
             $.each(userData, function (i, item) {
-
                 email = item.email;
             });
         }

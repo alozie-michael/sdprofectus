@@ -27,8 +27,8 @@ $(function ($) {
 
             }),
             success: function (data) {
+                $('#otpReportDiv').removeClass('hideDiv');
 
-                console.log(data);
                 $('#bankCode').text(bankCode);
                 $('#accNo').text(accNo);
                 $('#rOtpResponse').html(JSON.stringify(data));
