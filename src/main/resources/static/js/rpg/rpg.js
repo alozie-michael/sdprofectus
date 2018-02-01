@@ -41,8 +41,8 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/RPG/accountEnquiry",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/RPG/accountEnquiry",
+            //url: "http://localhost:8080/api/v1/remita/RPG/accountEnquiry",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/RPG/accountEnquiry",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
