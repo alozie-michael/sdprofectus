@@ -12,7 +12,7 @@ public interface RpgProcessRequestService {
 
 	RequestOtpResponse requestOtp(RequestOtp requestOtp) throws Exception;
 	ValidateOtpResponse validateOtp(ValidateOTP validateOTP) throws Exception;
-	SinglePaymentResponse singlePayment(SinglePayment singlePayment) throws Exception;
+	SinglePaymentResponse singlePayment(SinglePayment singlePayment, String initiator) throws Exception;
 	BulkPaymentResponse bulkPayment(BulkPayment bulkPayment) throws Exception;
 	PaymentStatusResponse paymentStatus(PaymentStatus paymentStatus) throws Exception;
 	AccountEnquiryResponse accountEnquiry(RequestOtp accountEnquiry) throws Exception;

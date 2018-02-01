@@ -8,8 +8,8 @@ import com.solutionsdelivery.OTP.dto.ValidateOtpResponse;
 import com.solutionsdelivery.OTP.service.OtpSendRequestService;
 import com.solutionsdelivery.RPG.dao.*;
 import com.solutionsdelivery.RPG.dto.*;
-import com.solutionsdelivery.RPG.model.Account;
-import com.solutionsdelivery.RPG.repository.AccountRepository;
+import com.solutionsdelivery.directdebit.model.Bank;
+import com.solutionsdelivery.directdebit.repository.BankRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,13 +23,15 @@ public class RpgProcessRequestServiceImpl implements RpgProcessRequestService {
 
     private final RpgSendRequestService rpgSendRequestService;
     private final OtpSendRequestService otpSendRequestService;
+    private BankRepository bankRepository;
     private final RpgCredentials rpgCredentials;
 
     @Autowired
-    public RpgProcessRequestServiceImpl(RpgSendRequestService rpgSendRequestService, RpgCredentials rpgCredentials, OtpSendRequestService otpSendRequestService) {
+    public RpgProcessRequestServiceImpl(RpgSendRequestService rpgSendRequestService, BankRepository bankRepository, RpgCredentials rpgCredentials, OtpSendRequestService otpSendRequestService) {
         this.rpgSendRequestService = rpgSendRequestService;
         this.rpgCredentials = rpgCredentials;
         this.otpSendRequestService = otpSendRequestService;
+        this.bankRepository = bankRepository;
     }
 
     @Override
@@ -45,21 +47,9 @@ public class RpgProcessRequestServiceImpl implements RpgProcessRequestService {
     }
 
     @Override
-    public SinglePaymentResponse singlePayment(SinglePayment singlePayment) throws Exception {
+    public SinglePaymentResponse singlePayment(SinglePayment singlePayment, String initiator) throws Exception {
 
-        String requestTimeStamp = new SimpleDateFormat("yyyy.MM.ddHH:mm:ss").format(new Date());
-        String requestId = requestTimeStamp + "SINGLEPAYMENT";
-
-        singlePayment.setFromBank(encryptor.encrypt(rpgCredentials.getDebitBankCode()));
-        singlePayment.setTransRef(encryptor.encrypt(requestId));
-        singlePayment.setAmount(encryptor.encrypt(singlePayment.getAmount()));
-        singlePayment.setBeneficiaryEmail(encryptor.encrypt(singlePayment.getBeneficiaryEmail()));
-        singlePayment.setCreditAccount(encryptor.encrypt(singlePayment.getCreditAccount()));
-        singlePayment.setDebitAccount(encryptor.encrypt(rpgCredentials.getDebitAccount()));
-        singlePayment.setToBank(encryptor.encrypt(singlePayment.getToBank()));
-        singlePayment.setNarration(encryptor.encrypt(singlePayment.getNarration()));
-
-        return rpgSendRequestService.singlePayment(singlePayment);
+        return rpgSendRequestService.singlePayment(singlePayment, initiator);
     }
 
     @Override
@@ -86,10 +76,19 @@ public class RpgProcessRequestServiceImpl implements RpgProcessRequestService {
     @Override
     public AccountEnquiryResponse accountEnquiry(RequestOtp accountEnquiry) throws Exception {
 
+        AccountEnquiryResponse accountEnquiryResponse;
+        Bank bank = bankRepository.findByBankCodeContaining(accountEnquiry.getBankCode());
+
         accountEnquiry.setAccountNo(encryptor.encrypt(accountEnquiry.getAccountNo()));
         accountEnquiry.setBankCode(encryptor.encrypt(accountEnquiry.getBankCode()));
 
-        return rpgSendRequestService.accountEnquiry(accountEnquiry);
+        accountEnquiryResponse = rpgSendRequestService.accountEnquiry(accountEnquiry);
+        Data data = accountEnquiryResponse.getData();
+        data.setBankCode(bank.getBankName());
+
+        accountEnquiryResponse.setData(data);
+
+        return accountEnquiryResponse;
     }
 
     @Override

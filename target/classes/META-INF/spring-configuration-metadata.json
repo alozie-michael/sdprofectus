@@ -105,6 +105,11 @@
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.account-enquiry",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.api-key",
       "type": "java.lang.String"
     },

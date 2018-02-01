@@ -19,6 +19,7 @@ public @Data class RpgCredentials {
     private String validateOTPLink;
     private String singlePaymentLink;
     private String bulkPaymentLink;
+    private String accountEnquiry;
     private String getActiveBanksLink;
     private String paymentStatusLink;
 

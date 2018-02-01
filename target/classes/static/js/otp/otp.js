@@ -1,27 +1,38 @@
 $(function ($) {
 
     var remitaTransRef = "";
+    var bankCode = "";
+    var accNo = "";
 
     $('#requestOTP').on('click', function (e) {
 
-        $accountNumber = $('#accountNo');
-        $bank = $('#bank');
+        var accountNumber = $('#accountNo').val();
+        var bank = $('#bank').val();
+
+        bankCode = bank;
+        accNo = accountNumber;
 
         e.preventDefault();
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOtp",
+            url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
             data: JSON.stringify({
 
-                "accountNo": $accountNumber.val(),
-                "bankCode": $bank.val()
+                "accountNo": accountNumber,
+                "bankCode": bank
 
             }),
             success: function (data) {
+
+                console.log(data);
+                $('#bankCode').text(bankCode);
+                $('#accNo').text(accNo);
+                $('#rOtpResponse').html(JSON.stringify(data));
+
                 var response = data.data;
 
                 if (response.responseCode && response.responseCode !== "00") {
@@ -30,6 +41,7 @@ $(function ($) {
                     $("#infoDiv").addClass("alert-danger").show();
 
                 } else {
+
                     $("#info-message").text(response.responseDescription);
                     $("#infoDiv").addClass("alert-success").show();
 
@@ -55,7 +67,6 @@ $(function ($) {
 
     });
 
-
     $('#validateOTP').on('click', function (e) {
 
         $OTP = $('#OTP');
@@ -64,8 +75,8 @@ $(function ($) {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/validateOTP",
-            //url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/validateOTP",
+            url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -85,6 +96,9 @@ $(function ($) {
 
             }),
             success: function (data) {
+
+                $('#vOtpResponse').html(JSON.stringify(data));
+
                 var response = data.data;
 
                 if (response.responseCode && response.responseCode !== "00") {
@@ -94,7 +108,6 @@ $(function ($) {
 
                 } else {
 
-                    //success
                     $("#info-message").text(response.responseDescription);
                     $("#infoDiv").addClass("alert-success").show();
 

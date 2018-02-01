@@ -14,7 +14,7 @@ $(function ($) {
             var staffNo = $('#staffNo').val();
             var firstName = $('#firstName').val();
             var lastName = $('#lastName').val();
-            var email = $('#email').val();
+            var userEmail = $('#email').val();
             var phone = $('#phone').val();
             var password = $('#password').val();
 
@@ -30,7 +30,7 @@ $(function ($) {
                     "staffNo": staffNo,
                     "firstName": firstName,
                     "lastName": lastName,
-                    "email": email,
+                    "email": userEmail,
                     "telephone": phone,
                     "password": password
 
@@ -63,7 +63,7 @@ $(function ($) {
 
         });
 
-        //STOP MANDATE
+        //REMOVE USER
         $('#usersTable').on('click', '[data-action="removeUser"]', function () {
 
             var response = confirm("Are you sure you want to remove this user?");

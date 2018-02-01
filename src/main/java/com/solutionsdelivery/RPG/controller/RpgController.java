@@ -12,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -64,14 +61,14 @@ public class RpgController {
         return new ResponseEntity<>(validateOtpResponse, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "singlePayment", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<SinglePaymentResponse> singlePayment(@RequestBody SinglePayment singlePayment) {
+    @RequestMapping(value = "singlePayment/{initiator}", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<SinglePaymentResponse> singlePayment(@PathVariable("initiator") String initiator, @RequestBody SinglePayment singlePayment) {
 
         SinglePaymentResponse singlePaymentResponse = new SinglePaymentResponse();
 
         try {
 
-            singlePaymentResponse = rpgProcessRequestService.singlePayment(singlePayment);
+            singlePaymentResponse = rpgProcessRequestService.singlePayment(singlePayment, initiator);
 
         } catch (Exception e) {
 

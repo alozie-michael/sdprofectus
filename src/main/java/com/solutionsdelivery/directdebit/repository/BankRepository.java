@@ -10,5 +10,4 @@ public interface BankRepository extends JpaRepository<Bank, Long> {
 
     @Query("select b from Bank b where b.bankCode = ?1 OR b.bankName = ?1")
     Bank findByBankCodeContaining(String bankcodeOrBankName);
-
 }
