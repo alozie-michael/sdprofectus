@@ -282,8 +282,8 @@ $('#setup').on('click', function (e) {
 
     $.ajax({
         type: "POST",
-        //url: "http://localhost:8080/api/v1/remita/directdebit/mandateSetup",
-        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/mandateSetup",
+        url: "http://localhost:8080/api/v1/remita/directdebit/mandateSetup",
+        //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/mandateSetup",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,
@@ -335,8 +335,8 @@ $('#passDebit').on('click', function (e) {
 
     $.ajax({
         type: "POST",
-        //url: "http://localhost:8080/api/v1/remita/directdebit/debitInstruction",
-        url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/debitInstruction",
+        url: "http://localhost:8080/api/v1/remita/directdebit/debitInstruction",
+        //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/debitInstruction",
         dataType: 'json',
         contentType: 'application/json',
         crossDomain: true,

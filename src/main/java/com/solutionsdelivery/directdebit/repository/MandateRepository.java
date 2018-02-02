@@ -8,5 +8,4 @@ import org.springframework.stereotype.Repository;
 public interface MandateRepository extends JpaRepository<Mandate, Long> {
 
     Mandate findByMandateIdContaining(String mandateId);
-
 }

@@ -144,8 +144,8 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
-            //url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
+            url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {

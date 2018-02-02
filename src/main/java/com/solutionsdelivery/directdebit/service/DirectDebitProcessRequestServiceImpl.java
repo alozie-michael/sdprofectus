@@ -113,7 +113,7 @@ public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessR
     @Override
     public StopDebitResponse stopDebit(StopDebit stopDebit) throws Exception {
 
-        com.solutionsdelivery.directdebit.model.DebitInstruction debitInstruction = debitInstructionRepository.findByRequestIdContaining(stopDebit.getRequestId());
+        com.solutionsdelivery.directdebit.model.DebitInstruction debitInstruction = debitInstructionRepository.findByMandateIdContaining(stopDebit.getRequestId());
 
         String stringToHash = stopDebit.getTransactionRef()+merchantId+stopDebit.getRequestId()+apiKey;
         String hashedValue = getHash.getResponseHash(stringToHash);
