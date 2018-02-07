@@ -1,0 +1,155 @@
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">RPG</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Get Status</li>
+        </ol>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body" style="padding-bottom: 30px;">
+                <div class="rowx text-center">
+                    <button id="showGetStatus" class="btn btn-inverse waves-effect waves-light"
+                            style="margin-top: 20px; margin-right: 10px; font-size: 18px;">Get Status
+                    </button>
+                    <button id="showViewMerchants" class="btn waves-effect waves-light"
+                            style="margin-top: 20px; font-size: 18px;">View Merchants
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="infoDiv" class="alert" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <span id="info-message"></span>
+                </div>
+
+                <div id="getStatusDiv">
+                    <h4>Get Status</h4>
+                    <form class="floating-labels m-t-40">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <label for="rrr" class="control-label">RRR:</label>
+                                    <input id="rrr" type="number" class="form-control border-input"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span class="control-label">Environment:</span>
+                                    <select id="environment" class="form-control border-input"
+                                            required>
+                                        <option value="demo">Demo</option>
+                                        <option value="live">Live</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hideDiv" id="showMerchants">
+                            <div class="col-md-4">
+                                <div class="form-group label-floating">
+                                    <span class="control-label">Merchant:</span>
+                                    <select id="Merchant" class="form-control border-input"
+                                            required>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group label-floating">
+                                    <button id="getStatus"
+                                            class="btn btn-block btn-inverse form-control border-input">
+                                        Get Status
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="viewMerchantDiv" class="hideDiv">
+                    <h4>View Merchants</h4>
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal"
+                            data-target="#addMerchantModal" data-whatever="@mdo">Add Merchant
+                    </button>
+                    <br><br>
+                    <table id="merchantTable"
+                           class="table table-hover table-bordered m-t-40"
+                           cellspacing="0" width="100%" data-pagination="true"
+                           data-page-list="[5, 10, 25, 50, 100, ALL]"
+                           data-page-size="5">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Merchant Name</th>
+                            <th>Merchant ID</th>
+                            <th>Merchant Short Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+                <div id="getStatusReportDiv" class="hideDiv">
+                    <h4>Get Status Report</h4>
+                    <table id="otpReportTable"
+                           class="table table-bordered" style="table-layout:fixed">
+                        <thead>
+                        <tr>
+                            <th>RRR</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Order Id</th>
+                            <th>Message</th>
+                            <th>Transaction Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="rrrVal" width="10%"></td>
+                            <td id="amount" width="20%"></td>
+                            <td id="status" width="35%"></td>
+                            <td id="orderId" width="35%"></td>
+                            <td id="message" width="35%"></td>
+                            <td id="transactionTime" width="35%"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/getStatus/getStatus.js"></script>
+
+<script>
+    $(function () {
+        $(".floating-labels .form-control").on("focus blur", function (i) {
+            $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
+        }).trigger("blur");
+    });
+</script>

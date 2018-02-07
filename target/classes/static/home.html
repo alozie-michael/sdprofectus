@@ -178,6 +178,9 @@
                     <li><a class="waves-effect waves-dark" href="otp.html" aria-expanded="true"><i
                             class="mdi mdi-bullseye"></i><span class="hide-menu">OTP</span></a>
                     </li>
+                    <li><a class="waves-effect waves-dark" href="getStatus.html" aria-expanded="true"><i
+                            class="mdi mdi-checkbox-multiple-marked-outline"></i><span class="hide-menu">Get Status</span></a>
+                    </li>
                     <li><a class="waves-effect waves-dark" href="users.html" aria-expanded="true"><i
                             class="fa fa-user-circle-o"></i><span class="hide-menu">Users</span></a></li>
 
@@ -391,6 +394,72 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button id="passDebit" class="btn btn-primary">Debit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ADD MERCHANT Modal -->
+    <div id="addMerchantModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Merchant</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels m-t-40">
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="merchantId" class="control-label">Merchant Id:</label>
+                                    <input id="merchantId" type="text"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="merchantName" class="control-label">Merchant Name:</label>
+                                    <input id="merchantName" type="text"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="apiKey" class="control-label">Api Key:</label>
+                                    <input id="apiKey" type="text"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group label-floating">
+                                    <label for="description" class="control-label">Description:</label>
+                                    <input id="description" type="text"
+                                           class="form-control border-input"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="addMerchant" class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>

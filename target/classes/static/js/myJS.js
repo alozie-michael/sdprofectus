@@ -41,11 +41,13 @@ $(function () {
                 getMandates();
                 getDebits();
             }
+            if(page === "getStatus.html"){
+                getMerchants();
+            }
             if (page === "users.html") {
                 getUsers();
             }
         });
-        $(".preloader").fadeOut();
     });
 
     function getMandates() {
@@ -140,12 +142,57 @@ $(function () {
         });
     }
 
+    function getMerchants() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/v1/remita/status/getMerchants",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getMerchants",
+            contentType: 'application/json',
+            crossDomain: true,
+            success: function (response) {
+                // success
+                if (response) {
+
+                    var data = response.data;
+                    var tData = "";
+                    var mData = "";
+                    $.each(data, function (i, item) {
+
+                        mData += "<option value= " + item.description + ">" + item.merchantName + "</option>";
+
+                        tData += "<tr>"
+                            + "<td>"
+                            + item.id
+                            + "</td>"
+                            + "<td>"
+                            + item.merchantName
+                            + "</td>"
+                            + "<td>"
+                            + item.merchantId
+                            + "</td>"
+                            + "<td>"
+                            + item.description
+                            + "</td>";
+                    });
+                    if (tData && mData) {
+                        $("#merchantTable").find("tbody").html(tData);
+                        $("#Merchant").html(mData);
+                    }
+                }
+            },
+            error: function (e) {
+                console.log(e);
+                return false;
+            }
+        });
+    }
+
     function getDebits() {
 
         $.ajax({
             type: "GET",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
-            url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/getDebits",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/getDebits",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
