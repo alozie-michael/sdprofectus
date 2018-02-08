@@ -15,8 +15,8 @@ $(function ($) {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOtp",
+            url: "http://localhost:8080/api/v1/remita/OTP/requestOtp",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -76,15 +76,10 @@ $(function ($) {
         $OTP = $('#OTP');
         $cardDetails = $('#cardDetails');
 
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/validateOTP",
-            //url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
-            dataType: 'json',
-            contentType: 'application/json',
-            crossDomain: true,
-            data: JSON.stringify({
+        var jsonData = "";
+
+        if(bankCode === "057"){
+            jsonData = {
 
                 "remitaTransRef": remitaTransRef,
                 "authParams": [
@@ -97,14 +92,35 @@ $(function ($) {
                         "value": $cardDetails.val()
                     }
                 ]
+            }
+        }else {
 
-            }),
+            jsonData = {
+
+                "remitaTransRef": remitaTransRef,
+                "authParams": [
+                    {
+                        "param1": "OTP",
+                        "value": $OTP.val()
+                    }
+                ]
+            }
+        }
+
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/validateOTP",
+            url: "http://localhost:8080/api/v1/remita/OTP/validateOTP",
+            dataType: 'json',
+            contentType: 'application/json',
+            crossDomain: true,
+            data: JSON.stringify(jsonData),
             success: function (data) {
 
                 $('#vOtpResponse').html(JSON.stringify(data));
 
                 var response = data.data;
-
                 if (response.responseCode && response.responseCode !== "00") {
 
                     $("#info-message").text(response.responseDescription);

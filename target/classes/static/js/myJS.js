@@ -145,8 +145,8 @@ $(function () {
     function getMerchants() {
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/status/getMerchants",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getMerchants",
+            //url: "http://localhost:8080/api/v1/remita/status/getMerchants",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getMerchants",
             contentType: 'application/json',
             crossDomain: true,
             success: function (response) {

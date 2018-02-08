@@ -1,10 +1,11 @@
 package com.solutionsdelivery.RPG.dao;
 
 
+import org.apache.commons.codec.binary.Base64;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.codec.binary.Base64;
 
 public class Encryptor {
 
@@ -20,9 +21,9 @@ public class Encryptor {
     private final String ALGORITHM = "AES";
 
     // The block size required in AES is 16, therefore ensure that the ENC_KEY and ENC_INIT_VECTOR are 16 in length.
-    private final String ENC_KEY = "cymsrniuxqtgfzva";
+    private final String ENC_KEY = "zksuwrmthnqifcpa";
 
-    private final String ENC_INIT_VECTOR = "czidrfwqugpaxvkj";
+    private final String ENC_INIT_VECTOR = "pdftmiwqyhvzengc";
 
 
     public String encrypt(String plainText) {

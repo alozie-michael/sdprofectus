@@ -41,8 +41,8 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/status/getStatus",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getStatus",
+            //url: "http://localhost:8080/api/v1/remita/status/getStatus",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getStatus",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -89,8 +89,8 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/status/addMerchant",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/addMerchant",
+            //url: "http://localhost:8080/api/v1/remita/status/addMerchant",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/addMerchant",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -134,8 +134,8 @@ $(function () {
     function getMerchants() {
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/status/getMerchants",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getMerchants",
+            //url: "http://localhost:8080/api/v1/remita/status/getMerchants",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/status/getMerchants",
             contentType: 'application/json',
             crossDomain: true,
             success: function (response) {

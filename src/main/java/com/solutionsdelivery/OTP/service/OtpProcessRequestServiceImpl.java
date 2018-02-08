@@ -40,22 +40,18 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
     @Override
     public ValidateOtpResponse validateOtp(ValidateOTP validateOTP) throws Exception {
 
-        ValidateOTP validateOTP1 = new ValidateOTP();
         List<AuthParams> newAuthParams = new ArrayList<>();
-
         List<AuthParams> authParams = validateOTP.getAuthParams();
 
-        for(AuthParams authParams1 : authParams){
+        for(AuthParams authParam : authParams){
             AuthParams authParams2 = new AuthParams();
-
-            authParams2.setParam1(encryptor.encrypt(authParams1.getParam1()));
-            //authParams2.setParam2(encryptor.encrypt(authParams1.getParam2()));
-            authParams2.setValue(encryptor.encrypt(authParams1.getValue()));
+            authParams2.setParam1(encryptor.encrypt(authParam.getParam1()));
+            authParams2.setValue(encryptor.encrypt(authParam.getValue()));
 
             newAuthParams.add(authParams2);
         }
 
-
+        ValidateOTP validateOTP1 = new ValidateOTP();
         validateOTP1.setRemitaTransRef(encryptor.encrypt(validateOTP.getRemitaTransRef()));
         validateOTP1.setAuthParams(newAuthParams);
 
