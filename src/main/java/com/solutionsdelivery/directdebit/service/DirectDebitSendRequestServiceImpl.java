@@ -7,6 +7,7 @@ import com.solutionsdelivery.directdebit.model.Mandate;
 import com.solutionsdelivery.directdebit.repository.BankRepository;
 import com.solutionsdelivery.directdebit.repository.DebitInstructionRepository;
 import com.solutionsdelivery.directdebit.repository.MandateRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@Slf4j
 public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequestService {
 
     @Autowired
@@ -50,7 +52,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private RequestOtpForMandateActivationResponse requestOtp(String url, RequestOtpForMandateActivation requestOtpForMandateActivation) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(requestOtpForMandateActivation, createRequestOtpHeader());
+        log.info("Sending OTP request to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("OTP request response {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -74,7 +78,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private MandateSetupResponse mandateSetup(String url, MandateSetup mandateSetup) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(mandateSetup, createRequestHeader());
+        log.info("Sending mandate setup request to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("Mandate setup response {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -135,6 +141,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
 
+        log.info("Header - {}", headers.toString());
         return headers;
     }
 
@@ -151,6 +158,8 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         headers.add("REQUEST_ID", requestTimeStamp);
         headers.add("REQUEST_TS", requestTimeStamp + "+0000");
         headers.add("API_DETAILS_HASH",apiDetailsHash);
+
+        log.info("Header - {}", headers.toString());
         return headers;
     }
 
@@ -171,17 +180,8 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public RequestOtpForMandateActivationResponse requestOtp(RequestOtpForMandateActivation requestOtpForMandateActivation) throws Exception {
 
-        System.out.println("");
-        System.out.println("request OTP request payload = [" + requestOtpForMandateActivation.toString() + "]");
-        System.out.println("");
-
         String url = credentials.getRequestOTPLink();
-
         RequestOtpForMandateActivationResponse response = requestOtp(url, requestOtpForMandateActivation);
-
-        System.out.println("");
-        System.out.println("request OTP response payload= [" + response.toString() + "]");
-        System.out.println("");
 
         return response;
     }
@@ -189,23 +189,24 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public MandateActivationResponse validateOtp(MandateActivation mandateActivation) throws Exception {
 
-        //"validate OTP request payload = [" + mandateActivation.toString() + "]"
-
         String url = credentials.getValidateOTPLink();
         MandateActivationResponse response = validateOtp(url, mandateActivation);
 
-        System.out.println("");
-        System.out.println("validate OTP response payload = [" + response.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("validate OTP response payload = [" + response.toString() + "]");
+        log.info("");
+
 
         if(response.getStatuscode().equals("00")){
 
+            log.info("successful OTP validation. Updating Mandate - " + response.getMandateId() + "status to ACTIVE");
             Mandate mandate = mandateRepository.findByMandateIdContaining(response.getMandateId());
             String activationDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
             mandate.setStatus("ACTIVE");
             mandate.setActivationDate(activationDate);
 
             mandateRepository.save(mandate);
+            log.info("Mandate - " + response.getMandateId() + "status Updated.");
         }
 
         return response;
@@ -214,16 +215,16 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public MandateStatusResponse mandateStatus(MandateStatus mandateStatus) throws Exception {
 
-        System.out.println("");
-        System.out.println("Mandate status request = [" + mandateStatus.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Mandate status request = [" + mandateStatus.toString() + "]");
+        log.info("");
 
         String url = credentials.getMandateStatusLink() + mandateStatus.getMerchantId() + "/" + mandateStatus.getRequestId() + "/" + mandateStatus.getHash() + "/status.reg";
         MandateStatusResponse response = mandateStatus(url);
 
-        System.out.println("");
-        System.out.println("Mandate status response = [" + response.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Mandate status response = [" + response.toString() + "]");
+        log.info("");
 
         return response;
     }
@@ -231,19 +232,19 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public DebitInstructionResponse debitInstruction(DebitInstruction debitInstruction) throws Exception {
 
-        System.out.println("");
-        System.out.println("debit instruction request = [" + debitInstruction.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("debit instruction request = [" + debitInstruction.toString() + "]");
+        log.info("");
 
         String url = credentials.getDebitInstructionLink();
         DebitInstructionResponse response = debitInstruction(url, debitInstruction);
 
-        System.out.println("");
-        System.out.println("debit instruction response = [" + response.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("debit instruction response = [" + response.toString() + "]");
+        log.info("");
 
         if(response.getStatuscode().equals("069")){
-
+            log.info("New #" + debitInstruction.getTotalAmount() + " debit passed on mandate - " + response.getMandateId() + " with Transaction ref - " + response.getTransactionRef());
             com.solutionsdelivery.directdebit.model.Bank bank = bankRepository.findByBankCodeContaining(debitInstruction.getFundingBankCode());
             com.solutionsdelivery.directdebit.model.DebitInstruction saveDebitInstruction = new com.solutionsdelivery.directdebit.model.DebitInstruction();
 
@@ -255,10 +256,11 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
             saveDebitInstruction.setTransactionRef(response.getTransactionRef());
             saveDebitInstruction.setStatus("PROCESSING");
 
-
+            log.info("Saving new debit with transaction ref - " + response.getTransactionRef() + " to Database.");
             Mandate mandate = mandateRepository.findByMandateIdContaining(response.getMandateId());
             List<com.solutionsdelivery.directdebit.model.DebitInstruction> debitInstructions = mandate.getDebitInstruction();
 
+            log.info("checking if debit transactions exist for Mandate ID " + response.getMandateId());
             if(debitInstructions == null) {
 
                 List<com.solutionsdelivery.directdebit.model.DebitInstruction> debitInstructions1 = new ArrayList<>();
@@ -268,6 +270,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
                 mandate.setDebitInstruction(debitInstructions1);
 
+                log.info("No existing debit found, new debit created for mandate Id - " + response.getMandateId() + " with transaction ID" + response.getTransactionRef() + " and persisted to database.");
                 debitInstructionRepository.save(saveDebitInstruction);
 
             }else {
@@ -277,6 +280,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
                 mandate.setDebitInstruction(debitInstructions);
 
+                log.info("Existing debits found,saving debit for mandate Id - " + response.getMandateId() + " with transaction ID" + response.getTransactionRef() + " to database.");
                 debitInstructionRepository.save(saveDebitInstruction);
             }
 
@@ -288,20 +292,20 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public StopMandateResponse stopMandate(StopMandate stopMandate) throws Exception {
 
-        System.out.println("");
-        System.out.println("Stop Mandate request = [" + stopMandate.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Stop mandate request = [{}]", stopMandate.toString());
+        log.info("");
 
         String url = credentials.getStopMandateLink();
 
         StopMandateResponse stopMandateResponse = stopMandate(url, stopMandate);
 
-        System.out.println("");
-        System.out.println("Stop Mandate response = [" + stopMandateResponse.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Stop mandate response = [{}]", stopMandateResponse.toString());
+        log.info("");
 
         if(stopMandateResponse.getStatuscode().equals("00")){
-
+            log.info("Mandate ID - {} stopped successfully. Updating Status to 'STOPPED'", stopMandateResponse.getMandateId());
             Mandate mandate = mandateRepository.findByMandateIdContaining(stopMandateResponse.getMandateId());
 
             String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH.mm.ss").format(new Date());
@@ -309,7 +313,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
             mandate.setStoppedDate(timeStamp);
             mandate.setStatus("STOPPED");
 
+
             mandateRepository.saveAndFlush(mandate);
+            log.info("Status successfully updated to STOPPED for Mandate ID - {}", stopMandateResponse.getMandateId());
         }
 
         return stopMandateResponse;
@@ -318,17 +324,17 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public StopDebitResponse stopDebit(StopDebit stopDebit) throws Exception {
 
-        System.out.println("");
-        System.out.println("Stop debit request = [" + stopDebit.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Stop debit request = [{}]", stopDebit.toString());
+        log.info("");
 
         String url = credentials.getStopDebitLink();
 
         StopDebitResponse stopDebitResponse = stopDebit(url, stopDebit);
 
-        System.out.println("");
-        System.out.println("Stop debit response = [" + stopDebitResponse.toString() + "]");
-        System.out.println("");
+        log.info("");
+        log.info("Stop debit response = [{}]", stopDebitResponse.toString());
+        log.info("");
 
         return stopDebitResponse;
 
@@ -338,20 +344,11 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
         Mandate mandate = new Mandate();
 
-        System.out.println("");
-        System.out.println("mandate setup request = [" + mandateSetup.toString() + "]");
-        System.out.println("");
-
         String url = credentials.getMandateSetupLink();
-
         MandateSetupResponse response = mandateSetup(url, mandateSetup);
 
-        System.out.println("");
-        System.out.println("mandate set up response = [" + response.toString() + "]");
-        System.out.println("");
-
         if(response.getStatuscode().equals("040")){
-
+            log.info("New mandate created with Mandate ID - {}", response.getMandateId());
             com.solutionsdelivery.directdebit.model.Bank bank = bankRepository.findByBankCodeContaining(mandateSetup.getPayerBankCode());
             String hash = getHash.getResponseHash(credentials.getMerchantId() + credentials.getApiKey() + response.getRequestId());
             String mandateLink = credentials.getViewMandateLink() + credentials.getMerchantId() + "/" + hash + "/" + response.getMandateId() + "/" + response.getRequestId() + "/rest.reg";
@@ -364,7 +361,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
             mandate.setMandateLink(mandateLink);
             mandate.setStatus("INACTIVE");
 
+            log.info("Saving new Mandate ID - {} to database", response.getMandateId());
             mandateRepository.save(mandate);
+            log.info("New Mandate ID - {} saved successfully to database", response.getMandateId());
         }
         return response;
     }

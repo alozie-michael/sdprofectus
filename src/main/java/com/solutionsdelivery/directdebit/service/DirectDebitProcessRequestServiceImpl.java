@@ -7,6 +7,7 @@ import com.solutionsdelivery.directdebit.model.Bank;
 import com.solutionsdelivery.directdebit.repository.BankRepository;
 import com.solutionsdelivery.directdebit.repository.DebitInstructionRepository;
 import com.solutionsdelivery.directdebit.repository.MandateRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@Slf4j
 public class DirectDebitProcessRequestServiceImpl implements DirectDebitProcessRequestService {
 
     private final DirectDebitSendRequestService directDebitSendRequestService;
