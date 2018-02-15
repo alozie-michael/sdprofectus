@@ -14,7 +14,6 @@ $(function ($) {
         $('#debitDiv').addClass('hideDiv');
         $('#requestOTPDiv').addClass("hideDiv");
 
-
     });
 
     //SHOW DEBIT DIV
@@ -309,7 +308,6 @@ $('#setup').on('click', function (e) {
             } else {
                 //success
                 getMandates();
-
                 $('#mandateSetupModal').modal('toggle');
                 $("#info-message").text("Mandate setup was successful");
                 $("#infoDiv").addClass("alert-success").show();

@@ -8,6 +8,7 @@ import com.solutionsdelivery.OTP.dto.RequestOtpResponse;
 import com.solutionsdelivery.OTP.dto.ValidateOtpResponse;
 import com.solutionsdelivery.directdebit.dao.Hash512Class;
 import com.solutionsdelivery.directdebit.service.DirectDebitSendRequestServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -19,6 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Service("otpSendRequestService")
+@Slf4j
 public class OtpSendRequestServiceImpl implements OtpSendRequestService {
 
     private final OtpCredentials otpCredentials;

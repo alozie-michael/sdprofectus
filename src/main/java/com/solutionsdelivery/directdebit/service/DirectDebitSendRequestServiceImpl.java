@@ -52,9 +52,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private RequestOtpForMandateActivationResponse requestOtp(String url, RequestOtpForMandateActivation requestOtpForMandateActivation) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(requestOtpForMandateActivation, createRequestOtpHeader());
-        log.info("Sending OTP request to Remita {}", requestObject.toString());
+        log.info("Sending OTP request for mandate activation to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
-        log.info("OTP request response {}", response.toString());
+        log.info("OTP request response for mandate activation from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -66,7 +66,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private MandateActivationResponse validateOtp(String url, MandateActivation mandateActivation) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(mandateActivation, createRequestOtpHeader());
+        log.info("Sending OTP validation request for mandate activation to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("OTP validation response for mandate activation from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -80,7 +82,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         HttpEntity<String> requestObject = new HttpEntity(mandateSetup, createRequestHeader());
         log.info("Sending mandate setup request to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
-        log.info("Mandate setup response {}", response.toString());
+        log.info("Mandate setup response from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -92,7 +94,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private StopMandateResponse stopMandate(String url, StopMandate stopMandate) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(stopMandate, createRequestHeader());
+        log.info("Sending stop mandate request to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("stop mandate response from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -104,7 +108,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private StopDebitResponse stopDebit(String url, StopDebit stopDebit) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(stopDebit, createRequestHeader());
+        log.info("Sending stop debit request to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("stop debit response from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -115,7 +121,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
     private MandateStatusResponse mandateStatus(String url) throws Exception {
 
+        log.info("retrieving mandate status from Remita {}", url);
         ResponseEntity<String> response = getResetTemplate().getForEntity(url, String.class);
+        log.info("mandate status response from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedBody = response.getBody();
@@ -127,7 +135,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     public DebitInstructionResponse debitInstruction(String url, DebitInstruction debitInstruction) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(debitInstruction, createRequestHeader());
+        log.info("sending debit instruction to Remita {}", requestObject.toString());
         ResponseEntity<String> response = getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("debit instruction response from Remita {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -141,7 +151,6 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
 
-        log.info("Header - {}", headers.toString());
         return headers;
     }
 
@@ -159,7 +168,6 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         headers.add("REQUEST_TS", requestTimeStamp + "+0000");
         headers.add("API_DETAILS_HASH",apiDetailsHash);
 
-        log.info("Header - {}", headers.toString());
         return headers;
     }
 
@@ -192,14 +200,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         String url = credentials.getValidateOTPLink();
         MandateActivationResponse response = validateOtp(url, mandateActivation);
 
-        log.info("");
-        log.info("validate OTP response payload = [" + response.toString() + "]");
-        log.info("");
-
-
         if(response.getStatuscode().equals("00")){
 
-            log.info("successful OTP validation. Updating Mandate - " + response.getMandateId() + "status to ACTIVE");
+            log.info("successful OTP validation. Updating Mandate - " + response.getMandateId() + "status to ACTIVE on DB");
             Mandate mandate = mandateRepository.findByMandateIdContaining(response.getMandateId());
             String activationDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
             mandate.setStatus("ACTIVE");
@@ -215,16 +218,8 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public MandateStatusResponse mandateStatus(MandateStatus mandateStatus) throws Exception {
 
-        log.info("");
-        log.info("Mandate status request = [" + mandateStatus.toString() + "]");
-        log.info("");
-
         String url = credentials.getMandateStatusLink() + mandateStatus.getMerchantId() + "/" + mandateStatus.getRequestId() + "/" + mandateStatus.getHash() + "/status.reg";
         MandateStatusResponse response = mandateStatus(url);
-
-        log.info("");
-        log.info("Mandate status response = [" + response.toString() + "]");
-        log.info("");
 
         return response;
     }
@@ -232,16 +227,8 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public DebitInstructionResponse debitInstruction(DebitInstruction debitInstruction) throws Exception {
 
-        log.info("");
-        log.info("debit instruction request = [" + debitInstruction.toString() + "]");
-        log.info("");
-
         String url = credentials.getDebitInstructionLink();
         DebitInstructionResponse response = debitInstruction(url, debitInstruction);
-
-        log.info("");
-        log.info("debit instruction response = [" + response.toString() + "]");
-        log.info("");
 
         if(response.getStatuscode().equals("069")){
             log.info("New #" + debitInstruction.getTotalAmount() + " debit passed on mandate - " + response.getMandateId() + " with Transaction ref - " + response.getTransactionRef());
@@ -292,17 +279,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public StopMandateResponse stopMandate(StopMandate stopMandate) throws Exception {
 
-        log.info("");
-        log.info("Stop mandate request = [{}]", stopMandate.toString());
-        log.info("");
-
         String url = credentials.getStopMandateLink();
 
         StopMandateResponse stopMandateResponse = stopMandate(url, stopMandate);
-
-        log.info("");
-        log.info("Stop mandate response = [{}]", stopMandateResponse.toString());
-        log.info("");
 
         if(stopMandateResponse.getStatuscode().equals("00")){
             log.info("Mandate ID - {} stopped successfully. Updating Status to 'STOPPED'", stopMandateResponse.getMandateId());
@@ -324,17 +303,9 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     @Override
     public StopDebitResponse stopDebit(StopDebit stopDebit) throws Exception {
 
-        log.info("");
-        log.info("Stop debit request = [{}]", stopDebit.toString());
-        log.info("");
-
         String url = credentials.getStopDebitLink();
 
         StopDebitResponse stopDebitResponse = stopDebit(url, stopDebit);
-
-        log.info("");
-        log.info("Stop debit response = [{}]", stopDebitResponse.toString());
-        log.info("");
 
         return stopDebitResponse;
 
