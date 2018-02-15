@@ -151,7 +151,7 @@ $(function ($) {
     });
 
     var remitaTransRef = '';
-    var authParamsLenght = '',
+    var authParamsLenght = '';
 
     //REQUEST OTP FOR MANDATE ACTIVATION
     $('#requestOTP').on('click', function (e) {
