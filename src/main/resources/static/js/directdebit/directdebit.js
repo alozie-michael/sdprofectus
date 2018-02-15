@@ -151,6 +151,7 @@ $(function ($) {
     });
 
     var remitaTransRef = '';
+    var authParamsLenght = '',
 
     //REQUEST OTP FOR MANDATE ACTIVATION
     $('#requestOTP').on('click', function (e) {
@@ -185,6 +186,9 @@ $(function ($) {
                     $("#infoDiv").addClass("alert-success").show();
 
                     remitaTransRef = data.remitaTransRef;
+                    authParamsLenght = data.authParams.length;
+
+                    console.log(authParamsLenght);
 
                     $.each(data.authParams, function (i, item) {
 
@@ -211,8 +215,42 @@ $(function ($) {
 
         e.preventDefault();
         console.log(remitaTransRef);
-        $OTP = $('#OTP');
-        $cardDetails = $('#cardDetails');
+        var OTP = $('#OTP').val();
+        var cardDetails = $('#cardDetails').val();
+
+        var jsonData = "";
+
+        if(authParamsLenght > 1){
+
+            $('#description').removeClass('hideDiv');
+
+            jsonData = {
+
+                "remitaTransRef": remitaTransRef,
+                "authParams": [
+                    {
+                        "param1": "OTP",
+                        "value": OTP
+                    },
+                    {
+                        "param1": "CARD",
+                        "value": cardDetails
+                    }
+                ]
+            }
+        }else {
+
+            jsonData = {
+
+                "remitaTransRef": remitaTransRef,
+                "authParams": [
+                    {
+                        "param1": "OTP",
+                        "value": OTP
+                    }
+                ]
+            }
+        }
 
         $.ajax({
             type: "POST",
@@ -221,21 +259,7 @@ $(function ($) {
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
-            data: JSON.stringify({
-
-                "remitaTransRef": remitaTransRef,
-                "authParams": [
-                    {
-                        "param1": "OTP",
-                        "value": $OTP.val()
-                    },
-                    {
-                        "param2": "CARD",
-                        "value": $cardDetails.val()
-                    }
-                ]
-
-            }),
+            data: JSON.stringify(jsonData),
             success: function (data) {
 
                 if (data.statuscode && data.statuscode !== "00") {

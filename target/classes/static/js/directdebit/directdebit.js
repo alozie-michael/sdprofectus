@@ -151,6 +151,7 @@ $(function ($) {
     });
 
     var remitaTransRef = '';
+    var authParamsLenght = '',
 
     //REQUEST OTP FOR MANDATE ACTIVATION
     $('#requestOTP').on('click', function (e) {
@@ -161,8 +162,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/requestOtp",
+            url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -185,6 +186,9 @@ $(function ($) {
                     $("#infoDiv").addClass("alert-success").show();
 
                     remitaTransRef = data.remitaTransRef;
+                    authParamsLenght = data.authParams.length;
+
+                    console.log(authParamsLenght);
 
                     $.each(data.authParams, function (i, item) {
 
@@ -211,31 +215,51 @@ $(function ($) {
 
         e.preventDefault();
         console.log(remitaTransRef);
-        $OTP = $('#OTP');
-        $cardDetails = $('#cardDetails');
+        var OTP = $('#OTP').val();
+        var cardDetails = $('#cardDetails').val();
 
-        $.ajax({
-            type: "POST",
-            //url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/validateOTP",
-            dataType: 'json',
-            contentType: 'application/json',
-            crossDomain: true,
-            data: JSON.stringify({
+        var jsonData = "";
+
+        if(authParamsLenght > 1){
+
+            $('#description').removeClass('hideDiv');
+
+            jsonData = {
 
                 "remitaTransRef": remitaTransRef,
                 "authParams": [
                     {
                         "param1": "OTP",
-                        "value": $OTP.val()
+                        "value": OTP
                     },
                     {
-                        "param2": "CARD",
-                        "value": $cardDetails.val()
+                        "param1": "CARD",
+                        "value": cardDetails
                     }
                 ]
+            }
+        }else {
 
-            }),
+            jsonData = {
+
+                "remitaTransRef": remitaTransRef,
+                "authParams": [
+                    {
+                        "param1": "OTP",
+                        "value": OTP
+                    }
+                ]
+            }
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/validateOTP",
+            dataType: 'json',
+            contentType: 'application/json',
+            crossDomain: true,
+            data: JSON.stringify(jsonData),
             success: function (data) {
 
                 if (data.statuscode && data.statuscode !== "00") {
