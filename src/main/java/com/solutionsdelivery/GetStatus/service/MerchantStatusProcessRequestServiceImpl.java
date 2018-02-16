@@ -41,7 +41,7 @@ public class MerchantStatusProcessRequestServiceImpl implements MerchantStatusPr
 
         if(merchants != null){
 
-            log.error("merchant does not exist");
+            log.error("merchant already exist");
             merchantResponse.setResponseCode("01");
             merchantResponse.setResponseMessage("merchant already exist");
 

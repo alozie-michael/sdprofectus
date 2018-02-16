@@ -4,7 +4,7 @@ import com.solutionsdelivery.GetStatus.model.Merchants;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository("merchantsRepository")
+@Repository
 public interface MerchantsRepository extends JpaRepository<Merchants, Long> {
 	
 	Merchants findByDescriptionContaining(String desc);

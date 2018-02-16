@@ -38,9 +38,6 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     private Hash512Class getHash = new Hash512Class();
 
 
-    private String apiDetailsHash;
-
-
     @Autowired
     public DirectDebitSendRequestServiceImpl(MandateRepository mandateRepository, DebitInstructionRepository debitInstructionRepository, BankRepository bankRepository, DirectDebitCredentials credentials) {
         this.mandateRepository = mandateRepository;
@@ -159,14 +156,14 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
         String requestTimeStamp = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(new Date());
 
         String stringToHash = credentials.getApiKey() + requestTimeStamp + credentials.getApiToken();
-        apiDetailsHash = getHash.getResponseHash(stringToHash);
+        String apiDetailsHash = getHash.getResponseHash(stringToHash);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("MERCHANT_ID", credentials.getMerchantId());
         headers.add("API_KEY", credentials.getApiKey());
         headers.add("REQUEST_ID", requestTimeStamp);
         headers.add("REQUEST_TS", requestTimeStamp + "+0000");
-        headers.add("API_DETAILS_HASH",apiDetailsHash);
+        headers.add("API_DETAILS_HASH", apiDetailsHash);
 
         return headers;
     }
@@ -189,9 +186,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     public RequestOtpForMandateActivationResponse requestOtp(RequestOtpForMandateActivation requestOtpForMandateActivation) throws Exception {
 
         String url = credentials.getRequestOTPLink();
-        RequestOtpForMandateActivationResponse response = requestOtp(url, requestOtpForMandateActivation);
-
-        return response;
+        return requestOtp(url, requestOtpForMandateActivation);
     }
 
     @Override
@@ -219,9 +214,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
     public MandateStatusResponse mandateStatus(MandateStatus mandateStatus) throws Exception {
 
         String url = credentials.getMandateStatusLink() + mandateStatus.getMerchantId() + "/" + mandateStatus.getRequestId() + "/" + mandateStatus.getHash() + "/status.reg";
-        MandateStatusResponse response = mandateStatus(url);
-
-        return response;
+        return mandateStatus(url);
     }
 
     @Override
@@ -250,15 +243,14 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
             log.info("checking if debit transactions exist for Mandate ID " + response.getMandateId());
             if(debitInstructions == null) {
 
-                List<com.solutionsdelivery.directdebit.model.DebitInstruction> debitInstructions1 = new ArrayList<>();
+                debitInstructions = new ArrayList<>();
 
                 saveDebitInstruction.setMandate(mandate);
-                debitInstructions1.add(saveDebitInstruction);
-
-                mandate.setDebitInstruction(debitInstructions1);
+                debitInstructions.add(saveDebitInstruction);
+                mandate.setDebitInstruction(debitInstructions);
 
                 log.info("No existing debit found, new debit created for mandate Id - " + response.getMandateId() + " with transaction ID" + response.getTransactionRef() + " and persisted to database.");
-                debitInstructionRepository.save(saveDebitInstruction);
+                mandateRepository.saveAndFlush(mandate);
 
             }else {
 
@@ -268,7 +260,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
                 mandate.setDebitInstruction(debitInstructions);
 
                 log.info("Existing debits found,saving debit for mandate Id - " + response.getMandateId() + " with transaction ID" + response.getTransactionRef() + " to database.");
-                debitInstructionRepository.save(saveDebitInstruction);
+                mandateRepository.save(mandate);
             }
 
         }
@@ -305,9 +297,7 @@ public class DirectDebitSendRequestServiceImpl implements DirectDebitSendRequest
 
         String url = credentials.getStopDebitLink();
 
-        StopDebitResponse stopDebitResponse = stopDebit(url, stopDebit);
-
-        return stopDebitResponse;
+        return stopDebit(url, stopDebit);
 
     }
 

@@ -39,7 +39,9 @@ public class OtpSendRequestServiceImpl implements OtpSendRequestService {
     private RequestOtpResponse requestOtp(String url, RequestOtp requestOtp) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(requestOtp, createRequestOtpHeader());
+        log.info("sending OTP request to Remita - {}", requestObject.toString());
         ResponseEntity<String> response = directDebitSendRequestService.getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("OTP request response from Remita - {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -51,7 +53,9 @@ public class OtpSendRequestServiceImpl implements OtpSendRequestService {
     private ValidateOtpResponse validateOtp(String url, ValidateOTP validateOTP) throws Exception {
 
         HttpEntity<String> requestObject = new HttpEntity(validateOTP, createRequestOtpHeader());
+        log.info("sending OTP validation to Remita - {}", requestObject.toString());
         ResponseEntity<String> response = directDebitSendRequestService.getResetTemplate().postForEntity(url, requestObject, String.class);
+        log.info("OTP validation response from Remita - {}", response.toString());
 
         //convert from jsonp to json
         String editedbody = response.getBody();
@@ -73,43 +77,19 @@ public class OtpSendRequestServiceImpl implements OtpSendRequestService {
         headers.add("REQUEST_ID", requestId);
         headers.add("REQUEST_TS", requestTimeStamp + "+0000");
         headers.add("API_DETAILS_HASH",apiDetailsHash);
-
         return headers;
     }
 
     @Override
     public RequestOtpResponse requestOtp(RequestOtp requestOtp) throws Exception {
-
-        System.out.println("");
-        System.out.println("request OTP request payload = [" + requestOtp.toString() + "]");
-        System.out.println("");
-
         String url = otpCredentials.getRequestOTPLink();
-
-        RequestOtpResponse response = requestOtp(url, requestOtp);
-
-        System.out.println("");
-        System.out.println("request OTP response payload= [" + response.toString() + "]");
-        System.out.println("");
-
-        return response;
+        return requestOtp(url, requestOtp);
     }
 
     @Override
     public ValidateOtpResponse validateOtp(ValidateOTP validateOTP) throws Exception {
-
-        System.out.println("");
-        System.out.println("validate OTP request payload = [" + validateOTP.toString() + "]");
-        System.out.println("");
-
         String url = otpCredentials.getValidateOTPLink();
-        ValidateOtpResponse response = validateOtp(url, validateOTP);
-
-        System.out.println("");
-        System.out.println("validate OTP response payload = [" + response.toString() + "]");
-        System.out.println("");
-
-        return response;
+        return validateOtp(url, validateOTP);
     }
 
 }
