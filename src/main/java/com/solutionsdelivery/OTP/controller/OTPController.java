@@ -2,6 +2,7 @@ package com.solutionsdelivery.OTP.controller;
 
 import com.solutionsdelivery.OTP.dao.RequestOtp;
 import com.solutionsdelivery.OTP.dao.ValidateOTP;
+import com.solutionsdelivery.OTP.dto.OtpRequestLogsResponse;
 import com.solutionsdelivery.OTP.dto.RequestOtpResponse;
 import com.solutionsdelivery.OTP.dto.ValidateOtpResponse;
 import com.solutionsdelivery.OTP.service.OtpProcessRequestService;
@@ -56,6 +57,23 @@ public class OTPController {
         }
 
         return new ResponseEntity<>(validateOtpResponse, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "requestOTPLogs", method = RequestMethod.GET)
+    public ResponseEntity<OtpRequestLogsResponse> requestOTPLogs() {
+
+        OtpRequestLogsResponse otpRequestLogsResponse = new OtpRequestLogsResponse();
+
+        try {
+
+            otpRequestLogsResponse = OtpProcessRequestService.getOtpRequestLogs();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return new ResponseEntity<>(otpRequestLogsResponse, HttpStatus.OK);
     }
 
 }

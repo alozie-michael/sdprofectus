@@ -151,7 +151,7 @@ $(function ($) {
     });
 
     var remitaTransRef = '';
-    var authParamsLenght = '',
+    var authParamsLenght = '';
 
     //REQUEST OTP FOR MANDATE ACTIVATION
     $('#requestOTP').on('click', function (e) {
@@ -162,8 +162,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/requestOtp",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/requestOtp",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/requestOtp",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,
@@ -254,8 +254,8 @@ $(function ($) {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/validateOTP",
+            //url: "http://localhost:8080/api/v1/remita/directdebit/validateOTP",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/directdebit/validateOTP",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,

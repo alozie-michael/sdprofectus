@@ -47,6 +47,9 @@ $(function () {
             if (page === "users.html") {
                 getUsers();
             }
+            if (page === "getOtpRequestLogs.html"){
+                getOtpRequestLogs();
+            }
         });
     });
 
@@ -321,6 +324,62 @@ $(function () {
 
                     if (tData)
                         $("#usersTable").find("tbody").html(tData);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+                return false;
+            }
+        });
+
+    }
+
+    function getOtpRequestLogs() {
+
+        $.ajax({
+            type: "GET",
+            //url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
+            contentType: 'application/json',
+            crossDomain: true,
+            success: function (data) {
+                // success
+
+                if(data.responseCode && data.responseCode === "00")
+
+
+                if (data.otpRequestLogs) {
+                    var tData = '';
+                    $.each(data.otpRequestLogs, function (i, item) {
+
+                        tData += "<tr>"
+                            + "<td>"
+                            + item.id
+                            + "</td>"
+                            + "<td>"
+                            + item.bank
+                            + "</td>"
+                            + "<td>"
+                            + item.accountNumber
+                            + "</td>"
+                            + "<td>"
+                            + item.request
+                            + "</td>"
+                            + "<td>"
+                            + item.requestTimeStamp
+                            + "</td>"
+                            + "<td>"
+                            + item.response
+                            + "</td>"
+                            + "<td>"
+                            + item.responseTimeStamp
+                            + "</td>"
+                            + "</tr>";
+
+                    });
+
+                    if (tData)
+                        $("#otpRequestLogs").find("tbody").html(tData);
                 }
             },
             error: function (e) {
