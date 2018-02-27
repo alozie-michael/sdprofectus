@@ -125,7 +125,7 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
     *   Every 1 hour, send OTP to all account numbers in accountNumber entity and persist response from Remita to
     *   OtpRequestLogs entity.
     * */
-    @Scheduled(cron = "0 0/2 * * * MON-FRI")
+    @Scheduled(cron = "0 0 0/1 * * MON-FRI")
     private void scheduledRequestOtp(){
         /*
         * Get account numbers from DB
