@@ -1,30 +1,21 @@
 package com.solutionsdelivery.OTP.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "OTPREQUESTLOGS")
-public @Data
-class OtpRequestLogs {
+public @lombok.Data class OtpRequestLogs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String bank;
+    @Column(name = "STARTTIME")
+    private String startTime;
 
-    @Column(name = "ACCOUNTNUMBER")
-    private String accountNumber;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "otpRequestLogs")
+    @Column(name = "DATA")
+    private List<Data> data;
 
-    private String request;
-    @Column(name = "REQUESTTIMESTAMP")
-    private String requestTimeStamp;
-
-    @Column(length = 500)
-    private String response;
-
-    @Column(name = "RESPONSETIMESTAMP")
-    private String responseTimeStamp;
 }

@@ -14,5 +14,5 @@ public class StatusResponse {
 	@JsonProperty("transactiontime")
 	private String transactionTime;
 	private String status;
-
+	private String paymentDate;
 }

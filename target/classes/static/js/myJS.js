@@ -41,13 +41,13 @@ $(function () {
                 getMandates();
                 getDebits();
             }
-            if(page === "getStatus.html"){
+            if (page === "getStatus.html") {
                 getMerchants();
             }
             if (page === "users.html") {
                 getUsers();
             }
-            if (page === "getOtpRequestLogs.html"){
+            if (page === "getOtpRequestLogs.html") {
                 getOtpRequestLogs();
             }
         });
@@ -338,49 +338,52 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            //url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
+            url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
                 // success
 
-                if(data.responseCode && data.responseCode === "00")
+                if (data.responseCode && data.responseCode === "00")
+
+                    if (data.otpRequestLogs) {
+
+                        var mData = '';
+                        var tData = '';
+                        $.each(data.otpRequestLogs, function (i, item) {
+
+                            tData = "<tr>"
+                                + "<td style='font-weight:bold'>"
+                                +   item.startTime
+                                + "</td>"
+                                +   mainlogs()
+                                + "</tr>";
+
+                            function mainlogs () {
+
+                                var sData = '';
+                                $.each(item.requestResponses, function (i, item) {
+
+                                    var td = "";
+                                    if(item.status === "success")
+                                        td = "<td style='font-weight: lighter'><font color=\"#3DC06D\">" + item.status + "</font></td>";
+                                    else
+                                        td = "<td style='font-weight: lighter'><font color=\"#FF0000\">" + item.status + "</font></td>";
 
 
-                if (data.otpRequestLogs) {
-                    var tData = '';
-                    $.each(data.otpRequestLogs, function (i, item) {
+                                    sData += td;
+                                });
 
-                        tData += "<tr>"
-                            + "<td>"
-                            + item.id
-                            + "</td>"
-                            + "<td>"
-                            + item.bank
-                            + "</td>"
-                            + "<td>"
-                            + item.accountNumber
-                            + "</td>"
-                            + "<td>"
-                            + item.request
-                            + "</td>"
-                            + "<td>"
-                            + item.requestTimeStamp
-                            + "</td>"
-                            + "<td>"
-                            + item.response
-                            + "</td>"
-                            + "<td>"
-                            + item.responseTimeStamp
-                            + "</td>"
-                            + "</tr>";
+                                return sData;
+                            }
 
-                    });
+                            mData += tData;
+                        });
 
-                    if (tData)
-                        $("#otpRequestLogs").find("tbody").html(tData);
-                }
+                        $("#mainData").find("tbody").html(mData);
+
+                    }
             },
             error: function (e) {
                 console.log(e);

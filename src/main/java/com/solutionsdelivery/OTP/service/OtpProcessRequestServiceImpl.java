@@ -5,10 +5,14 @@ import com.solutionsdelivery.OTP.dao.RequestOtp;
 import com.solutionsdelivery.OTP.dao.ValidateOTP;
 import com.solutionsdelivery.OTP.dto.OtpRequestLogsResponse;
 import com.solutionsdelivery.OTP.dto.RequestOtpResponse;
+import com.solutionsdelivery.OTP.dto.RequestResponse;
 import com.solutionsdelivery.OTP.dto.ValidateOtpResponse;
 import com.solutionsdelivery.OTP.model.AccountNumber;
+import com.solutionsdelivery.OTP.model.Data;
+import com.solutionsdelivery.OTP.model.GeneralOtpRequestLogs;
 import com.solutionsdelivery.OTP.model.OtpRequestLogs;
 import com.solutionsdelivery.OTP.repository.AccountNumberRepository;
+import com.solutionsdelivery.OTP.repository.GeneralOtpRequestLogsRepository;
 import com.solutionsdelivery.OTP.repository.OtpRequestLogsRepository;
 import com.solutionsdelivery.RPG.dao.Encryptor;
 import com.solutionsdelivery.directdebit.model.Bank;
@@ -30,17 +34,19 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
 
     private final OtpSendRequestService otpSendRequestService;
     private final OtpRequestLogsRepository otpRequestLogsRepository;
+    private final GeneralOtpRequestLogsRepository generalOtpRequestLogsRepository;
     private final BankRepository bankRepository;
     private final AccountNumberRepository accountNumberRepository;
 
     private Encryptor encryptor = new Encryptor();
 
     @Autowired
-    public OtpProcessRequestServiceImpl(OtpSendRequestService otpSendRequestService, OtpRequestLogsRepository otpRequestLogsRepository, BankRepository bankRepository, AccountNumberRepository accountNumberRepository) {
+    public OtpProcessRequestServiceImpl(OtpSendRequestService otpSendRequestService, OtpRequestLogsRepository otpRequestLogsRepository, BankRepository bankRepository, AccountNumberRepository accountNumberRepository, GeneralOtpRequestLogsRepository generalOtpRequestLogsRepository) {
         this.otpRequestLogsRepository = otpRequestLogsRepository;
         this.otpSendRequestService = otpSendRequestService;
         this.bankRepository = bankRepository;
         this.accountNumberRepository = accountNumberRepository;
+        this.generalOtpRequestLogsRepository = generalOtpRequestLogsRepository;
     }
 
     @Override
@@ -78,7 +84,7 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
     public OtpRequestLogsResponse getOtpRequestLogs() {
 
         OtpRequestLogsResponse otpRequestLogsResponse = new OtpRequestLogsResponse();
-        List<com.solutionsdelivery.OTP.dto.OtpRequestLogs> newOtpRequestLogs = new ArrayList<>();
+        List<com.solutionsdelivery.OTP.dto.OtpRequestLogs> otpRequestLogsList = new ArrayList<>();
         List<OtpRequestLogs> otpRequestLogs = otpRequestLogsRepository.findAll();
 
         if(otpRequestLogs == null){
@@ -86,68 +92,132 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
             otpRequestLogsResponse.setResponseMessage("no logs found!");
         }else {
 
-            for(OtpRequestLogs otpRequestLogs2 : otpRequestLogs){
-                com.solutionsdelivery.OTP.dto.OtpRequestLogs otpRequestLogs1 = new com.solutionsdelivery.OTP.dto.OtpRequestLogs();
-                BeanUtils.copyProperties(otpRequestLogs2, otpRequestLogs1);
+            for(OtpRequestLogs otpRequestLogs1 : otpRequestLogs){
 
-                newOtpRequestLogs.add(otpRequestLogs1);
+                List<RequestResponse> requestResponses = new ArrayList<>();
+                com.solutionsdelivery.OTP.dto.OtpRequestLogs otpRequestLogs2 = new com.solutionsdelivery.OTP.dto.OtpRequestLogs();
+                List<Data> data = otpRequestLogs1.getData();
+
+                for(Data data1: data){
+                    RequestResponse requestResponse = new RequestResponse();
+                    BeanUtils.copyProperties(data1, requestResponse);
+
+                    requestResponses.add(requestResponse);
+                }
+
+                otpRequestLogs2.setStartTime(otpRequestLogs1.getStartTime());
+                otpRequestLogs2.setRequestResponses(requestResponses);
+
+                otpRequestLogsList.add(otpRequestLogs2);
+
             }
 
             otpRequestLogsResponse.setResponseCode("00");
             otpRequestLogsResponse.setResponseMessage("successful");
-            otpRequestLogsResponse.setOtpRequestLogs(newOtpRequestLogs);
+            otpRequestLogsResponse.setOtpRequestLogs(otpRequestLogsList);
 
         }
 
         return otpRequestLogsResponse;
     }
 
-    @Scheduled(cron = "0 0 0/1 * * MON-FRI")
-    public void scheduledRequestOtp(){
+    /*
+    *   Every 1 hour, send OTP to all account numbers in accountNumber entity and persist response from Remita to
+    *   OtpRequestLogs entity.
+    * */
+    @Scheduled(cron = "0 0/2 * * * MON-FRI")
+    private void scheduledRequestOtp(){
         /*
         * Get account numbers from DB
         * */
         List<AccountNumber> accountNumbers = accountNumberRepository.findAll();
+        OtpRequestLogs otpRequestLogs = new OtpRequestLogs();
+        List<Data> dataList = new ArrayList<>();
+        String bankCode;
+        String accountNumber = "";
+
+        String startTime = getTime();
 
         assert accountNumbers != null;
         for (AccountNumber newAccountNumber: accountNumbers){
 
-            String bankCode = newAccountNumber.getBankCode();
-            String accountNumber = newAccountNumber.getAccountNumber();
-
-            OtpRequestLogs otpRequestLogs = new OtpRequestLogs();
-            RequestOtp requestOtp = new RequestOtp();
+            bankCode = newAccountNumber.getBankCode();
+            accountNumber = newAccountNumber.getAccountNumber();
             Bank bank = bankRepository.findByBankCodeContaining(bankCode);
+
+            RequestOtp requestOtp = new RequestOtp();
             requestOtp.setBankCode(encryptor.encrypt(bankCode));
             requestOtp.setAccountNo(encryptor.encrypt(accountNumber));
 
             try {
 
-                String requestTimeStamp = getTimeStamp();
-                otpRequestLogs.setRequestTimeStamp(requestTimeStamp);
+                otpRequestLogs.setStartTime(startTime);
+
+                Data data = new Data();
+                data.setBank(bank.getBankName());
+                data.setAccountNumber(accountNumber);
+                data.setRequest("{'bankCode' : " + bankCode + ", 'accountNumber' : " + accountNumber + "}");
+                data.setRequestTimeStamp(getTimeStamp());
+                data.setStatus("no response");
+                data.setOtpRequestLogs(otpRequestLogs);
+                dataList.add(data);
+                otpRequestLogs.setData(dataList);
+
 
                 RequestOtpResponse requestOtpResponse = otpSendRequestService.requestOtp(requestOtp);
 
-                String responseTimeStamp = getTimeStamp();
-                otpRequestLogs.setResponseTimeStamp(responseTimeStamp);
-                otpRequestLogs.setRequest("{'bankCode' : " + bankCode + ", 'accountNumber' : " + accountNumber + "}");
-                otpRequestLogs.setResponse(requestOtpResponse.toString());
-                otpRequestLogs.setBank(bank.getBankName());
-                otpRequestLogs.setAccountNumber(accountNumber);
+                dataList.remove(data);
 
-                log.info("saving otp request log for account number {} to database", accountNumber);
-                otpRequestLogsRepository.save(otpRequestLogs);
-                log.info("otp request log saved for account number {} to database", accountNumber);
+                data.setResponseTimeStamp(getTimeStamp());
+                data.setResponse(requestOtpResponse.toString());
+                data.setStatus((requestOtpResponse.getStatus() != null)? requestOtpResponse.getStatus() : "no response");
+                data.setOtpRequestLogs(otpRequestLogs);
+
+                dataList.add(data);
+
+                otpRequestLogs.setData(dataList);
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
+
+        log.info("saving otp request result to database");
+        otpRequestLogsRepository.save(otpRequestLogs);
+        log.info("otp request result saved to database", accountNumber);
+    }
+
+    /*
+    * every 24hours, move all data from OtpRequestLogs entity to GeneralOtpRequestLogs entity,
+    * then truncate OtpRequestLogs entity
+    * */
+    @Scheduled(cron = "0 0 0/24 * * MON-FRI")
+    private void switchTables(){
+        /*
+        * Get account numbers from DB
+        * */
+        List<OtpRequestLogs> otpRequestLogs = otpRequestLogsRepository.findAll();
+
+        for(OtpRequestLogs otpRequestLogs1: otpRequestLogs){
+            GeneralOtpRequestLogs generalOtpRequestLogs = new GeneralOtpRequestLogs();
+            List<Data> data = otpRequestLogs1.getData();
+
+            for(Data data1: data){
+                BeanUtils.copyProperties(data1, generalOtpRequestLogs);
+                generalOtpRequestLogsRepository.save(generalOtpRequestLogs);
+            }
+        }
+
+        otpRequestLogsRepository.deleteAll();
+
     }
 
     private String getTimeStamp(){
         return new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date());
+    }
+    private String getTime(){
+        return new SimpleDateFormat("HH:mm:ss").format(new Date());
     }
 
 }

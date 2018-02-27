@@ -12,4 +12,5 @@ public class Data {
     private String responseDescription;
     private String mandateNumber;
     private String accountToken;
+
 }

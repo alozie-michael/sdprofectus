@@ -25,6 +25,16 @@ public class Encryptor {
 
     private final String ENC_INIT_VECTOR = "pdsfzjetmvkyagrq";
 
+    /*public static void main(String [] args){
+
+        Encryptor encryptor = new Encryptor();
+
+        String decryptedText = "o4SXiNUKzv+L/xHTUdXhig==";
+
+        System.out.println(encryptor.decrypt(decryptedText));
+    }*/
+
+
     public String encrypt(String plainText) {
         String encryptedText = "";
         try {

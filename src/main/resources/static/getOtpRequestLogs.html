@@ -24,16 +24,62 @@
                     <span id="info-message"></span>
                 </div>
                 <div class="table-responsive">
-                    <table id="otpRequestLogs" class="table">
-                        <thead>
+                    <table id="mainData" class="table table-hover table-bordered table-responsive m-t-40">
+                        <thead style='font-weight: 900'>
                         <tr>
-                            <th>ID</th>
-                            <th>Bank</th>
-                            <th>Account Number</th>
-                            <th>Request</th>
-                            <th>Request TimeStamp</th>
-                            <th>Response</th>
-                            <th>Response TimeStamp</th>
+                            <td>
+                            </td>
+                            <td>
+                                Eco Bank
+                            </td>
+                            <td>
+                                Fidelity Bank
+                            </td>
+                            <td>
+                                First Bank
+                            </td>
+                            <td>
+                                FCBM
+                            </td>
+                            <td>
+                                GTB
+                            </td>
+                            <td>
+                                Heritage Bank
+                            </td>
+                            <td>
+                                Jaiz Bank
+                            </td>
+                            <td>
+                                KeyStone Bank
+                            </td>
+                            <td>
+                                Skye Bank
+                            </td>
+                            <td>
+                                Stanbic IBTC
+                            </td>
+                            <td>
+                                Sterling Bank
+                            </td>
+                            <td>
+                                Union Bank
+                            </td>
+                            <td>
+                                UBA
+                            </td>
+                            <td>
+                                Unity Bank
+                            </td>
+                            <td>
+                                Wema Bank
+                            </td>
+                            <td>
+                                Zenith Bank
+                            </td>
+                            <td>
+                                Providous Bank
+                            </td>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,7 +95,7 @@
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script>
     $(function () {
-        $('#otpRequestLogs').DataTable();
+
         $(".floating-labels .form-control").on("focus blur", function (i) {
             $(this).parents(".form-group").toggleClass("focused", "focus" === i.type || this.value.length > 0)
         }).trigger("blur");

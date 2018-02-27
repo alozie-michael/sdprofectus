@@ -8,4 +8,6 @@ public @Data class AuthParams {
     private String description1;
     private String param2;
     private String description2;
+    private String param3;
+    private String description3;
 }

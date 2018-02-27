@@ -68,7 +68,7 @@ public class OtpSendRequestServiceImpl implements OtpSendRequestService {
     public HttpHeaders createRequestOtpHeader() {
 
         String requestTimeStamp = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(new Date());
-        String requestId = requestTimeStamp + "OTP";
+        String requestId = getTimeStamp();
         String apiDetailsHash = hash512Class.getResponseHash(otpCredentials.getApiKey() + requestId + otpCredentials.getApiToken());
 
         HttpHeaders headers = new HttpHeaders();
@@ -90,6 +90,10 @@ public class OtpSendRequestServiceImpl implements OtpSendRequestService {
     public ValidateOtpResponse validateOtp(ValidateOTP validateOTP) throws Exception {
         String url = otpCredentials.getValidateOTPLink();
         return validateOtp(url, validateOTP);
+    }
+
+    private String getTimeStamp(){
+        return new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.S").format(new Date());
     }
 
 }
