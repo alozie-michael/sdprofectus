@@ -23,6 +23,9 @@ $(function ($) {
                         $.each(data.otpRequestLogs, function (i, item) {
 
                             tData = "<tr>"
+                                + "<td style='font-weight:bold'>"
+                                + item.startTime
+                                + "</td>"
                                 + mainlogs()
                                 + "</tr>";
 
