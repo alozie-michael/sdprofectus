@@ -338,8 +338,8 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
+            //url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
