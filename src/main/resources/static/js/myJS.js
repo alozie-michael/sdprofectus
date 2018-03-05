@@ -338,14 +338,14 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            //url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
-            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
+            url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLogs",
+            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLogs",
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
                 // success
 
-                if (data.responseCode && data.responseCode === "00")
+                if (data.responseCode && data.responseCode === "00") {
 
                     if (data.otpRequestLogs) {
 
@@ -353,20 +353,20 @@ $(function () {
                         var tData = '';
                         $.each(data.otpRequestLogs, function (i, item) {
 
-                            tData = "<tr>"
+                            tData = "<tr data-action=\'otpResponseByTime\'>"
                                 + "<td style='font-weight:bold'>"
-                                +   item.startTime
+                                + item.startTime
                                 + "</td>"
-                                +   mainlogs()
+                                + mainlogs()
                                 + "</tr>";
 
-                            function mainlogs () {
+                            function mainlogs() {
 
                                 var sData = '';
                                 $.each(item.requestResponses, function (i, item) {
 
                                     var td = "";
-                                    if(item.status === "success")
+                                    if (item.status === "success")
                                         td = "<td style='font-weight: lighter'><font color=\"#3DC06D\">" + item.status + "</font></td>";
                                     else
                                         td = "<td style='font-weight: lighter'><font color=\"#FF0000\">" + item.status + "</font></td>";
@@ -384,6 +384,7 @@ $(function () {
                         $("#mainData").find("tbody").html(mData);
 
                     }
+                }
             },
             error: function (e) {
                 console.log(e);
@@ -392,6 +393,63 @@ $(function () {
         });
 
     }
+
+    /*function getOtpResponsebyTime() {
+
+
+        $("#mainData").find("tbody").find("tr").on('click', '[data-action="otpResponseByTime"]', function () {
+            alert("clicked");
+
+            var $row = jQuery(this).closest('tr');
+            var $columns = $row.find('td');
+
+            var startTime = $columns[0].innerHTML;
+
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLog/" + startTime,
+                //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLog/" + startTime,
+                contentType: 'application/json',
+                crossDomain: true,
+                success: function (data) {
+
+                    if (data.responseCode && data.responseCode === "00") {
+
+                        var tData = '';
+                        if (!data.otpRequestLogs) {
+                        } else {
+
+                            $.each(data.otpRequestLogs, function (i, item) {
+
+                                tData = "<tr>"
+                                    + mainlogs()
+                                    + "</tr>";
+
+                                function mainlogs() {
+
+                                    var sData = '';
+                                    $.each(item.requestResponses, function (i, item) {
+                                        sData += "<td>" + item.response + "</td>";
+                                    });
+
+                                    return sData;
+                                }
+                            });
+
+                            $("#responseModalTable").find("tbody").html(tData);
+                        }
+                    }
+                },
+                error: function (e) {
+                    console.log(e);
+                    return false;
+                }
+            });
+
+            $('#otpResponseModal').modal('toggle');
+        });
+
+    }*/
 
     $("#changePasswordBtn").on("click", function (e) {
 

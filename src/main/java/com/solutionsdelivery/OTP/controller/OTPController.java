@@ -76,4 +76,21 @@ public class OTPController {
         return new ResponseEntity<>(otpRequestLogsResponse, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "requestOTPLog/{startTime}", method = RequestMethod.GET)
+    public ResponseEntity<OtpRequestLogsResponse> requestOTPLog(@PathVariable("startTime") String startTime) {
+
+        OtpRequestLogsResponse otpRequestLogsResponse = new OtpRequestLogsResponse();
+
+        try {
+
+            otpRequestLogsResponse = OtpProcessRequestService.getOtpRequestLog(startTime);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return new ResponseEntity<>(otpRequestLogsResponse, HttpStatus.OK);
+    }
+
 }

@@ -11,5 +11,6 @@ public interface OtpProcessRequestService {
 	RequestOtpResponse requestOtp(RequestOtp requestOtp) throws Exception;
 	ValidateOtpResponse validateOtp(ValidateOTP validateOTP) throws Exception;
 	OtpRequestLogsResponse getOtpRequestLogs();
+	OtpRequestLogsResponse getOtpRequestLog(String startTime);
 
 }

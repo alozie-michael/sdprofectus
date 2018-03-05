@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OtpRequestLogsRepository extends JpaRepository<OtpRequestLogs, Long> {
 
+     OtpRequestLogs findByStartTimeContaining(String startTime);
+
 }

@@ -121,6 +121,43 @@ public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
         return otpRequestLogsResponse;
     }
 
+    @Override
+    public OtpRequestLogsResponse getOtpRequestLog(String startTime) {
+
+        OtpRequestLogsResponse otpRequestLogsResponse = new OtpRequestLogsResponse();
+        List<com.solutionsdelivery.OTP.dto.OtpRequestLogs> otpRequestLogs = new ArrayList<>();
+        OtpRequestLogs otpRequestLog = otpRequestLogsRepository.findByStartTimeContaining(startTime);
+
+        if(otpRequestLog == null){
+            otpRequestLogsResponse.setResponseCode("01");
+            otpRequestLogsResponse.setResponseMessage("No record found");
+        }else {
+
+            com.solutionsdelivery.OTP.dto.OtpRequestLogs otpRequestLogs1 = new com.solutionsdelivery.OTP.dto.OtpRequestLogs();
+            List<RequestResponse> requestResponses = new ArrayList<>();
+
+            List<Data> data = otpRequestLog.getData();
+
+            for(Data data1: data){
+                RequestResponse requestResponse = new RequestResponse();
+
+                BeanUtils.copyProperties(data1, requestResponse);
+                requestResponses.add(requestResponse);
+            }
+
+            otpRequestLogs1.setStartTime(otpRequestLog.getStartTime());
+            otpRequestLogs1.setRequestResponses(requestResponses);
+            otpRequestLogs.add(otpRequestLogs1);
+
+            otpRequestLogsResponse.setResponseMessage("successful");
+            otpRequestLogsResponse.setResponseCode("00");
+            otpRequestLogsResponse.setOtpRequestLogs(otpRequestLogs);
+
+        }
+
+        return otpRequestLogsResponse;
+    }
+
     /*
     *   Every 1 hour, send OTP to all account numbers in accountNumber entity and persist response from Remita to
     *   OtpRequestLogs entity.
