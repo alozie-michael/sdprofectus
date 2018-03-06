@@ -7,8 +7,8 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/api/v1/remita/user/validateLogin",
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/validateLogin",
+            //url: "http://localhost:8080/api/v1/remita/user/validateLogin",
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/user/validateLogin",
             dataType: 'json',
             contentType: 'application/json',
             crossDomain: true,

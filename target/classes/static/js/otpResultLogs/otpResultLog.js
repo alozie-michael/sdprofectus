@@ -1,17 +1,15 @@
 $(function ($) {
 
     $("#mainData").on('click', '[data-action="otpResponseByTime"]', function () {
-        alert("clicked");
 
         var $row = jQuery(this).closest('tr');
         var $columns = $row.find('td');
-
         var startTime = $columns[0].innerHTML;
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLog/" + startTime,
-            //url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLog/" + startTime,
+            //url: "http://localhost:8080/api/v1/remita/OTP/requestOTPLog/" + startTime,
+            url: "https://sdprofectus.herokuapp.com/api/v1/remita/OTP/requestOTPLog/" + startTime,
             contentType: 'application/json',
             crossDomain: true,
             success: function (data) {
@@ -25,6 +23,9 @@ $(function ($) {
                         $.each(data.otpRequestLogs, function (i, item) {
 
                             tData = "<tr>"
+                                + "<td style='font-weight:bold'>"
+                                + item.startTime
+                                + "</td>"
                                 + mainlogs()
                                 + "</tr>";
 
