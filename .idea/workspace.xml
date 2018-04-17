@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="887350d7-f211-4338-b531-c70265300219" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/announcements-4.0.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/announcements-4.0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/announcements-4.0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,13 +18,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+            <state relative-caret-position="630">
+              <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>include</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +41,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/announcements-4.0.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/_includes/announcements-4.0.html" />
       </list>
     </option>
   </component>
@@ -126,6 +131,69 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="select2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="select2" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SolutionsDelivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdprofectus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="select2" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -152,6 +220,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/_includes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523662099643</updated>
       <workItem from="1523662101015" duration="1276000" />
-      <workItem from="1523988489146" duration="2411000" />
+      <workItem from="1523988489146" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3687000" />
+    <option name="totallyTimeSpent" value="4254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -238,7 +311,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32956383" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32956383" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -257,7 +330,7 @@
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23172414" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -377,17 +450,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/browserconfig.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/announcements-4.0.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/plugins/select2/docs/_includes/announcements-4.0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+        <state relative-caret-position="307">
+          <caret line="742" lean-forward="true" selection-start-line="742" selection-end-line="742" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+        <state relative-caret-position="630">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
         </state>
       </provider>
     </entry>

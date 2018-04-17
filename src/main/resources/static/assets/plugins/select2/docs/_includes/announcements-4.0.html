@@ -79,7 +79,7 @@ slug: announcements-4.0
 
         <p>
           The adapters implement a consistent interface that is documented in the
-          <a href="options.html#adapters">options section for adapters</a>, allowing
+          <a href="../options.html#adapters">options section for adapters</a>, allowing
           you to customize Select2 to do exactly what you are looking for. Select2
           is designed such that you can mix and match plugins, with most of the core
           options being built as decorators that wrap the standard adapters.
@@ -349,7 +349,7 @@ $("select").select2({
 
         <p>
           This is now handled by
-          <a href="options.html#dataAdapter">the data adapter</a> in the
+          <a href="../options.html#dataAdapter">the data adapter</a> in the
           <code>current</code> method, which allows Select2 to convert the currently
           selected values into data objects that can be displayed. The default
           implementation converts the text and value of <code>option</code> elements
@@ -480,7 +480,7 @@ $request.then(function (data) {
         <p>
           The custom <code>query</code> and <code>initSelection</code> methods have
           been replaced by
-          <a href="options.html#dataAdapter">custom data adapters</a> that handle
+          <a href="../options.html#dataAdapter">custom data adapters</a> that handle
           how Select2 stores and retrieves the data that will be displayed to the
           user. An example of the old <code>query</code> option is provided below,
           which is
@@ -570,7 +570,7 @@ $.fn.select2.amd.require([
 
         <p>
           You should refer to the updated
-          <a href="options.html#templating">documentation on templates</a> when
+          <a href="../options.html#templating">documentation on templates</a> when
           migrating from previous versions of Select2.
         </p>
 
@@ -648,7 +648,7 @@ var data = $.map([
           could be localized to fit the language of the website that it was being
           used on. Select2 only comes with the English language by default, but
           provides
-          <a href="options.html#language">community-contributed translations</a> for
+          <a href="../options.html#language">community-contributed translations</a> for
           many common languages. Many of the formatters have been moved to the
           <code>language</code> option and the signatures of the formatters have
           been changed to handle future additions.
@@ -662,7 +662,7 @@ var data = $.map([
           In the past, Select2 has only supported declaring a subset of options
           using <code>data-*</code> attributes. Select2 now supports declaring all
           options using the attributes, using
-          <a href="options.html#data-attributes">the format specified in the documentation</a>.
+          <a href="../options.html#data-attributes">the format specified in the documentation</a>.
         </p>
 
         <p>
@@ -679,7 +679,7 @@ var data = $.map([
           a JSON-formatted array of objects for tags. As the method for specifying
           tags has changed in 4.0, you should now provide the array of objects using
           the <code>data-data</code> attribute, which maps to
-          <a href="options.html#data">the array data</a> option. You should also
+          <a href="../options.html#data">the array data</a> option. You should also
           enable tags by setting <code>data-tags="true"</code> on the object, to
           maintain the ability for users to create their own options as well.
         </p>
