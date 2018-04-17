@@ -9,8 +9,5 @@
         <module name="SolutionsDelivery" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SolutionsDelivery" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Service("otpProcessRequestService")
+@Service
 @Slf4j
 public class OtpProcessRequestServiceImpl implements OtpProcessRequestService {
 

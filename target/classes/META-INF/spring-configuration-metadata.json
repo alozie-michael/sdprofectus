@@ -25,7 +25,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
       "name": "directdebit.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.debit-instruction-link",
       "type": "java.lang.String"
     },
     {
@@ -40,7 +55,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.mandate-setup-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
       "name": "directdebit.mandate-status-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.mandate-status-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.merchant-id",
       "type": "java.lang.String"
     },
     {
@@ -55,7 +85,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.request-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
       "name": "directdebit.service-type-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.service-type-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.stop-debit-link",
       "type": "java.lang.String"
     },
     {
@@ -70,7 +115,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.stop-mandate-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
       "name": "directdebit.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.directdebit.dao.DirectDebitCredentials",
+      "name": "directdebit.view-mandate-link",
       "type": "java.lang.String"
     },
     {
@@ -85,7 +145,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
+      "name": "otp.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
       "name": "otp.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
+      "name": "otp.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
+      "name": "otp.merchant-id",
       "type": "java.lang.String"
     },
     {
@@ -100,7 +175,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
+      "name": "otp.request-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
       "name": "otp.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.OTP.dao.OtpCredentials",
+      "name": "otp.validate-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.account-enquiry",
       "type": "java.lang.String"
     },
     {
@@ -115,7 +205,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.api-token",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.bulk-payment-link",
       "type": "java.lang.String"
     },
     {
@@ -130,7 +235,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.debit-account",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.debit-bank-code",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.debit-bank-code",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.enc-key",
       "type": "java.lang.String"
     },
     {
@@ -145,7 +265,22 @@
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.get-active-banks-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.iv",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.iv",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.merchant-id",
       "type": "java.lang.String"
     },
     {
@@ -160,12 +295,32 @@
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.payment-status-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.request-o-t-p-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.request-o-t-p-link",
       "type": "java.lang.String"
     },
     {
       "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
       "name": "rpg.single-payment-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.single-payment-link",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.solutionsdelivery.RPG.dao.RpgCredentials",
+      "name": "rpg.validate-o-t-p-link",
       "type": "java.lang.String"
     },
     {
